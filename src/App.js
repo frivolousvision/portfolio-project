@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { CSSTransition } from "react-transition-group";
 
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
@@ -21,22 +20,20 @@ function App() {
   };
   return (
     <div className='App'>
-      <CSSTransition timeout={600}>
-        <Router>
-          <Header dark={dark} toggleDark={toggleDark} />
-          <Switch>
-            <Route path='/' exact>
-              <Home dark={dark} toggleDark={toggleDark} />
-            </Route>
-            <Route path='/projects' exact>
-              <Projects dark={dark} />
-            </Route>
-            <Route path='/contact' exact>
-              <Contact dark={dark} />
-            </Route>
-          </Switch>
-        </Router>
-      </CSSTransition>
+      <Router>
+        <Header dark={dark} toggleDark={toggleDark} />
+        <Switch>
+          <Route path='/' exact>
+            <Home dark={dark} toggleDark={toggleDark} />
+          </Route>
+          <Route path='/projects' exact>
+            <Projects dark={dark} />
+          </Route>
+          <Route path='/contact' exact>
+            <Contact dark={dark} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
