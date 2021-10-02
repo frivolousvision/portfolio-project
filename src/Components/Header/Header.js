@@ -1,6 +1,6 @@
 import "./header.css";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon, faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,9 +16,9 @@ const Header = (props) => {
           icon={faBars}
           className={`bars ${props.dark ? "bars-dark" : "bars-light"}`}
         />
-        <Link to='/'>
+        <NavLink to='/'>
           <li>about</li>
-        </Link>
+        </NavLink>
         <Link to='/projects'>
           <li>projects</li>
         </Link>

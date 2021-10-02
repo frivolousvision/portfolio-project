@@ -10,13 +10,11 @@
   background-color: rgb(34, 34, 34);
 }
 .contact-header {
-  transition: 10000ms;
+  transition: 600ms;
 }
 .contact-header-light {
   color: black;
-  transition: 10000ms;
 }
 .contact-header-dark {
   color: white;
-  transition: 10000ms;
 }
