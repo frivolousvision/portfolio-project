@@ -1,0 +1,22 @@
+.contact {
+  padding-top: 5rem;
+  height: 100vh;
+  transition: 600ms;
+}
+.contact-light {
+  background-color: white;
+}
+.contact-dark {
+  background-color: rgb(34, 34, 34);
+}
+.contact-header {
+  transition: 10000ms;
+}
+.contact-header-light {
+  color: black;
+  transition: 10000ms;
+}
+.contact-header-dark {
+  color: white;
+  transition: 10000ms;
+}

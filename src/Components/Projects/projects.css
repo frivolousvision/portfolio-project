@@ -1,0 +1,11 @@
+.projects {
+  padding-top: 5rem;
+  height: 100vh;
+  transition: 600ms;
+}
+.projects-light {
+  background-color: white;
+}
+.projects-dark {
+  background-color: rgb(34, 34, 34);
+}
