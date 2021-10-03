@@ -7,20 +7,38 @@ import {
   faMoon,
   faBars,
   faTimes,
+  faMinus,
+  faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) => {
   const [showNav, setShowNav] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState(false);
   const [displayContent, setDisplayContent] = useState(false);
+  // const [displaySubMenu, setDisplaySubMenu] = useState(false);
+
   const toggleMobileNav = () => {
     if (showNav) {
       setShowNav(false);
       setDisplayContent(false);
+      setShowSubMenu(false);
     }
     if (!showNav) {
       setShowNav(true);
       setTimeout(() => {
         setDisplayContent(true);
+      }, 200);
+    }
+  };
+  const toggleSubMenu = () => {
+    if (showSubMenu) {
+      setShowSubMenu(false);
+      // setDisplaySubMenu(false);
+    }
+    if (!showSubMenu) {
+      setShowSubMenu(true);
+      setTimeout(() => {
+        // setDisplaySubMenu(true);
       }, 200);
     }
   };
@@ -86,17 +104,39 @@ const Header = (props) => {
             <FontAwesomeIcon
               icon={faTimes}
               onClick={toggleMobileNav}
-              className={`fa-times ${
-                props.dark ? `fa-times-dark` : `fa-time-light`
-              }`}
+              className={`fa-times ${props.dark ? `fa-dark` : `fa-light`}`}
             />
           </li>
           <Link to='/'>
             <li onClick={toggleMobileNav}>about</li>
           </Link>
-          <Link to='/projects'>
-            <li onClick={toggleMobileNav}>projects</li>
+          <Link to=''>
+            <li onClick={toggleSubMenu}>
+              projects{" "}
+              <FontAwesomeIcon
+                icon={showSubMenu ? faMinus : faPlus}
+                className={`fa-plus-minus ${
+                  props.dark ? `fa-dark` : `fa-light`
+                }`}
+              />
+            </li>
           </Link>
+          <div
+            className={`mobile-sub-menu ${
+              props.dark ? "text-dark" : "text-light"
+            }
+            ${showSubMenu ? "mobile-sub-menu-show" : "mobile-sub-menu-hide"}
+          `}
+          >
+            <ul>
+              <Link to='/projects' onClick={toggleMobileNav}>
+                <li>See all</li>
+              </Link>
+              <li onClick={toggleMobileNav}>E-Commerce-App</li>
+              <li onClick={toggleMobileNav}>Reddit API App</li>
+              <li onClick={toggleMobileNav}>Coding Challenge</li>
+            </ul>
+          </div>
           <Link to='/contact'>
             <li onClick={toggleMobileNav}>contact</li>
           </Link>
