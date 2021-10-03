@@ -10,7 +10,8 @@
 }
 .header-light {
   /* background-color: rgb(148, 148, 148); */
-  background-color: rgb(80, 120, 194);
+  /* background-color: rgb(80, 120, 194); */
+  background-color: seashell;
   box-shadow: 1px 1px 3px black;
 }
 .header-dark {
@@ -94,7 +95,8 @@
 }
 .mobile-nav-light {
   /* background-color: rgb(148, 148, 148); */
-  background-color: rgb(80, 120, 194);
+  /* background-color: rgb(80, 120, 194); */
+  background-color: seashell;
 }
 .mobile-nav-dark {
   background-color: rgb(19, 19, 19);
