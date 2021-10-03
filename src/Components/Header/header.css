@@ -68,16 +68,71 @@
   transition: 600ms;
   cursor: pointer;
 }
+/* BEGIN MOBILE NAV */
 .bars {
   font-size: 3rem;
   position: fixed;
   left: 1rem;
+  z-index: 30;
 }
 .bars-light {
   color: black;
 }
 .bars-dark {
   color: white;
+}
+.mobile-nav {
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  z-index: 20;
+  transition: 400ms;
+}
+.mobile-nav-light {
+  background-color: rgb(148, 148, 148);
+}
+.mobile-nav-dark {
+  background-color: rgb(19, 19, 19);
+}
+.mobile-nav-hide {
+  width: 0;
+}
+.mobile-nav-show {
+  width: 60vw;
+}
+.mobile-nav a {
+  text-decoration: none;
+}
+.mobile-nav-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 4rem;
+  transition: 300ms;
+}
+.mobile-nav-content li {
+  list-style-type: none;
+  margin-bottom: 3rem;
+}
+.mobile-nav-content-hide {
+  margin-left: -20rem;
+}
+.mobile-nav-content-show {
+  margin-left: 0;
+}
+.mobile-nav-content-dark a {
+  color: white;
+}
+.mobile-nav-content-light a {
+  color: black;
+}
+.fa-times-dark {
+  color: white;
+}
+.fa-times-light {
+  color: black;
 }
 @media only screen and (max-width: 600px) {
   .header-content li {
@@ -89,6 +144,9 @@
 }
 @media only screen and (min-width: 600px) {
   .bars {
+    display: none;
+  }
+  .mobile-nav {
     display: none;
   }
 }
