@@ -18,7 +18,7 @@ const Contact = (props) => {
             props.dark ? "text-dark" : "text-light"
           }`}
         >
-          <a href='mailto:ddurnell1@gmail.com' target='_blank'>
+          <a href='mailto:ddurnell1@gmail.com' target='_blank' rel='noreferrer'>
             <p>Email:</p>
             <FontAwesomeIcon icon={faInbox} />
           </a>
@@ -28,7 +28,11 @@ const Contact = (props) => {
             props.dark ? "text-dark" : "text-light"
           }`}
         >
-          <a href='https://github.com/frivolousvision/' target='_blank'>
+          <a
+            href='https://github.com/frivolousvision/'
+            target='_blank'
+            rel='noreferrer'
+          >
             <p>GitHub:</p>
             <FontAwesomeIcon icon={faGithubSquare} />
           </a>
@@ -38,7 +42,11 @@ const Contact = (props) => {
             props.dark ? "text-dark" : "text-light"
           }`}
         >
-          <a href='https://www.linkedin.com/in/daniel-durnell/' target='_blank'>
+          <a
+            href='https://www.linkedin.com/in/daniel-durnell/'
+            target='_blank'
+            rel='noreferrer'
+          >
             <p>LinkedIn:</p>
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
