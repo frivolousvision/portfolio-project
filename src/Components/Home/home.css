@@ -10,6 +10,9 @@
 .home-dark {
   background-color: rgb(34, 34, 34);
 }
+.show-nav {
+  filter: blur(5px);
+}
 .home-container {
   width: 80%;
   margin: 0 auto;

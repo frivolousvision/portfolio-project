@@ -6,7 +6,9 @@ import codingChallenge from "./coding-challenge.png";
 const Projects = (props) => {
   return (
     <div
-      className={`projects ${props.dark ? "projects-dark" : "projects-light"}`}
+      className={`projects ${props.dark ? "projects-dark" : "projects-light"} ${
+        props.showNav ? "show-nav" : "hide-nav"
+      }`}
     >
       <h2
         className={`projects-header ${props.dark ? "text-dark" : "text-light"}`}

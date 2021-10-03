@@ -4,7 +4,11 @@ import DanPhoto from "./Dan-4.21.png";
 const Home = (props) => {
   return (
     <div>
-      <div className={`home ${props.dark ? "home-dark" : "home-light"}`}>
+      <div
+        className={`home ${props.dark ? "home-dark" : "home-light"} ${
+          props.showNav ? "show-nav" : "hide-nav"
+        }`}
+      >
         <div
           className={`home-container ${
             props.dark ? "home-container-dark" : "home-container-light"

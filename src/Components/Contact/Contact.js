@@ -4,7 +4,11 @@ import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Contact = (props) => {
   return (
-    <div className={`contact ${props.dark ? "contact-dark" : "contact-light"}`}>
+    <div
+      className={`contact ${props.dark ? "contact-dark" : "contact-light"} ${
+        props.showNav ? "show-nav" : "hide-nav"
+      }`}
+    >
       <h2
         className={`contact-header ${
           props.dark ? "contact-header-dark" : "contact-header-light"
