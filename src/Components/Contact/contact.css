@@ -6,15 +6,57 @@
 .contact-light {
   background-color: white;
 }
+.contact a {
+  font-size: 8rem;
+}
 .contact-dark {
   background-color: rgb(34, 34, 34);
 }
+.contact-dark a {
+  text-decoration: none;
+  color: white;
+}
+.contact-light a {
+  text-decoration: none;
+  color: black;
+}
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 40%;
+  margin: 0 auto;
+  max-height: 30rem;
+}
 .contact-header {
   transition: 600ms;
+  font-size: 3rem;
+  margin: 0rem 0 -2rem;
 }
 .contact-header-light {
   color: black;
 }
 .contact-header-dark {
   color: white;
+}
+.text-light {
+  color: black;
+}
+.text-dark {
+  color: white;
+}
+.contact-container p {
+  font-size: 2rem;
+}
+.contact-link-container {
+  margin: 2rem 4rem;
+}
+@media only screen and (max-width: 800px) {
+  .contact-container {
+    width: 80%;
+  }
+  .contact-container p {
+    font-size: 2rem;
+    margin-bottom: 0rem;
+  }
 }
