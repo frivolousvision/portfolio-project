@@ -1,5 +1,5 @@
 .projects {
-  padding-top: 5rem;
+  padding-top: 3.5rem;
   transition: 600ms;
 }
 .projects-light {
@@ -8,11 +8,20 @@
 .projects-dark {
   background-color: rgb(34, 34, 34);
 }
+.projects-dark img {
+  box-shadow: 0px 0px 2px white;
+}
+.projects-light img {
+  box-shadow: 0px 0px 2px black;
+}
 .text-light {
   color: black;
 }
 .text-dark {
   color: white;
+}
+.projects-header {
+  font-size: 2rem;
 }
 .projects-container {
   display: flex;
@@ -21,6 +30,10 @@
   width: 90%;
   margin: 0 auto;
   padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+.projects-container a {
+  text-decoration: none;
 }
 .projects-container img {
   max-width: 100%;
@@ -28,6 +41,7 @@
 .each-project-container {
   margin-bottom: 2rem;
 }
+
 @media only screen and (min-width: 600px) {
   .projects-container {
     width: 80%;
@@ -38,6 +52,9 @@
   .projects-container img {
     max-width: 100%;
   }
+  .projects-container img:hover {
+    opacity: 0.8;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .projects {
@@ -47,7 +64,7 @@
     width: 80%;
   }
   .each-project-container {
-    width: 45%;
+    width: 38%;
   }
   .projects-container img {
     max-width: 100%;
