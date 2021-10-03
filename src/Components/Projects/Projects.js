@@ -6,6 +6,7 @@ import codingChallenge from "./coding-challenge.png";
 const Projects = (props) => {
   return (
     <div
+      onClick={props.closeMobileNav}
       className={`projects ${props.dark ? "projects-dark" : "projects-light"} ${
         props.showNav ? "show-nav" : "hide-nav"
       }`}

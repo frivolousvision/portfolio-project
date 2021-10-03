@@ -5,6 +5,7 @@ const Home = (props) => {
   return (
     <div>
       <div
+        onClick={props.closeMobileNav}
         className={`home ${props.dark ? "home-dark" : "home-light"} ${
           props.showNav ? "show-nav" : "hide-nav"
         }`}

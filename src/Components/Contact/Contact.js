@@ -5,6 +5,7 @@ import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 const Contact = (props) => {
   return (
     <div
+      onClick={props.closeMobileNav}
       className={`contact ${props.dark ? "contact-dark" : "contact-light"} ${
         props.showNav ? "show-nav" : "hide-nav"
       }`}

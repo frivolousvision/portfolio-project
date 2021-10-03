@@ -34,6 +34,13 @@ function App() {
       }, 200);
     }
   };
+  const closeMobileNav = () => {
+    if (showNav) {
+      setShowNav(false);
+      setDisplayContent(false);
+      setShowSubMenu(false);
+    }
+  };
   const toggleSubMenu = () => {
     if (showSubMenu) {
       setShowSubMenu(false);
@@ -60,13 +67,25 @@ function App() {
         />
         <Switch>
           <Route path='/' exact>
-            <Home dark={dark} showNav={showNav} />
+            <Home
+              dark={dark}
+              showNav={showNav}
+              closeMobileNav={closeMobileNav}
+            />
           </Route>
           <Route path='/projects' exact>
-            <Projects dark={dark} showNav={showNav} />
+            <Projects
+              dark={dark}
+              showNav={showNav}
+              closeMobileNav={closeMobileNav}
+            />
           </Route>
           <Route path='/contact' exact>
-            <Contact dark={dark} showNav={showNav} />
+            <Contact
+              dark={dark}
+              showNav={showNav}
+              closeMobileNav={closeMobileNav}
+            />
           </Route>
         </Switch>
       </Router>
