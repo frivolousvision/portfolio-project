@@ -110,17 +110,15 @@ const Header = (props) => {
           <Link to='/'>
             <li onClick={toggleMobileNav}>about</li>
           </Link>
-          <Link to=''>
-            <li onClick={toggleSubMenu}>
-              projects{" "}
-              <FontAwesomeIcon
-                icon={showSubMenu ? faMinus : faPlus}
-                className={`fa-plus-minus ${
-                  props.dark ? `fa-dark` : `fa-light`
-                }`}
-              />
-            </li>
-          </Link>
+
+          <li onClick={toggleSubMenu}>
+            projects{" "}
+            <FontAwesomeIcon
+              icon={showSubMenu ? faMinus : faPlus}
+              className={`fa-plus-minus ${props.dark ? `fa-dark` : `fa-light`}`}
+            />
+          </li>
+
           <div
             className={`mobile-sub-menu ${
               props.dark ? "text-dark" : "text-light"

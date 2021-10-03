@@ -11,7 +11,7 @@
 .header-light {
   /* background-color: rgb(148, 148, 148); */
   /* background-color: rgb(80, 120, 194); */
-  background-color: seashell;
+  background-color: white;
   box-shadow: 1px 1px 3px black;
 }
 .header-dark {
@@ -96,7 +96,7 @@
 .mobile-nav-light {
   /* background-color: rgb(148, 148, 148); */
   /* background-color: rgb(80, 120, 194); */
-  background-color: seashell;
+  background-color: white;
 }
 .mobile-nav-dark {
   background-color: rgb(19, 19, 19);
@@ -126,6 +126,12 @@
 }
 .mobile-nav-content-show {
   margin-left: 0;
+}
+.mobile-nav-content-dark li {
+  color: white;
+}
+.mobile-nav-content-light li {
+  color: black;
 }
 .mobile-nav-content-dark a {
   color: white;
