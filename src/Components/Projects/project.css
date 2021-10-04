@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
+  height: 100vh;
 }
 .project-container {
   display: flex;
