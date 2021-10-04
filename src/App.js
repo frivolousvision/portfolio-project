@@ -11,7 +11,7 @@ import CodingChallenge from "./Components/Projects/CodingChallenge";
 import RedditApp from "./Components/Projects/RedditApp";
 
 function App() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const [showNav, setShowNav] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [displayContent, setDisplayContent] = useState(false);
