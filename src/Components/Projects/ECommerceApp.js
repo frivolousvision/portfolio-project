@@ -13,16 +13,11 @@ const ECommerceApp = (props) => {
       </h2>
       <div className={`project-container`}>
         <div className={`each-project-container`}>
-          <a
-          // href='http://e-commerce-apple-clone.herokuapp.com/'
-          // target='_blank'
-          // rel='noreferrer'
-          >
-            <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
-              E-Commerce-App
-            </h5>
-            <img src={eCommercePhoto} alt='' />
-          </a>
+          <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
+            E-Commerce-App
+          </h5>
+          <img src={eCommercePhoto} alt='' />
+
           <p className={`${props.dark ? "text-dark" : "text-light"}`}>
             A full-stack mock e-commerce application made with the PERN stack
           </p>

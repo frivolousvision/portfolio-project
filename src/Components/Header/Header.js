@@ -18,9 +18,6 @@ const Header = (props) => {
     if (showDropMenu) setShowDropMenu(false);
     if (!showDropMenu) setShowDropMenu(true);
   };
-  const closeDropMenu = () => {
-    setShowDropMenu(false);
-  };
   return (
     <div>
       <nav className={`header ${props.dark ? "header-dark" : "header-light"}`}>
