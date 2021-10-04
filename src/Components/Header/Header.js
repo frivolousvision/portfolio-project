@@ -154,9 +154,11 @@ const Header = (props) => {
               <Link to='/e-commerce-app'>
                 <li onClick={props.toggleMobileNav}>E-Commerce-App</li>
               </Link>
-              <li onClick={props.toggleMobileNav}>Reddit API App</li>
-              <Link to='/coding-challenge'>
-                <li onClick={props.toggleMobileNav}>Coding Challenge</li>
+              <Link to='/reddit-app'>
+                <li onClick={props.toggleMobileNav}>Reddit API App</li>
+                <Link to='/coding-challenge'>
+                  <li onClick={props.toggleMobileNav}>Coding Challenge</li>
+                </Link>
               </Link>
             </ul>
           </div>
