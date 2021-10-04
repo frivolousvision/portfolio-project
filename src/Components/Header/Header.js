@@ -63,9 +63,11 @@ const Header = (props) => {
                     E-Commerce-App
                   </li>
                 </Link>
-                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                  Reddit API App
-                </li>
+                <Link to='/reddit-app'>
+                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                    Reddit API App
+                  </li>
+                </Link>
                 <Link to='/coding-challenge'>
                   <li className={`${props.dark ? "text-dark" : "text-light"}`}>
                     Coding Challenge

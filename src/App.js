@@ -8,6 +8,7 @@ import Projects from "./Components/ProjectList/Projects";
 import Contact from "./Components/Contact/Contact";
 import ECommerceApp from "./Components/Projects/ECommerceApp";
 import CodingChallenge from "./Components/Projects/CodingChallenge";
+import RedditApp from "./Components/Projects/RedditApp";
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -98,6 +99,13 @@ function App() {
           </Route>
           <Route path='/coding-challenge' exact>
             <CodingChallenge
+              dark={dark}
+              showNav={showNav}
+              closeMobileNav={closeMobileNav}
+            />
+          </Route>
+          <Route path='/reddit-app' exact>
+            <RedditApp
               dark={dark}
               showNav={showNav}
               closeMobileNav={closeMobileNav}

@@ -34,7 +34,7 @@ const ECommerceApp = (props) => {
             </a>
           </p>
           <p className={`${props.dark ? "text-dark" : "text-light"}`}>
-            Check out this project's repository
+            Check out this project's repository{" "}
             <a
               href='https://github.com/frivolousvision/e-commerce-app'
               target='_blank'
