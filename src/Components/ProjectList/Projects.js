@@ -23,11 +23,14 @@ const Projects = (props) => {
             target='_blank'
             rel='noreferrer'
           >
-            <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+            <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
               E-Commerce-App
-            </p>
+            </h5>
             <img src={eCommercePhoto} alt='' />
           </a>
+          <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+            A full-stack mock e-commerce application made with the PERN stack
+          </p>
         </div>
         <div className={`each-project-container`}>
           <a
@@ -35,19 +38,26 @@ const Projects = (props) => {
             target='_blank'
             rel='noreferrer'
           >
-            <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+            <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
               Reddit API App
-            </p>
+            </h5>
             <img src={redditPhoto} alt='' />
           </a>
+          <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+            A frontend application made with React and Redux using Reddit's API
+          </p>
         </div>
         <div className={`each-project-container`}>
           <a href='https://www.dan-demos.com/' target='_blank' rel='noreferrer'>
-            <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+            <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
               Coding Challenge
-            </p>
+            </h5>
             <img src={codingChallenge} alt='' />
           </a>
+          <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+            A frontend application made with React to compare target companies
+            with CRUD functionality
+          </p>
         </div>
       </div>
     </div>

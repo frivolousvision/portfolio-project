@@ -1,4 +1,5 @@
 .header {
+  top: 0;
   position: fixed;
   width: 100%;
   height: 4rem;
@@ -6,16 +7,16 @@
   justify-content: flex-end;
   align-items: center;
   transition: 600ms;
-  z-index: 20;
+  z-index: 30;
+  box-shadow: 1px 1px 3px rgb(66, 66, 66);
 }
 .header-light {
   background-color: white;
-  box-shadow: 1px 1px 3px black;
 }
 .header-dark {
   background-color: rgb(19, 19, 19);
-  box-shadow: 1px 1px 3px rgb(66, 66, 66);
 }
+
 .header-content {
   display: flex;
   justify-content: flex-end;
@@ -68,6 +69,63 @@
   color: yellow;
   transition: 600ms;
   cursor: pointer;
+}
+/* DROP DOWN MENU TRANSITION HANDLING */
+.drop-menu-hide {
+  position: fixed;
+  margin-left: 2rem;
+  height: 0;
+  width: 11rem;
+  z-index: 0;
+  transition: 400ms;
+  top: 3.9rem;
+}
+.drop-menu-show {
+  height: 14rem;
+  width: 11rem;
+  position: fixed;
+  top: 3.9rem;
+  margin-left: 2rem;
+  align-items: center;
+  border-radius: 2px;
+  transition: 400ms;
+  z-index: 0;
+  box-shadow: 1px 3px 3px rgb(66, 66, 66);
+}
+.background-dark {
+  background-color: rgb(19, 19, 19);
+}
+.background-light {
+  background-color: white;
+}
+.drop-menu-hide li {
+  transform: scaleY(0);
+  transition: 100ms;
+}
+.drop-menu-show li {
+  transform: scaleY(1);
+  transition-delay: 400ms;
+  transition: 800ms;
+}
+.projects-tab {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+.projects-tab li {
+  padding-left: 0;
+}
+.project-drop-menu ul {
+  padding: 0;
+  font-size: 0.5rem;
+  text-align: center;
+  margin: 0;
+}
+.project-drop-menu li {
+  font-size: 1rem;
+  padding: 0;
+  margin: 1rem;
+  margin-bottom: 2rem;
 }
 /* BEGIN MOBILE NAV */
 .bars {

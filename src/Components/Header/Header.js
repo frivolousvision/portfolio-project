@@ -1,5 +1,5 @@
 import "./header.css";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,6 +12,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) => {
+  const [showDropMenu, setShowDropMenu] = useState(false);
+
+  const toggleDropMenu = () => {
+    if (showDropMenu) setShowDropMenu(false);
+    if (!showDropMenu) setShowDropMenu(true);
+  };
+  const closeDropMenu = () => {
+    setShowDropMenu(false);
+  };
   return (
     <div>
       <nav className={`header ${props.dark ? "header-dark" : "header-light"}`}>
@@ -28,9 +37,44 @@ const Header = (props) => {
           <Link to='/'>
             <li>about</li>
           </Link>
-          <Link to='/projects'>
+          <div
+            onMouseEnter={toggleDropMenu}
+            onMouseLeave={toggleDropMenu}
+            className='projects-tab'
+          >
             <li>projects</li>
-          </Link>
+            {/* DROPDOWN MENU DIV */}
+            <div
+              className={`project-drop-menu ${
+                props.dark
+                  ? "text-dark background-dark"
+                  : "text-light background-light"
+              }
+              ${showDropMenu ? "drop-menu-show" : "drop-menu-hide"}
+          `}
+            >
+              <ul>
+                <Link to='/projects'>
+                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                    See all
+                  </li>
+                </Link>
+                <Link to='/e-commerce-app'>
+                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                    E-Commerce-App
+                  </li>
+                </Link>
+                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                  Reddit API App
+                </li>
+                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                  Coding Challenge
+                </li>
+              </ul>
+            </div>
+            {/* END DROPDOWN MENU DIV */}
+          </div>
+          {/* </Link> */}
           <Link to='/contact'>
             <li>contact</li>
           </Link>
@@ -104,7 +148,9 @@ const Header = (props) => {
               <Link to='/projects' onClick={props.toggleMobileNav}>
                 <li>See all</li>
               </Link>
-              <li onClick={props.toggleMobileNav}>E-Commerce-App</li>
+              <Link to='/e-commerce-app'>
+                <li onClick={props.toggleMobileNav}>E-Commerce-App</li>
+              </Link>
               <li onClick={props.toggleMobileNav}>Reddit API App</li>
               <li onClick={props.toggleMobileNav}>Coding Challenge</li>
             </ul>

@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
-import Projects from "./Components/Projects/Projects";
+import Projects from "./Components/ProjectList/Projects";
 import Contact from "./Components/Contact/Contact";
+import ECommerceApp from "./Components/Projects/ECommerceApp";
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -82,6 +83,13 @@ function App() {
           </Route>
           <Route path='/contact' exact>
             <Contact
+              dark={dark}
+              showNav={showNav}
+              closeMobileNav={closeMobileNav}
+            />
+          </Route>
+          <Route path='/e-commerce-app' exact>
+            <ECommerceApp
               dark={dark}
               showNav={showNav}
               closeMobileNav={closeMobileNav}

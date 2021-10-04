@@ -22,6 +22,7 @@
 }
 .projects-header {
   font-size: 2rem;
+  margin-bottom: 0.8rem;
 }
 .projects-container {
   display: flex;
@@ -39,15 +40,21 @@
   max-width: 100%;
 }
 .each-project-container {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
-
+.each-project-container p {
+  font-size: 1rem;
+  margin-top: 0rem;
+}
+.each-project-container h5 {
+  margin-bottom: 0.75rem;
+}
 @media only screen and (min-width: 600px) {
   .projects-container {
     width: 80%;
   }
   .each-project-container {
-    width: 45%;
+    width: 80%;
   }
   .projects-container img {
     max-width: 100%;
@@ -57,9 +64,6 @@
   }
 }
 @media only screen and (min-width: 1000px) {
-  .projects {
-    height: 100vh;
-  }
   .projects-container {
     width: 80%;
   }
@@ -69,4 +73,9 @@
   .projects-container img {
     max-width: 100%;
   }
+  .projects-header {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1000px) {
 }
