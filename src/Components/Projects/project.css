@@ -1,0 +1,19 @@
+.project {
+  padding-top: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  border: 1px solid red;
+}
+.project-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.project-container img {
+  max-width: 100%;
+}

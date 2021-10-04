@@ -39,7 +39,9 @@ const Header = (props) => {
             onMouseLeave={toggleDropMenu}
             className='projects-tab'
           >
-            <li>projects</li>
+            <Link to='/projects'>
+              <li>projects</li>
+            </Link>
             {/* DROPDOWN MENU DIV */}
             <div
               className={`project-drop-menu ${
@@ -64,9 +66,11 @@ const Header = (props) => {
                 <li className={`${props.dark ? "text-dark" : "text-light"}`}>
                   Reddit API App
                 </li>
-                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                  Coding Challenge
-                </li>
+                <Link to='/coding-challenge'>
+                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                    Coding Challenge
+                  </li>
+                </Link>
               </ul>
             </div>
             {/* END DROPDOWN MENU DIV */}
@@ -149,7 +153,9 @@ const Header = (props) => {
                 <li onClick={props.toggleMobileNav}>E-Commerce-App</li>
               </Link>
               <li onClick={props.toggleMobileNav}>Reddit API App</li>
-              <li onClick={props.toggleMobileNav}>Coding Challenge</li>
+              <Link to='/coding-challenge'>
+                <li onClick={props.toggleMobileNav}>Coding Challenge</li>
+              </Link>
             </ul>
           </div>
           <Link to='/contact'>

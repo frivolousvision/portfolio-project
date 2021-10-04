@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home";
 import Projects from "./Components/ProjectList/Projects";
 import Contact from "./Components/Contact/Contact";
 import ECommerceApp from "./Components/Projects/ECommerceApp";
+import CodingChallenge from "./Components/Projects/CodingChallenge";
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -90,6 +91,13 @@ function App() {
           </Route>
           <Route path='/e-commerce-app' exact>
             <ECommerceApp
+              dark={dark}
+              showNav={showNav}
+              closeMobileNav={closeMobileNav}
+            />
+          </Route>
+          <Route path='/coding-challenge' exact>
+            <CodingChallenge
               dark={dark}
               showNav={showNav}
               closeMobileNav={closeMobileNav}
