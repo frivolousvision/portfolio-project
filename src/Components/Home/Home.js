@@ -1,5 +1,5 @@
 import "./home.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import DanPhoto from "./Dan-4.21.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
