@@ -1,3 +1,20 @@
+.menu-icon-show {
+  position: fixed;
+  top: 3rem;
+  color: white;
+  transform: rotate(0.1turn) translateX(1.8rem);
+  transition: 600ms;
+}
+.menu-icon-hide {
+  position: fixed;
+  top: 0rem;
+  color: white;
+  transform: rotate(0.5turn) translateX(-2rem);
+  transition: 600ms;
+}
+.fa-share {
+  transform: rotate(0.7turn);
+}
 .home {
   display: flex;
   align-items: center;
