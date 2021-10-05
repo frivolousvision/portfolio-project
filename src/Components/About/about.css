@@ -1,23 +1,22 @@
-.home {
+.about {
   display: flex;
   align-items: center;
   transition: 600ms;
   position: absolute;
-  width: 100%;
 }
-.home-light {
+.about-light {
   background-color: white;
 }
-.home-dark {
+.about-dark {
   background-color: rgb(34, 34, 34);
 }
 .show-nav {
   filter: blur(5px);
 }
-.home-container {
+.about-container {
   width: 80%;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,10 +26,10 @@
   text-align: left;
   transition: 600ms;
 }
-.home-container-light {
+.about-container-light {
   color: black;
 }
-.home-container-dark {
+.about-container-dark {
   color: white;
 }
 .image-container {
@@ -47,21 +46,14 @@
   margin-top: -1rem;
 }
 @media only screen and (max-width: 600px) {
-  .home {
-    height: 100vh;
-  }
   .image-container img {
     width: 90%;
   }
-  .home-container {
+  .about-container {
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
-  }
-  .home-container h2 {
-    margin-left: 1rem;
   }
 }
 
@@ -72,7 +64,7 @@
   .image-container img {
     max-height: 20rem;
   }
-  .home-container {
+  .about-container {
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -80,7 +72,7 @@
   }
 }
 @media only screen and (min-width: 1000px) {
-  .home {
+  .about {
     height: 100%;
   }
   .image-container img {
@@ -94,8 +86,8 @@
   .image-container img {
     max-height: 22rem;
   }
-  .home-container {
-    width: 60%;
+  .about-container {
+    width: 80%;
     display: flex;
     flex-direction: row;
     align-items: space-between;

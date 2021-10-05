@@ -19,7 +19,7 @@ const Header = (props) => {
     if (!showDropMenu) setShowDropMenu(true);
   };
   return (
-    <div>
+    <div className='header-wrapper'>
       <nav className={`header ${props.dark ? "header-dark" : "header-light"}`}>
         <ul
           className={`header-content ${
@@ -44,11 +44,8 @@ const Header = (props) => {
             </Link>
             {/* DROPDOWN MENU DIV */}
             <div
-              className={`project-drop-menu ${
-                props.dark
-                  ? "text-dark background-dark"
-                  : "text-light background-light"
-              }
+              className={`project-drop-menu 
+              ${props.dark ? "header-dark" : "header-light"}
               ${showDropMenu ? "drop-menu-show" : "drop-menu-hide"}
           `}
             >

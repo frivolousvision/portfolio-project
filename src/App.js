@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
+import About from "./Components/About/About";
 import Projects from "./Components/ProjectList/Projects";
 import Contact from "./Components/Contact/Contact";
 import ECommerceApp from "./Components/Projects/ECommerceApp";
@@ -71,6 +72,13 @@ function App() {
         <Switch>
           <Route path='/' exact>
             <Home
+              dark={dark}
+              showNav={showNav}
+              closeMobileNav={closeMobileNav}
+            />
+          </Route>
+          <Route path='/about' exact>
+            <About
               dark={dark}
               showNav={showNav}
               closeMobileNav={closeMobileNav}
