@@ -14,8 +14,6 @@
   background-color: rgb(34, 34, 34);
 }
 .project-container {
-  display: flex;
-  justify-content: center;
   width: 100%;
   margin: 0 auto;
 }
@@ -28,28 +26,70 @@
 .project-container img {
   max-width: 90%;
 }
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 .text-dark a {
   color: white;
 }
 .text-light a {
   color: black;
 }
-hr {
-  height: 0.01px;
-  opacity: 0.2;
-  width: 95%;
-}
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   .project {
     height: 100vh;
   }
   .project-container {
-    display: flex;
-    justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    margin-top: 2rem;
   }
   .project-header {
     font-size: 2rem;
+  }
+  .project-content {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3rem;
+  }
+  .project-image-container {
+    width: 60%;
+    margin-top: 0.5rem;
+    padding: 0;
+    /* border: 1px solid red; */
+  }
+  .text-container {
+    text-align: left;
+    margin: 0;
+    width: 40%;
+    font-size: 1.2rem;
+    /* border: 1px solid red; */
+  }
+}
+@media only screen and (min-width: 1350px) {
+  .project-container {
+    width: 90%;
+  }
+  .project-image-container {
+    width: 40%;
+    margin-top: 0.5rem;
+    padding: 0;
+    /* border: 1px solid red; */
+  }
+  .project-content {
+    margin-top: 4rem;
+  }
+}
+@media only screen and (min-width: 1350px) {
+  .project-container {
+    margin-top: 4rem;
   }
 }
