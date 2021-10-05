@@ -6,13 +6,10 @@ import { faShare } from "@fortawesome/free-solid-svg-icons";
 
 const Home = (props) => {
   const [menuIcon, setMenuIcon] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      if (!menuIcon) setMenuIcon(true);
-      if (menuIcon) setMenuIcon(false);
-    }, 3000);
-  });
-
+  setTimeout(() => {
+    if (!menuIcon) setMenuIcon(true);
+    if (menuIcon) setMenuIcon(false);
+  }, 4000);
   return (
     <div>
       <div
@@ -34,7 +31,8 @@ const Home = (props) => {
           </div>
           <div className='text-container'>
             <h2 className='about-header'>
-              Hey there! My name's Dan and I design and build websites.
+              Hey there! My name's Dan and I design and build websites and
+              applications.
             </h2>
             <p></p>
           </div>

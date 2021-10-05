@@ -1,16 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 .menu-icon-show {
-  position: fixed;
-  top: 3rem;
+  position: absolute;
+  top: 3.2rem;
   color: white;
-  transform: rotate(0.1turn) translateX(1.8rem);
+  transform: rotate(0.1turn) translateX(1.6rem);
   transition: 600ms;
+  font-family: "Permanent Marker", cursive;
 }
 .menu-icon-hide {
   position: fixed;
-  top: 0rem;
+  top: -1rem;
   color: white;
-  transform: rotate(0.5turn) translateX(-2rem);
+  transform: rotate(0.9turn) translateX(-2rem);
   transition: 600ms;
+  font-family: "Permanent Marker", cursive;
 }
 .fa-share {
   transform: rotate(0.7turn);
@@ -27,6 +30,12 @@
 }
 .home-dark {
   background-color: rgb(34, 34, 34);
+}
+.home-light p {
+  color: black;
+}
+.home-dark p {
+  color: white;
 }
 .show-nav {
   filter: blur(5px);
