@@ -1,5 +1,4 @@
 import "./about.css";
-import DanPhoto from "../Home/Dan-4.21.png";
 
 const About = (props) => {
   return (
