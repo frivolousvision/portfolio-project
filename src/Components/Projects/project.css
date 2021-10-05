@@ -7,12 +7,35 @@
   width: 100%;
   height: 100vh;
 }
+.background-light {
+  background-color: white;
+}
+.background-dark {
+  background-color: rgb(34, 34, 34);
+}
 .project-container {
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .project-container img {
   max-width: 100%;
+}
+.text-dark a {
+  color: white;
+}
+.text-light a {
+  color: black;
+}
+@media only screen and (min-width: 1200px) {
+  .project-container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .project-header {
+    font-size: 2rem;
+  }
 }

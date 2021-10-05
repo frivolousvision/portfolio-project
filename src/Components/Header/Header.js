@@ -85,19 +85,12 @@ const Header = (props) => {
             className={`toggle-container ${
               props.dark ? "toggle-container-dark" : "toggle-container-light"
             }`}
+            onClick={props.toggleDark}
           >
             {props.dark ? (
-              <FontAwesomeIcon
-                onClick={props.toggleDark}
-                icon={faMoon}
-                className='moon'
-              />
+              <FontAwesomeIcon icon={faMoon} className='moon' />
             ) : (
-              <FontAwesomeIcon
-                onClick={props.toggleDark}
-                icon={faSun}
-                className='sun'
-              />
+              <FontAwesomeIcon icon={faSun} className='sun' />
             )}
           </div>
         </ul>

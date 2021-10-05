@@ -1,6 +1,7 @@
 .projects {
   padding-top: 3.5rem;
   transition: 600ms;
+  height: 100vh;
 }
 .projects-light {
   background-color: white;
