@@ -46,7 +46,7 @@ const RedditApp = (props) => {
             </a>
           </p>
           <hr />
-          <br />
+
           <p className={`${props.dark ? "text-dark" : "text-light"}`}>
             This project was built using React functional components and hooks -
             using Redux to manage more complex state accross the application.
