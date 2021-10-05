@@ -153,9 +153,9 @@ const Header = (props) => {
               </Link>
               <Link to='/reddit-app'>
                 <li onClick={props.toggleMobileNav}>Reddit API App</li>
-                <Link to='/coding-challenge'>
-                  <li onClick={props.toggleMobileNav}>Coding Challenge</li>
-                </Link>
+              </Link>
+              <Link to='/coding-challenge'>
+                <li onClick={props.toggleMobileNav}>Coding Challenge</li>
               </Link>
             </ul>
           </div>
