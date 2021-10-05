@@ -24,6 +24,7 @@ const RedditApp = (props) => {
             <strong>tl;dr</strong> A frontend application made with React and
             Redux using Reddit's API
           </p>
+          <hr />
           <p className={`${props.dark ? "text-dark" : "text-light"}`}>
             View the project live{" "}
             <a
@@ -44,6 +45,7 @@ const RedditApp = (props) => {
               here
             </a>
           </p>
+          <hr />
           <br />
           <p className={`${props.dark ? "text-dark" : "text-light"}`}>
             This project was built using React functional components and hooks -
