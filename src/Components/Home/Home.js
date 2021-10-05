@@ -45,8 +45,7 @@ const Home = (props) => {
                 firstVisit ? "about-header-show" : "about-header-hide"
               }`}
             >
-              Hey there! My name's Dan and I design and build websites and
-              applications.
+              Hey there! My name's Dan and I design and build websites.
             </h2>
 
             <h2
