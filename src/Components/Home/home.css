@@ -72,6 +72,24 @@
 .text-container p {
   margin-top: -1rem;
 }
+.about-header {
+  transition: 600ms;
+  max-width: 30rem;
+}
+
+.about-header-hide {
+  transform: translateX(100rem);
+}
+.goodbye-header {
+  transition: 600ms;
+  margin-top: -10rem;
+}
+.goodbye-header-show {
+  transform: translateX(0rem);
+}
+.goodbye-header-hide {
+  transform: translateX(-100rem);
+}
 @media only screen and (max-width: 600px) {
   .home {
     height: 100vh;
@@ -92,6 +110,9 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
   .text-container {
     width: 80%;
   }

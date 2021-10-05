@@ -31,6 +31,9 @@ const Header = (props) => {
             className={`bars ${props.dark ? "bars-dark" : "bars-light"}`}
             onClick={props.toggleMobileNav}
           />
+          <Link to='/'>
+            <li>home</li>
+          </Link>
           <Link to='/about'>
             <li>about</li>
           </Link>
@@ -92,6 +95,7 @@ const Header = (props) => {
           </div>
         </ul>
       </nav>
+      {/* BEGIN MOBILE MENU */}
       <nav
         className={`mobile-nav ${
           props.dark ? "mobile-nav-dark" : "mobile-nav-light"
@@ -114,6 +118,9 @@ const Header = (props) => {
               className={`fa-times ${props.dark ? `fa-dark` : `fa-light`}`}
             />
           </li>
+          <Link to='/'>
+            <li onClick={props.toggleMobileNav}>home</li>
+          </Link>
           <Link to='/about'>
             <li onClick={props.toggleMobileNav}>about</li>
           </Link>
@@ -157,6 +164,7 @@ const Header = (props) => {
           </Link>
         </ul>
       </nav>
+      {/* END MOBILE MENU */}
     </div>
   );
 };
