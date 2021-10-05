@@ -30,6 +30,7 @@
   margin: auto;
   border: 0.5px solid rgb(66, 66, 66);
   border-radius: 5px;
+  margin-top: 2rem;
 }
 .project-container p {
   width: 90%;
@@ -54,6 +55,9 @@
 }
 .text-light a {
   color: black;
+}
+.project-header {
+  margin-top: 3rem;
 }
 .project-header-dark {
   box-shadow: 0px 32px 11px -19px white;
@@ -83,6 +87,7 @@
   }
   .project-header {
     font-size: 2rem;
+    margin-top: 0rem;
   }
   .project-content {
     width: 100%;
