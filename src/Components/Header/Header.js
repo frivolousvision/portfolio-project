@@ -31,7 +31,7 @@ const Header = (props) => {
             className={`bars ${props.dark ? "bars-dark" : "bars-light"}`}
             onClick={props.toggleMobileNav}
           />
-          <Link to='/'>
+          <Link to='/about'>
             <li>about</li>
           </Link>
           <div
@@ -114,7 +114,7 @@ const Header = (props) => {
               className={`fa-times ${props.dark ? `fa-dark` : `fa-light`}`}
             />
           </li>
-          <Link to='/'>
+          <Link to='/about'>
             <li onClick={props.toggleMobileNav}>about</li>
           </Link>
 
