@@ -44,10 +44,6 @@ a {
 
 .link-container li:hover {
   color: cornflowerblue;
-  /* margin-bottom: -1px;
-  border-bottom-width: scaleX(1);
-  border-bottom: 1px solid cornflowerblue;
-  box-shadow: 0 5px 5px -5px cornflowerblue; */
 }
 .is-active .link-container {
   margin-bottom: -1px;
@@ -146,8 +142,6 @@ a {
 .project-drop-menu li {
   font-size: 1rem;
   padding: 1rem;
-  /* margin: 1rem; */
-  /* margin-bottom: 2rem; */
 }
 .project-drop-menu li:hover {
   background-color: cornflowerblue;
@@ -171,13 +165,32 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 1.5rem;
   z-index: 30;
   transition: 400ms;
 }
+.mobile-link-container {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 60%;
+}
+.is-active .mobile-link-container li {
+  margin-bottom: -1px;
+  border-bottom: 1px solid cornflowerblue;
+  box-shadow: 0 5px 5px -5px cornflowerblue;
+}
+.sub-menu-mobile-link-container {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.is-active .sub-menu-mobile-link-container li {
+  margin-bottom: -1px;
+  border-bottom: 1px solid cornflowerblue;
+  box-shadow: 0 5px 5px -5px cornflowerblue;
+}
 .mobile-nav-light {
-  /* background-color: rgb(148, 148, 148); */
-  /* background-color: rgb(80, 120, 194); */
   background-color: white;
 }
 .mobile-nav-dark {

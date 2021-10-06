@@ -1,6 +1,6 @@
 import "./header.css";
-import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSun,
@@ -13,11 +13,26 @@ import {
 
 const Header = (props) => {
   const [showDropMenu, setShowDropMenu] = useState(false);
+  const [activeState, setActiveState] = useState(false);
+  let path = window.location.pathname;
+  useEffect(() => {
+    if (
+      /reddit-app/.test(window.location.href) ||
+      /e-commerce-app/.test(window.location.href) ||
+      /coding-challenge/.test(window.location.href) ||
+      /projects/.test(window.location.href)
+    ) {
+      setActiveState(true);
+    } else {
+      setActiveState(false);
+    }
+  }, [path]);
 
   const toggleDropMenu = () => {
     if (showDropMenu) setShowDropMenu(false);
     if (!showDropMenu) setShowDropMenu(true);
   };
+
   return (
     <div className='header-wrapper'>
       <nav className={`header ${props.dark ? "header-dark" : "header-light"}`}>
@@ -34,13 +49,11 @@ const Header = (props) => {
           <NavLink to='/' exact={true} activeClassName='is-active'>
             <div className='link-container'>
               <li>home</li>
-              {/* <hr /> */}
             </div>
           </NavLink>
           <NavLink to='/about' exact={true} activeClassName='is-active'>
             <div className='link-container'>
               <li>about</li>
-              {/* <hr /> */}
             </div>
           </NavLink>
           <div
@@ -48,7 +61,12 @@ const Header = (props) => {
             onMouseLeave={toggleDropMenu}
             className='projects-tab'
           >
-            <NavLink to='/projects' exact={true} activeClassName='is-active'>
+            <NavLink
+              to='/projects'
+              exact={true}
+              activeClassName='is-active'
+              className={`${activeState ? "is-active" : null}`}
+            >
               <div className='link-container'>
                 <li>projects</li>
                 {/* <hr /> */}
@@ -62,31 +80,31 @@ const Header = (props) => {
           `}
             >
               <ul>
-                <Link to='/projects'>
+                <NavLink to='/projects'>
                   <li className={`${props.dark ? "text-dark" : "text-light"}`}>
                     See all
                   </li>
-                </Link>
-                <Link to='/e-commerce-app'>
+                </NavLink>
+                <NavLink to='/e-commerce-app'>
                   <li className={`${props.dark ? "text-dark" : "text-light"}`}>
                     E-Commerce-App
                   </li>
-                </Link>
-                <Link to='/reddit-app'>
+                </NavLink>
+                <NavLink to='/reddit-app'>
                   <li className={`${props.dark ? "text-dark" : "text-light"}`}>
                     Reddit API App
                   </li>
-                </Link>
-                <Link to='/coding-challenge'>
+                </NavLink>
+                <NavLink to='/coding-challenge'>
                   <li className={`${props.dark ? "text-dark" : "text-light"}`}>
                     Coding Challenge
                   </li>
-                </Link>
+                </NavLink>
               </ul>
             </div>
             {/* END DROPDOWN MENU DIV */}
           </div>
-          {/* </Link> */}
+          {/* </NavLink> */}
           <NavLink to='/contact' exact={true} activeClassName='is-active'>
             <div className='link-container'>
               <li>contact</li>
@@ -130,20 +148,33 @@ const Header = (props) => {
               className={`fa-times ${props.dark ? `fa-dark` : `fa-light`}`}
             />
           </li>
-          <Link to='/'>
-            <li onClick={props.toggleMobileNav}>home</li>
-          </Link>
-          <Link to='/about'>
-            <li onClick={props.toggleMobileNav}>about</li>
-          </Link>
-
-          <li onClick={props.toggleSubMenu}>
-            projects{" "}
-            <FontAwesomeIcon
-              icon={props.showSubMenu ? faMinus : faPlus}
-              className={`fa-plus-minus ${props.dark ? `fa-dark` : `fa-light`}`}
-            />
-          </li>
+          <NavLink to='/' exact={true} activeClassName='is-active'>
+            <div className='mobile-link-container'>
+              <li onClick={props.toggleMobileNav}>home</li>
+            </div>
+          </NavLink>
+          <NavLink to='/about' exact={true} activeClassName='is-active'>
+            <div className='mobile-link-container'>
+              <li onClick={props.toggleMobileNav}>about</li>
+            </div>
+          </NavLink>
+          <div
+            className={`${props.showSubMenu ? "is-active" : null} ${
+              activeState ? "is-active" : null
+            }`}
+          >
+            <div className='sub-menu-mobile-link-container'>
+              <li onClick={props.toggleSubMenu}>
+                projects{" "}
+                <FontAwesomeIcon
+                  icon={props.showSubMenu ? faMinus : faPlus}
+                  className={`fa-plus-minus ${
+                    props.dark ? `fa-dark` : `fa-light`
+                  }`}
+                />
+              </li>
+            </div>
+          </div>
 
           <div
             className={`mobile-sub-menu ${
@@ -157,23 +188,45 @@ const Header = (props) => {
           `}
           >
             <ul>
-              <Link to='/projects' onClick={props.toggleMobileNav}>
-                <li>See all</li>
-              </Link>
-              <Link to='/e-commerce-app'>
-                <li onClick={props.toggleMobileNav}>E-Commerce-App</li>
-              </Link>
-              <Link to='/reddit-app'>
-                <li onClick={props.toggleMobileNav}>Reddit API App</li>
-              </Link>
-              <Link to='/coding-challenge'>
-                <li onClick={props.toggleMobileNav}>Coding Challenge</li>
-              </Link>
+              <NavLink to='/projects' exact={true} activeClassName='is-active'>
+                <div className='sub-menu-mobile-link-container'>
+                  <li onClick={props.toggleMobileNav}>See all</li>
+                </div>
+              </NavLink>
+              <NavLink
+                to='/e-commerce-app'
+                exact={true}
+                activeClassName='is-active'
+              >
+                <div className='sub-menu-mobile-link-container'>
+                  <li onClick={props.toggleMobileNav}>E-Commerce-App</li>
+                </div>
+              </NavLink>
+              <NavLink
+                to='/reddit-app'
+                exact={true}
+                activeClassName='is-active'
+              >
+                <div className='sub-menu-mobile-link-container'>
+                  <li onClick={props.toggleMobileNav}>Reddit API App</li>
+                </div>
+              </NavLink>
+              <NavLink
+                to='/coding-challenge'
+                exact={true}
+                activeClassName='is-active'
+              >
+                <div className='sub-menu-mobile-link-container'>
+                  <li onClick={props.toggleMobileNav}>Coding Challenge</li>
+                </div>
+              </NavLink>
             </ul>
           </div>
-          <Link to='/contact'>
-            <li onClick={props.toggleMobileNav}>contact</li>
-          </Link>
+          <NavLink to='/contact' exact={true} activeClassName='is-active'>
+            <div className='mobile-link-container'>
+              <li onClick={props.toggleMobileNav}>contact</li>
+            </div>
+          </NavLink>
         </ul>
       </nav>
       {/* END MOBILE MENU */}
