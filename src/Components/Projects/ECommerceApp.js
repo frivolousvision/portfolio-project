@@ -1,5 +1,5 @@
 import "./project.css";
-import eCommercePhoto from "../ProjectList/e-commerce-app.png";
+import eCommercePhoto from "../ProjectList/e-commerce-app.jpg";
 
 const ECommerceApp = (props) => {
   return (

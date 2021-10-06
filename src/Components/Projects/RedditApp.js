@@ -1,5 +1,5 @@
 import "./project.css";
-import redditPhoto from "../ProjectList/reddit-screenshot.png";
+import redditPhoto from "../ProjectList/reddit-screenshot.jpg";
 
 const RedditApp = (props) => {
   return (

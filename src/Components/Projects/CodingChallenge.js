@@ -1,5 +1,5 @@
 import "./project.css";
-import codingChallenge from "../ProjectList/coding-challenge.png";
+import codingChallenge from "../ProjectList/coding-challenge.jpg";
 
 const CodingChallenge = (props) => {
   return (

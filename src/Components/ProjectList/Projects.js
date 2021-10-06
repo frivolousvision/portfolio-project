@@ -1,8 +1,8 @@
 import "./projects.css";
 import { Link } from "react-router-dom";
-import eCommercePhoto from "./e-commerce-app.png";
-import redditPhoto from "./reddit-screenshot.png";
-import codingChallenge from "./coding-challenge.png";
+import eCommercePhoto from "./e-commerce-app.jpg";
+import redditPhoto from "./reddit-screenshot.jpg";
+import codingChallenge from "./coding-challenge.jpg";
 
 const Projects = (props) => {
   return (

@@ -42,11 +42,12 @@ a {
   text-decoration: none;
 }
 
-.link-container:hover {
-  margin-bottom: -1px;
+.link-container li:hover {
+  color: cornflowerblue;
+  /* margin-bottom: -1px;
   border-bottom-width: scaleX(1);
   border-bottom: 1px solid cornflowerblue;
-  box-shadow: 0 5px 5px -5px cornflowerblue;
+  box-shadow: 0 5px 5px -5px cornflowerblue; */
 }
 .is-active .link-container {
   margin-bottom: -1px;

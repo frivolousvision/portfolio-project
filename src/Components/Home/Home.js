@@ -1,6 +1,6 @@
 import "./home.css";
 import { useState } from "react";
-import DanPhoto from "./Dan-4.21.png";
+import DanPhoto from "./Dan-photo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
 
