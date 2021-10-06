@@ -37,30 +37,38 @@ const About = (props) => {
               experience in customer service building and managing
               relationships.
             </p> */}
-            <h2 className='about-header'>Skills</h2>
-            <ul>
-              <h3>Front / UI:</h3>
-              <li>JavaScript ES6</li>
-              <li>CSS3</li>
-              <li>React</li>
-              <li>Redux</li>
-              <li>HTML5</li>
-              <li>Responsive UI's</li>
-              <li>Adobe Illustrator</li>
-            </ul>
-            <ul>
-              <h3>Back:</h3>
-              <li>NodeJS</li>
-              <li>Express</li>
-              <li>PostgreSQL</li>
-              <li>RESTful APIs</li>
-            </ul>
-            <ul>
-              <h3>Bit of Both:</h3>
-              <li>Git/Github</li>
-              <li>Heroku</li>
-              <li>Continuous Integration</li>
-            </ul>
+            <h2 className='skills-header'>Skills</h2>
+            <div className='skills-container'>
+              <div>
+                <ul>
+                  <h3>Front:</h3>
+                  <li>JavaScript ES6</li>
+                  <li>CSS3</li>
+                  <li>React</li>
+                  <li>Redux</li>
+                  <li>HTML5</li>
+                  <li>Responsive UI's</li>
+                  <li>Adobe Illustrator</li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <h3>Back:</h3>
+                  <li>NodeJS</li>
+                  <li>Express</li>
+                  <li>PostgreSQL</li>
+                  <li>RESTful APIs</li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <h3>Bit of Both:</h3>
+                  <li>Git/Github</li>
+                  <li>Heroku</li>
+                  <li>Continuous Integration</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
