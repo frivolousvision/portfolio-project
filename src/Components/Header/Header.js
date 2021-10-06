@@ -1,6 +1,6 @@
 import "./header.css";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSun,
@@ -31,20 +31,29 @@ const Header = (props) => {
             className={`bars ${props.dark ? "bars-dark" : "bars-light"}`}
             onClick={props.toggleMobileNav}
           />
-          <Link to='/'>
-            <li>home</li>
-          </Link>
-          <Link to='/about'>
-            <li>about</li>
-          </Link>
+          <NavLink to='/' exact={true} activeClassName='is-active'>
+            <div className='link-container'>
+              <li>home</li>
+              {/* <hr /> */}
+            </div>
+          </NavLink>
+          <NavLink to='/about' exact={true} activeClassName='is-active'>
+            <div className='link-container'>
+              <li>about</li>
+              {/* <hr /> */}
+            </div>
+          </NavLink>
           <div
             onMouseEnter={toggleDropMenu}
             onMouseLeave={toggleDropMenu}
             className='projects-tab'
           >
-            <Link to='/projects'>
-              <li>projects</li>
-            </Link>
+            <NavLink to='/projects' exact={true} activeClassName='is-active'>
+              <div className='link-container'>
+                <li>projects</li>
+                {/* <hr /> */}
+              </div>
+            </NavLink>
             {/* DROPDOWN MENU DIV */}
             <div
               className={`project-drop-menu 
@@ -78,9 +87,12 @@ const Header = (props) => {
             {/* END DROPDOWN MENU DIV */}
           </div>
           {/* </Link> */}
-          <Link to='/contact'>
-            <li>contact</li>
-          </Link>
+          <NavLink to='/contact' exact={true} activeClassName='is-active'>
+            <div className='link-container'>
+              <li>contact</li>
+              {/* <hr /> */}
+            </div>
+          </NavLink>
           <div
             className={`toggle-container ${
               props.dark ? "toggle-container-dark" : "toggle-container-light"

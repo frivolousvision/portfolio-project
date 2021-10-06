@@ -1,5 +1,5 @@
 import "./home.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import DanPhoto from "./Dan-4.21.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
@@ -7,11 +7,10 @@ import { faShare } from "@fortawesome/free-solid-svg-icons";
 const Home = (props) => {
   const [menuIcon, setMenuIcon] = useState(false);
   const [firstVisit, setFirstVisit] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setFirstVisit(false);
-    }, 1000 * 10);
-  }, []);
+
+  setTimeout(() => {
+    setFirstVisit(false);
+  }, 1000 * 10);
   setTimeout(() => {
     if (!menuIcon) setMenuIcon(true);
     if (menuIcon) setMenuIcon(false);
