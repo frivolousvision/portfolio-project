@@ -1,7 +1,6 @@
 .projects {
   padding-top: 3.5rem;
   transition: 600ms;
-  height: 100vh;
 }
 .projects-light {
   background-color: white;
@@ -51,6 +50,9 @@
   margin-bottom: 0.75rem;
 }
 @media only screen and (min-width: 600px) {
+  .projects {
+    height: 100vh;
+  }
   .projects-container {
     width: 80%;
   }
