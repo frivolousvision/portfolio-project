@@ -177,8 +177,8 @@ a {
 }
 .is-active .mobile-link-container li {
   margin-bottom: -1px;
-  border-bottom: 1px solid cornflowerblue;
-  box-shadow: 0 5px 5px -5px cornflowerblue;
+  /* border-bottom: 1px solid cornflowerblue; */
+  box-shadow: 0px 5px 4px -4px cornflowerblue;
 }
 .sub-menu-mobile-link-container {
   margin: 0 auto;
@@ -187,8 +187,8 @@ a {
 }
 .is-active .sub-menu-mobile-link-container li {
   margin-bottom: -1px;
-  border-bottom: 1px solid cornflowerblue;
-  box-shadow: 0 5px 5px -5px cornflowerblue;
+  /* border-bottom: 1px solid cornflowerblue; */
+  box-shadow: 0px 5px 4px -4px cornflowerblue;
 }
 .mobile-nav-light {
   background-color: white;
