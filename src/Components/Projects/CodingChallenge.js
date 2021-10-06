@@ -5,7 +5,8 @@ const CodingChallenge = (props) => {
   return (
     <div
       onClick={props.closeMobileNav}
-      className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
+      // CHNAGE CLASSNAME BACK TO JUST PROJECT WHEN MORE CONTENT IS ADDED
+      className={`project-test  ${props.showNav ? "show-nav" : "hide-nav"} ${
         props.dark ? "background-dark" : "background-light"
       }`}
     >
