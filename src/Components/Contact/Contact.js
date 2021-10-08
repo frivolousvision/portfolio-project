@@ -18,6 +18,13 @@ const Contact = (props) => {
         Contact
       </h2>
       <div className={`contact-container`}>
+        <p
+          className={`connect-message ${
+            props.dark ? "text-dark" : "text-light"
+          }`}
+        >
+          I'm happy you found me! Want to connect? Me too!
+        </p>
         <div
           className={`contact-link-container ${
             props.dark ? "text-dark" : "text-light"

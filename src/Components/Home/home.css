@@ -72,13 +72,16 @@
 .text-container p {
   margin-top: -1rem;
 }
-.about-header {
+.home-header {
   transition: 600ms;
 }
-.about-header-show {
+.home-header-show {
   margin-top: 2rem;
 }
-.about-header-hide {
+.home-container h2 {
+  font-weight: 200;
+}
+.home-header-hide {
   margin-top: 2rem;
   transform: translateX(100rem);
 }

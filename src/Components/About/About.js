@@ -17,7 +17,7 @@ const About = (props) => {
           <div className='text-container'>
             <h2 className='about-header'>About</h2>
             <p>
-              I am a self-taught full-stack developer who enjoys building and
+              I'm an Atlanta-based full-stack developer who enjoys building and
               creating dynamic applications that look and feel fantastic. I love
               learning how to solve tricky problems and live for those "aha!"
               moments when everything clicks.

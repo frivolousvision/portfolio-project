@@ -40,8 +40,8 @@ const Home = (props) => {
           </div>
           <div className={`text-container`}>
             <h2
-              className={`about-header ${
-                firstVisit ? "about-header-show" : "about-header-hide"
+              className={`home-header ${
+                firstVisit ? "home-header-show" : "home-header-hide"
               }`}
             >
               Hey there! My name's Dan and I design and build websites.
