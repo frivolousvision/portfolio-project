@@ -5,7 +5,7 @@ const RedditApp = (props) => {
   return (
     <div
       onClick={props.closeMobileNav}
-      className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
+      className={`project-test ${props.showNav ? "show-nav" : "hide-nav"} ${
         props.dark ? "background-dark" : "background-light"
       }`}
     >
@@ -18,7 +18,7 @@ const RedditApp = (props) => {
                 : "text-light project-header-light"
             }`}
           >
-            Reddit-App
+            Reddit API App
           </h2>
           <div className='project-content'>
             <div className='project-image-container'>

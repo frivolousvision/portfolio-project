@@ -17,7 +17,7 @@ const ECommerceApp = (props) => {
               props.dark ? "text-dark" : "text-light"
             }`}
           >
-            E-Commerce-App
+            E-Commerce App
           </h2>
           <img src={eCommercePhoto} alt='' />
 

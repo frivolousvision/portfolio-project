@@ -57,6 +57,9 @@
   flex-wrap: wrap;
   margin: auto;
 }
+.project-content a {
+  text-decoration: underline;
+}
 .project-header h2 {
   font-family: Roboto;
 }
