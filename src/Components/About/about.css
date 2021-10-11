@@ -4,6 +4,7 @@
   align-items: center;
   transition: 600ms;
   position: absolute;
+  padding-bottom: 2rem;
 }
 .about-light {
   background-color: white;
