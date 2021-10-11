@@ -17,10 +17,10 @@ const About = (props) => {
           <div className='text-container'>
             <h2 className='about-header'>About</h2>
             <p>
-              I'm an Atlanta-based full-stack developer who enjoys building and
-              creating dynamic applications that look and feel fantastic. I love
-              learning how to solve tricky problems and live for those "aha!"
-              moments when everything clicks.
+              I'm an Atlanta-based developer who enjoys building and creating
+              dynamic applications that look and feel fantastic. I love learning
+              how to solve tricky problems and live for those "aha!" moments
+              when everything clicks.
             </p>
             {/* <p>
               A strong foundation in current web development languages such as
