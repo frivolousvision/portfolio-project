@@ -23,10 +23,6 @@ const RedditApp = (props) => {
           <div className='project-content'>
             <div className='project-image-container'>
               <img src={redditPhoto} alt='' />
-              {/* <p className={`${props.dark ? "text-dark" : "text-light"}`}>
-                <strong>tl;dr</strong> A frontend application made with React
-                and Redux using Reddit's API
-              </p> */}
               <p className={`${props.dark ? "text-dark" : "text-light"}`}>
                 View the project live{" "}
                 <a

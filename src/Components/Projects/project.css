@@ -105,14 +105,12 @@
     width: 60%;
     margin-top: 0.5rem;
     padding: 0;
-    /* border: 1px solid red; */
   }
   .text-container {
     text-align: left;
     margin: 0;
     width: 40%;
     font-size: 1.2rem;
-    /* border: 1px solid red; */
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -120,15 +118,13 @@
     width: 80%;
   }
   .project-header {
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-top: 0rem;
     margin-bottom: 0rem;
   }
   .project-image-container {
-    /* width: 40%; */
     margin-top: 0.5rem;
     padding: 0;
-    /* border: 1px solid red; */
   }
   .project-content {
     margin-top: 4rem;
