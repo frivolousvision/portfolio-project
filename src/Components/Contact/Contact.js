@@ -10,58 +10,64 @@ const Contact = (props) => {
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
-      <h2
-        className={`contact-header ${
-          props.dark ? "contact-header-dark" : "contact-header-light"
-        }`}
-      >
-        Contact
-      </h2>
       <div className={`contact-container`}>
+        <h2
+          className={`contact-header ${
+            props.dark ? "contact-header-dark" : "contact-header-light"
+          }`}
+        >
+          Contact
+        </h2>
         <p
           className={`connect-message ${
             props.dark ? "text-dark" : "text-light"
           }`}
         >
-          I'm happy you found me! Want to connect? Me too!
+          I'm happy you found me. Want to connect? Me too!
         </p>
-        <div
-          className={`contact-link-container ${
-            props.dark ? "text-dark" : "text-light"
-          }`}
-        >
-          <a href='mailto:ddurnell1@gmail.com' target='_blank' rel='noreferrer'>
-            <p>Email:</p>
-            <FontAwesomeIcon icon={faInbox} />
-          </a>
-        </div>
-        <div
-          className={`contact-link-container ${
-            props.dark ? "text-dark" : "text-light"
-          }`}
-        >
-          <a
-            href='https://github.com/frivolousvision/'
-            target='_blank'
-            rel='noreferrer'
+        <div className='contact-links'>
+          <div
+            className={`contact-link-container ${
+              props.dark ? "text-dark" : "text-light"
+            }`}
           >
-            <p>GitHub:</p>
-            <FontAwesomeIcon icon={faGithubSquare} />
-          </a>
-        </div>
-        <div
-          className={`contact-link-container ${
-            props.dark ? "text-dark" : "text-light"
-          }`}
-        >
-          <a
-            href='https://www.linkedin.com/in/daniel-durnell/'
-            target='_blank'
-            rel='noreferrer'
+            <a
+              href='mailto:ddurnell1@gmail.com'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <p>Email:</p>
+              <FontAwesomeIcon icon={faInbox} />
+            </a>
+          </div>
+          <div
+            className={`contact-link-container ${
+              props.dark ? "text-dark" : "text-light"
+            }`}
           >
-            <p>LinkedIn:</p>
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
+            <a
+              href='https://github.com/frivolousvision/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <p>GitHub:</p>
+              <FontAwesomeIcon icon={faGithubSquare} />
+            </a>
+          </div>
+          <div
+            className={`contact-link-container ${
+              props.dark ? "text-dark" : "text-light"
+            }`}
+          >
+            <a
+              href='https://www.linkedin.com/in/daniel-durnell/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <p>LinkedIn:</p>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </div>
         </div>
       </div>
     </div>
