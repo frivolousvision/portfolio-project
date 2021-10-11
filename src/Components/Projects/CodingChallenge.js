@@ -56,6 +56,36 @@ const CodingChallenge = (props) => {
                 an existing target, create a new target and delete a target
                 using a modern JavaScript framework.
               </p>
+
+              <br />
+              <p
+                className={`view-project-text-desktop ${
+                  props.dark ? "text-dark" : "text-light"
+                }`}
+              >
+                View the project live{" "}
+                <a
+                  href='https://www.dan-demos.com/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  here
+                </a>
+              </p>
+              <p
+                className={`view-project-text-desktop ${
+                  props.dark ? "text-dark" : "text-light"
+                }`}
+              >
+                View this project's repository{" "}
+                <a
+                  href='https://github.com/frivolousvision/coding-challenge'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  here
+                </a>
+              </p>
             </div>
           </div>
         </div>
