@@ -5,15 +5,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
-}
-.project-test {
-  padding-top: 4rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
+  padding-bottom: 2rem;
 }
 .background-light {
   background-color: white;

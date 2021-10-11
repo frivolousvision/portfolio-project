@@ -5,7 +5,7 @@ const RedditApp = (props) => {
   return (
     <div
       onClick={props.closeMobileNav}
-      className={`project-test ${props.showNav ? "show-nav" : "hide-nav"} ${
+      className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
         props.dark ? "background-dark" : "background-light"
       }`}
     >
@@ -55,6 +55,35 @@ const RedditApp = (props) => {
                 and search within that subReddit. The app also integrates an
                 infinite scroll feature calling the subsequent API when nearing
                 the end of the page to allow for endless scrolling and content.
+              </p>
+              <br />
+              <p
+                className={`view-project-text-desktop  ${
+                  props.dark ? "text-dark" : "text-light"
+                }`}
+              >
+                View the project live{" "}
+                <a
+                  href='https://www.reddit-dark.com/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  here
+                </a>
+              </p>
+              <p
+                className={`view-project-text-desktop  ${
+                  props.dark ? "text-dark" : "text-light"
+                }`}
+              >
+                View this project's repository{" "}
+                <a
+                  href='https://github.com/frivolousvision/reddit-mimic-app'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  here
+                </a>
               </p>
             </div>
           </div>
