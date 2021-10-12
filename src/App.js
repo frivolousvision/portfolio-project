@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
@@ -16,6 +16,22 @@ function App() {
   const [showNav, setShowNav] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [displayContent, setDisplayContent] = useState(false);
+  const [activeState, setActiveState] = useState(false);
+
+  let path = window.location.href;
+  useEffect(() => {
+    setActiveState(false);
+    if (
+      /reddit-app/.test(window.location.href) ||
+      /e-commerce-app/.test(window.location.href) ||
+      /coding-challenge/.test(window.location.href) ||
+      /projects/.test(window.location.href)
+    ) {
+      setActiveState(true);
+    } else {
+      setActiveState(false);
+    }
+  }, [path]);
 
   const toggleDark = () => {
     if (dark) {
@@ -68,6 +84,7 @@ function App() {
           displayContent={displayContent}
           toggleMobileNav={toggleMobileNav}
           toggleSubMenu={toggleSubMenu}
+          activeState={activeState}
         />
         <Switch>
           <Route path='/' exact>

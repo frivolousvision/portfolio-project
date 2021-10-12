@@ -13,20 +13,21 @@ import {
 
 const Header = (props) => {
   const [showDropMenu, setShowDropMenu] = useState(false);
-  const [activeState, setActiveState] = useState(false);
-  let path = window.location.pathname;
-  useEffect(() => {
-    if (
-      /reddit-app/.test(window.location.href) ||
-      /e-commerce-app/.test(window.location.href) ||
-      /coding-challenge/.test(window.location.href) ||
-      /projects/.test(window.location.href)
-    ) {
-      setActiveState(true);
-    } else {
-      setActiveState(false);
-    }
-  }, [path]);
+  // const [activeState, setActiveState] = useState(false);
+  // let path = window.location.href;
+  // useEffect(() => {
+  //   setActiveState(false);
+  //   if (
+  //     /reddit-app/.test(window.location.href) ||
+  //     /e-commerce-app/.test(window.location.href) ||
+  //     /coding-challenge/.test(window.location.href) ||
+  //     /projects/.test(window.location.href)
+  //   ) {
+  //     setActiveState(true);
+  //   } else {
+  //     setActiveState(false);
+  //   }
+  // }, [path]);
 
   const toggleDropMenu = () => {
     if (showDropMenu) setShowDropMenu(false);
@@ -56,54 +57,49 @@ const Header = (props) => {
               <li>about</li>
             </div>
           </NavLink>
+
+          {/* <div onClick={toggleDropMenu} className='projects-tab'> */}
           <div
-            onMouseEnter={toggleDropMenu}
-            onMouseLeave={toggleDropMenu}
-            className='projects-tab'
+            className={`link-container ${
+              props.activeState ? "is-active" : null
+            }`}
           >
-            <NavLink
-              to='/projects'
-              exact={true}
-              activeClassName='is-active'
-              className={`${activeState ? "is-active" : null}`}
-            >
-              <div className='link-container'>
-                <li>projects</li>
-                {/* <hr /> */}
-              </div>
-            </NavLink>
-            {/* DROPDOWN MENU DIV */}
-            <div
-              className={`project-drop-menu 
+            {/* <div className='link-container'> */}
+            <li>projects</li>
+          </div>
+          {/* </div> */}
+          {/* DROPDOWN MENU DIV */}
+          <div
+            className={`project-drop-menu 
               ${props.dark ? "header-dark" : "header-light"}
               ${showDropMenu ? "drop-menu-show" : "drop-menu-hide"}
           `}
-            >
-              <ul>
-                <NavLink to='/projects'>
-                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                    See all
-                  </li>
-                </NavLink>
-                <NavLink to='/e-commerce-app'>
-                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                    E-Commerce-App
-                  </li>
-                </NavLink>
-                <NavLink to='/reddit-app'>
-                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                    Reddit API App
-                  </li>
-                </NavLink>
-                <NavLink to='/coding-challenge'>
-                  <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                    Coding Challenge
-                  </li>
-                </NavLink>
-              </ul>
-            </div>
-            {/* END DROPDOWN MENU DIV */}
+          >
+            <ul>
+              <NavLink to='/projects'>
+                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                  See all
+                </li>
+              </NavLink>
+              <NavLink to='/e-commerce-app'>
+                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                  E-Commerce-App
+                </li>
+              </NavLink>
+              <NavLink to='/reddit-app'>
+                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                  Reddit API App
+                </li>
+              </NavLink>
+              <NavLink to='/coding-challenge'>
+                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
+                  Coding Challenge
+                </li>
+              </NavLink>
+            </ul>
           </div>
+          {/* END DROPDOWN MENU DIV */}
+          {/* </div> */}
           {/* </NavLink> */}
           <NavLink to='/contact' exact={true} activeClassName='is-active'>
             <div className='link-container'>
@@ -160,7 +156,7 @@ const Header = (props) => {
           </NavLink>
           <div
             className={`${props.showSubMenu ? "is-active" : null} ${
-              activeState ? "is-active" : null
+              props.activeState ? "is-active" : null
             }`}
           >
             <div className='sub-menu-mobile-link-container'>
