@@ -12,45 +12,50 @@ const Projects = (props) => {
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
-      <h2
-        className={`projects-header ${props.dark ? "text-dark" : "text-light"}`}
-      >
-        Projects
-      </h2>
       <div className={`projects-container`}>
-        <div className={`each-project-container`}>
-          <Link to='/e-commerce-app'>
-            <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
-              E-Commerce-App
-            </h5>
-            <img src={eCommercePhoto} alt='' />
-          </Link>
-          <p className={`${props.dark ? "text-dark" : "text-light"}`}>
-            A full-stack mock e-commerce application made with the PERN stack
-          </p>
-        </div>
-        <div className={`each-project-container`}>
-          <Link to='/reddit-app'>
-            <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
-              Reddit API App
-            </h5>
-            <img src={redditPhoto} alt='' />
-          </Link>
-          <p className={`${props.dark ? "text-dark" : "text-light"}`}>
-            A frontend application made with React and Redux using Reddit's API
-          </p>
-        </div>
-        <div className={`each-project-container`}>
-          <Link to='/coding-challenge'>
-            <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
-              Coding Challenge
-            </h5>
-            <img src={codingChallenge} alt='' />
-          </Link>
-          <p className={`${props.dark ? "text-dark" : "text-light"}`}>
-            A frontend application made with React to compare target companies
-            with CRUD functionality
-          </p>
+        <h2
+          className={`projects-header ${
+            props.dark ? "text-dark" : "text-light"
+          }`}
+        >
+          Projects
+        </h2>
+        <div className={`projects-content`}>
+          <div className={`each-project-container`}>
+            <Link to='/e-commerce-app'>
+              <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
+                E-Commerce-App
+              </h5>
+              <img src={eCommercePhoto} alt='' />
+            </Link>
+            <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+              A full-stack mock e-commerce application made with the PERN stack
+            </p>
+          </div>
+          <div className={`each-project-container`}>
+            <Link to='/reddit-app'>
+              <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
+                Reddit API App
+              </h5>
+              <img src={redditPhoto} alt='' />
+            </Link>
+            <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+              A frontend application made with React and Redux using Reddit's
+              API
+            </p>
+          </div>
+          <div className={`each-project-container`}>
+            <Link to='/coding-challenge'>
+              <h5 className={`${props.dark ? "text-dark" : "text-light"}`}>
+                Coding Challenge
+              </h5>
+              <img src={codingChallenge} alt='' />
+            </Link>
+            <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+              A frontend application made with React to compare target companies
+              with CRUD functionality
+            </p>
+          </div>
         </div>
       </div>
     </div>

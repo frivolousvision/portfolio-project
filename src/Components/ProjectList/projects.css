@@ -1,6 +1,7 @@
 .projects {
   padding-top: 3.5rem;
   transition: 600ms;
+  padding-bottom: 2rem;
 }
 .projects-light {
   background-color: white;
@@ -26,6 +27,13 @@
 }
 .projects-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.projects-content {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 90%;
@@ -50,9 +58,6 @@
   margin-bottom: 0.75rem;
 }
 @media only screen and (min-width: 600px) {
-  .projects {
-    height: 100vh;
-  }
   .projects-container {
     width: 80%;
   }
@@ -64,6 +69,13 @@
   }
   .projects-container img:hover {
     opacity: 0.8;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .projects-container {
+    margin-top: 3rem;
+    border: 0.5px solid rgb(66, 66, 66);
+    border-radius: 5px;
   }
 }
 @media only screen and (min-width: 1000px) {
