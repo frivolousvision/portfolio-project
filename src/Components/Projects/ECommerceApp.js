@@ -4,7 +4,7 @@ import eCommercePhoto from "../ProjectList/e-commerce-app.jpg";
 const ECommerceApp = (props) => {
   return (
     <div
-      onClick={props.closeMobileNav}
+      onClick={props.closeAllNav}
       className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
         props.dark ? "background-dark" : "background-light"
       }`}

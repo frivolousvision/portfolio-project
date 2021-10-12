@@ -44,6 +44,7 @@
   font-size: 2rem;
   margin-top: 2rem;
   margin-left: 12rem;
+  cursor: pointer;
 }
 .drop-menu-x:hover {
   color: cornflowerblue;

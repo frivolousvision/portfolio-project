@@ -4,7 +4,7 @@ const About = (props) => {
   return (
     <div>
       <div
-        onClick={props.closeMobileNav}
+        onClick={props.closeAllNav}
         className={`about ${props.dark ? "about-dark" : "about-light"} ${
           props.showNav ? "show-nav" : "hide-nav"
         }`}

@@ -44,12 +44,12 @@ const Header = (props) => {
           />
           <NavLink to='/' exact={true} activeClassName='is-active'>
             <div className='link-container'>
-              <li>home</li>
+              <li onClick={props.closeAllNav}>home</li>
             </div>
           </NavLink>
           <NavLink to='/about' exact={true} activeClassName='is-active'>
             <div className='link-container'>
-              <li>about</li>
+              <li onClick={props.closeAllNav}>about</li>
             </div>
           </NavLink>
           <div
@@ -57,16 +57,18 @@ const Header = (props) => {
               props.activeState ? "is-active" : null
             }`}
           >
-            <li onClick={props.toggleDropMenu}>projects</li>
-            <div
-              className={`
-              ${props.dark ? "header-dark" : "header-light"}
-          `}
-            ></div>
+            <li onClick={props.toggleDropMenu}>
+              projects{" "}
+              {props.showDropMenu ? (
+                <FontAwesomeIcon className='projects-minus' icon={faMinus} />
+              ) : (
+                <FontAwesomeIcon className='projects-plus' icon={faPlus} />
+              )}
+            </li>
           </div>
           <NavLink to='/contact' exact={true} activeClassName='is-active'>
             <div className='link-container'>
-              <li>contact</li>
+              <li onClick={props.closeAllNav}>contact</li>
               {/* <hr /> */}
             </div>
           </NavLink>

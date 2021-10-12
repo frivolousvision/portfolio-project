@@ -17,14 +17,6 @@ const DropDownList = (props) => {
       `}
     >
       <ul>
-        <NavLink to='/projects'>
-          <li
-            onClick={props.toggleDropMenu}
-            className={`${props.dark ? "text-dark" : "text-light"}`}
-          >
-            See all
-          </li>
-        </NavLink>
         <NavLink to='/e-commerce-app'>
           <li
             onClick={props.toggleDropMenu}
@@ -47,6 +39,14 @@ const DropDownList = (props) => {
             className={`${props.dark ? "text-dark" : "text-light"}`}
           >
             Coding Challenge
+          </li>
+        </NavLink>
+        <NavLink to='/projects'>
+          <li
+            onClick={props.toggleDropMenu}
+            className={`${props.dark ? "text-dark" : "text-light"}`}
+          >
+            View all
           </li>
         </NavLink>
         <FontAwesomeIcon

@@ -4,7 +4,7 @@ import redditPhoto from "../ProjectList/reddit-screenshot.jpg";
 const RedditApp = (props) => {
   return (
     <div
-      onClick={props.closeMobileNav}
+      onClick={props.closeAllNav}
       className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
         props.dark ? "background-dark" : "background-light"
       }`}

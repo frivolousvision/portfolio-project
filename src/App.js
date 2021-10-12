@@ -45,7 +45,10 @@ function App() {
   };
   const toggleDropMenu = () => {
     if (showDropMenu) setShowDropMenu(false);
-    if (!showDropMenu) setShowDropMenu(true);
+    if (!showDropMenu) {
+      setShowDropMenu(true);
+      setActiveState(true);
+    }
   };
   const toggleMobileNav = () => {
     if (showNav) {
@@ -60,12 +63,13 @@ function App() {
       }, 200);
     }
   };
-  const closeMobileNav = () => {
+  const closeAllNav = () => {
     if (showNav) {
       setShowNav(false);
       setDisplayContent(false);
       setShowSubMenu(false);
     }
+    if (showDropMenu) setShowDropMenu(false);
   };
   const toggleSubMenu = () => {
     if (showSubMenu) {
@@ -87,6 +91,7 @@ function App() {
           toggleDark={toggleDark}
           showNav={showNav}
           showSubMenu={showSubMenu}
+          closeAllNav={closeAllNav}
           toggleDropMenu={toggleDropMenu}
           showDropMenu={showDropMenu}
           displayContent={displayContent}
@@ -101,52 +106,36 @@ function App() {
         />
         <Switch>
           <Route path='/' exact>
-            <Home
-              dark={dark}
-              showNav={showNav}
-              closeMobileNav={closeMobileNav}
-            />
+            <Home dark={dark} showNav={showNav} closeAllNav={closeAllNav} />
           </Route>
           <Route path='/about' exact>
-            <About
-              dark={dark}
-              showNav={showNav}
-              closeMobileNav={closeMobileNav}
-            />
+            <About dark={dark} showNav={showNav} closeAllNav={closeAllNav} />
           </Route>
           <Route path='/projects' exact>
-            <Projects
-              dark={dark}
-              showNav={showNav}
-              closeMobileNav={closeMobileNav}
-            />
+            <Projects dark={dark} showNav={showNav} closeAllNav={closeAllNav} />
           </Route>
           <Route path='/contact' exact>
-            <Contact
-              dark={dark}
-              showNav={showNav}
-              closeMobileNav={closeMobileNav}
-            />
+            <Contact dark={dark} showNav={showNav} closeAllNav={closeAllNav} />
           </Route>
           <Route path='/e-commerce-app' exact>
             <ECommerceApp
               dark={dark}
               showNav={showNav}
-              closeMobileNav={closeMobileNav}
+              closeAllNav={closeAllNav}
             />
           </Route>
           <Route path='/coding-challenge' exact>
             <CodingChallenge
               dark={dark}
               showNav={showNav}
-              closeMobileNav={closeMobileNav}
+              closeAllNav={closeAllNav}
             />
           </Route>
           <Route path='/reddit-app' exact>
             <RedditApp
               dark={dark}
               showNav={showNav}
-              closeMobileNav={closeMobileNav}
+              closeAllNav={closeAllNav}
             />
           </Route>
         </Switch>
