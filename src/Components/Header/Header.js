@@ -29,11 +29,6 @@ const Header = (props) => {
   //   }
   // }, [path]);
 
-  // const toggleDropMenu = () => {
-  // if (showDropMenu) setShowDropMenu(false);
-  // if (!showDropMenu) setShowDropMenu(true);
-  // };
-
   return (
     <div className='header-wrapper'>
       <nav className={`header ${props.dark ? "header-dark" : "header-light"}`}>
@@ -57,50 +52,18 @@ const Header = (props) => {
               <li>about</li>
             </div>
           </NavLink>
-
-          {/* <div onClick={toggleDropMenu} className='projects-tab'> */}
           <div
             className={`link-container ${
               props.activeState ? "is-active" : null
             }`}
           >
-            {/* <div className='link-container'> */}
-            <li>projects</li>
-          </div>
-          {/* </div> */}
-          {/* DROPDOWN MENU DIV */}
-          <div
-            // ${showDropMenu ? "drop-menu-show" : "drop-menu-hide"}
-            className={`project-drop-menu 
+            <li onClick={props.toggleDropMenu}>projects</li>
+            <div
+              className={`
               ${props.dark ? "header-dark" : "header-light"}
           `}
-          >
-            <ul>
-              <NavLink to='/projects'>
-                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                  See all
-                </li>
-              </NavLink>
-              <NavLink to='/e-commerce-app'>
-                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                  E-Commerce-App
-                </li>
-              </NavLink>
-              <NavLink to='/reddit-app'>
-                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                  Reddit API App
-                </li>
-              </NavLink>
-              <NavLink to='/coding-challenge'>
-                <li className={`${props.dark ? "text-dark" : "text-light"}`}>
-                  Coding Challenge
-                </li>
-              </NavLink>
-            </ul>
+            ></div>
           </div>
-          {/* END DROPDOWN MENU DIV */}
-          {/* </div> */}
-          {/* </NavLink> */}
           <NavLink to='/contact' exact={true} activeClassName='is-active'>
             <div className='link-container'>
               <li>contact</li>

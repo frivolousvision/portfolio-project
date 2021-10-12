@@ -10,6 +10,7 @@ import Contact from "./Components/Contact/Contact";
 import ECommerceApp from "./Components/Projects/ECommerceApp";
 import CodingChallenge from "./Components/Projects/CodingChallenge";
 import RedditApp from "./Components/Projects/RedditApp";
+import DropDownList from "./Components/Header/DropDownList";
 
 function App() {
   const [dark, setDark] = useState(true);
@@ -17,6 +18,7 @@ function App() {
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [displayContent, setDisplayContent] = useState(false);
   const [activeState, setActiveState] = useState(false);
+  const [showDropMenu, setShowDropMenu] = useState(false);
 
   let path = window.location.href;
   useEffect(() => {
@@ -40,6 +42,10 @@ function App() {
     if (!dark) {
       setDark(true);
     }
+  };
+  const toggleDropMenu = () => {
+    if (showDropMenu) setShowDropMenu(false);
+    if (!showDropMenu) setShowDropMenu(true);
   };
   const toggleMobileNav = () => {
     if (showNav) {
@@ -81,10 +87,17 @@ function App() {
           toggleDark={toggleDark}
           showNav={showNav}
           showSubMenu={showSubMenu}
+          toggleDropMenu={toggleDropMenu}
+          showDropMenu={showDropMenu}
           displayContent={displayContent}
           toggleMobileNav={toggleMobileNav}
           toggleSubMenu={toggleSubMenu}
           activeState={activeState}
+        />
+        <DropDownList
+          dark={dark}
+          showDropMenu={showDropMenu}
+          toggleDropMenu={toggleDropMenu}
         />
         <Switch>
           <Route path='/' exact>

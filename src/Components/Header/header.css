@@ -7,7 +7,7 @@
   justify-content: flex-end;
   align-items: center;
   transition: 600ms;
-  z-index: 10;
+  z-index: 30;
   box-shadow: 1px 1px 3px rgb(66, 66, 66);
 }
 .header-light {
@@ -26,17 +26,17 @@
 .header-content li {
   font-size: 1.75rem;
   list-style-type: none;
+  transition: 400ms;
 }
 .link-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-left: 3rem;
   height: 4rem;
-  border-bottom: 3px solid cornflowerblue;
-  border-bottom-width: 0;
-  z-index: 10;
+  cursor: pointer;
 }
 a {
   text-decoration: none;
@@ -89,31 +89,23 @@ a {
   cursor: pointer;
 }
 /* DROP DOWN MENU TRANSITION HANDLING */
-.drop-menu-hide {
+/* .drop-menu-hide {
+  visibility: hidden;
   position: fixed;
-  margin-right: 14rem;
   height: 0;
   width: 10.5rem;
-  z-index: -10;
-  transition: 400ms;
-  top: -10rem;
-}
-.projects-tab {
-  border: 1px solid red;
-}
-.link-container:hover ~ .drop-menu-hide {
+} */
+/* .link-container:hover .drop-menu-hide {
+  visibility: visible;
   height: 13rem;
   width: 10.5rem;
-  position: fixed;
   top: 3.9rem;
-  /* margin-right: 14rem; */
   align-items: center;
   border-radius: 2px;
-  transition: 600ms;
-  z-index: -10;
+  transition: 500ms;
   box-shadow: 1px 3px 3px rgb(66, 66, 66);
 }
-.link-container:hover ~ .drop-menu-hide li {
+.link-container:hover .drop-menu-hide li {
   transform: scaleY(1);
   transition-delay: 400ms;
   transition: 800ms;
@@ -125,16 +117,14 @@ a {
   top: 3.9rem;
   align-items: center;
   border-radius: 2px;
-  transition: 600ms;
-  z-index: -10;
+  transition: 500ms;
   box-shadow: 1px 3px 3px rgb(66, 66, 66);
-}
-.drop-menu-hide:hover li {
+} */
+/* .drop-menu-hide:hover li {
   transform: scaleY(1);
   transition-delay: 400ms;
-  transition: 800ms;
-}
-.drop-menu-show {
+} */
+/* .drop-menu-show {
   height: 13rem;
   width: 10.5rem;
   position: fixed;
@@ -145,7 +135,7 @@ a {
   transition: 400ms;
   z-index: 0;
   box-shadow: 1px 3px 3px rgb(66, 66, 66);
-}
+} */
 .background-dark {
   background-color: rgb(34, 34, 34);
 }
@@ -161,28 +151,7 @@ a {
   transition-delay: 400ms;
   transition: 800ms;
 }
-.projects-tab {
-  height: 4rem;
-  display: flex;
-  align-items: center;
-}
-.projects-tab li {
-  padding-left: 0;
-}
-.project-drop-menu ul {
-  padding: 0;
-  font-size: 0.5rem;
-  text-align: center;
-  margin: 0;
-}
-.project-drop-menu li {
-  font-size: 1rem;
-  padding: 1rem;
-}
-.project-drop-menu li:hover {
-  background-color: cornflowerblue;
-  border-radius: 5px;
-}
+
 /* BEGIN MOBILE NAV */
 .bars {
   font-size: 3rem;
