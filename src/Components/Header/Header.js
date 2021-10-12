@@ -70,9 +70,9 @@ const Header = (props) => {
           {/* </div> */}
           {/* DROPDOWN MENU DIV */}
           <div
+            // ${showDropMenu ? "drop-menu-show" : "drop-menu-hide"}
             className={`project-drop-menu 
               ${props.dark ? "header-dark" : "header-light"}
-              ${showDropMenu ? "drop-menu-show" : "drop-menu-hide"}
           `}
           >
             <ul>
