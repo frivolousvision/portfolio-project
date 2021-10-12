@@ -16,7 +16,6 @@
 .header-dark {
   background-color: rgb(34, 34, 34);
 }
-
 .header-content {
   display: flex;
   justify-content: flex-end;
@@ -34,11 +33,10 @@
   justify-content: center;
   align-items: center;
   margin-left: 3rem;
-  /* padding-left: 4rem; */
-  /* border: 1px solid red; */
   height: 4rem;
   border-bottom: 3px solid cornflowerblue;
   border-bottom-width: 0;
+  z-index: 10;
 }
 a {
   text-decoration: none;
@@ -291,7 +289,6 @@ a {
 .mobile-sub-menu-show {
   height: 100%;
   transform: scaleY(1);
-  /* margin-left: 0; */
 }
 .mobile-sub-menu ul {
   padding: 0;
