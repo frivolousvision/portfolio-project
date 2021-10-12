@@ -29,10 +29,10 @@ const Header = (props) => {
   //   }
   // }, [path]);
 
-  const toggleDropMenu = () => {
-    if (showDropMenu) setShowDropMenu(false);
-    if (!showDropMenu) setShowDropMenu(true);
-  };
+  // const toggleDropMenu = () => {
+  // if (showDropMenu) setShowDropMenu(false);
+  // if (!showDropMenu) setShowDropMenu(true);
+  // };
 
   return (
     <div className='header-wrapper'>
