@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) => {
-  const [showDropMenu, setShowDropMenu] = useState(false);
+  // const [showDropMenu, setShowDropMenu] = useState(false);
   // const [activeState, setActiveState] = useState(false);
   // let path = window.location.href;
   // useEffect(() => {
