@@ -108,6 +108,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -1rem;
+    overflow: hidden;
   }
   .home-container h2 {
     margin-left: 1rem;
