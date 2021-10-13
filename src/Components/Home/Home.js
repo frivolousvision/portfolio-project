@@ -53,8 +53,6 @@ const Home = (props) => {
           >
             Thanks for stopping by! Hope to see you around!
           </h2>
-
-          <p></p>
         </div>
       </div>
     </div>
