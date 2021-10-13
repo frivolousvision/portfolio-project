@@ -82,8 +82,8 @@
 }
 @media only screen and (min-width: 1000px) {
   .about-container {
-    min-height: 44rem;
-    max-height: 44rem;
+    min-height: 40rem;
+    max-height: 40rem;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -96,11 +96,6 @@
   }
   .about-container {
     flex-direction: row;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .about-container {
-    min-height: 44rem;
   }
 }
 @media only screen and (min-width: 1800px) {

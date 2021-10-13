@@ -152,8 +152,8 @@
     align-items: center;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
-    min-height: 44rem;
-    max-height: 44rem;
+    min-height: 40rem;
+    max-height: 40rem;
   }
   .home {
     height: 100%;

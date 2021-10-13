@@ -96,8 +96,8 @@
   .project-container {
     margin: 0 auto;
     margin-top: 3rem;
-    min-height: 44rem;
-    max-height: 44rem;
+    min-height: 40rem;
+    max-height: 40rem;
   }
   .project-content {
     width: 100%;
@@ -142,14 +142,9 @@
   }
   .project-container {
     margin-top: 4rem;
-    max-height: 44rem;
   }
 }
 @media only screen and (min-width: 1400px) {
-  .project-container {
-    margin-top: 4rem;
-    max-height: 44rem;
-  }
   .project-image-container {
     width: 55%;
   }
