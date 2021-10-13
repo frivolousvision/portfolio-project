@@ -74,7 +74,6 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     margin: auto;
     border: 0.5px solid rgb(66, 66, 66);
@@ -135,16 +134,20 @@
     max-width: 90%;
   }
 }
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1400px) {
   .project-container {
     margin-top: 4rem;
+    max-height: 44rem;
   }
   .project-image-container {
     width: 55%;
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1800px) {
   .project-image-container {
     width: 50%;
+  }
+  .project-container {
+    min-height: 54rem;
   }
 }

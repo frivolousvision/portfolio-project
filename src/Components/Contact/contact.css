@@ -85,5 +85,13 @@
     justify-content: center;
   }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1400px) {
+  .contact-container {
+    max-height: 44rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .contact-container {
+    min-height: 54rem;
+  }
 }
