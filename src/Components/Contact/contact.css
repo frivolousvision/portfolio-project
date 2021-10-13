@@ -1,6 +1,6 @@
 .contact {
-  padding-top: 5rem;
   transition: 600ms;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 .contact-light {
@@ -73,9 +73,9 @@
     height: 100vh;
   }
   .contact-container {
-    min-width: 80%;
+    width: 80%;
     height: 80%;
-    margin-top: 2rem;
+    margin-top: 4rem;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
   }
@@ -86,7 +86,4 @@
   }
 }
 @media only screen and (min-width: 1300px) {
-  .contact-container {
-    width: 40%;
-  }
 }

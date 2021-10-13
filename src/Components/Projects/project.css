@@ -5,6 +5,7 @@
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
+  padding-top: 4rem;
   padding-bottom: 2rem;
 }
 .background-light {
@@ -21,7 +22,7 @@
   width: 100%;
   height: 80%;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .project-container p {
   width: 90%;
@@ -73,12 +74,12 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     margin: auto;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
-    margin-top: 3rem;
+    margin-top: 4rem;
   }
   .project-container img {
     max-width: 70%;
