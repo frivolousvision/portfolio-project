@@ -98,9 +98,9 @@
     flex-direction: row;
   }
 }
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1600px) {
   .about-container {
-    min-height: 54rem;
+    min-height: 50rem;
   }
   .about-text-container {
     width: 40%;

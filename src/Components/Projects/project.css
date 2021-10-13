@@ -149,11 +149,11 @@
     width: 55%;
   }
 }
-@media only screen and (min-width: 1800px) {
+@media only screen and (min-width: 1600px) {
   .project-image-container {
     width: 50%;
   }
   .project-container {
-    min-height: 54rem;
+    min-height: 50rem;
   }
 }
