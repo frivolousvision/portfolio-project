@@ -3,21 +3,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "emailjs-com";
-// import keys from "../../emailKey";
+
 const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target);
     emailjs
       .sendForm(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
         e.target,
-        process.env.USER_ID
+        process.env.REACT_APP_USER_ID
       )
       .then(
         (result) => {
-          alert("Message Sent, We will get back to you shortly", result.text);
+          alert(
+            "Thanks for reaching out! I'll will get back to you shortly",
+            result.text
+          );
         },
         (error) => {
           alert("An error occurred, Please try again", error.text);
