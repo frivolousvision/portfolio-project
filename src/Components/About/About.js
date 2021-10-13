@@ -22,7 +22,7 @@ const About = (props) => {
               how to solve tricky problems and live for those "aha!" moments
               when everything clicks.
             </p>
-            <h2 className='skills-header'>Things I Know</h2>
+            <h2 className='skills-header'>Technologies I Use</h2>
             <div className='skills-container'>
               <div>
                 <ul>
