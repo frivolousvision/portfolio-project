@@ -3,15 +3,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "emailjs-com";
-import keys from "../../emailKey";
+// import keys from "../../emailKey";
 const Contact = (props) => {
-  // console.log(keys.USER_ID);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e.target);
     emailjs
-      .sendForm(keys.SERVICE_ID, keys.TEMPLATE_ID, e.target, keys.USER_ID)
+      .sendForm(
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
+        e.target,
+        process.env.USER_ID
+      )
       .then(
         (result) => {
           alert("Message Sent, We will get back to you shortly", result.text);
