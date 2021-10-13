@@ -55,7 +55,6 @@
 .project-header h2 {
   font-family: Roboto;
 }
-
 .text-dark a {
   color: white;
 }
@@ -97,6 +96,8 @@
   .project-container {
     margin: 0 auto;
     margin-top: 3rem;
+    min-height: 44rem;
+    max-height: 44rem;
   }
   .project-content {
     width: 100%;
@@ -138,6 +139,10 @@
   }
   .project-container img {
     max-width: 90%;
+  }
+  .project-container {
+    margin-top: 4rem;
+    max-height: 44rem;
   }
 }
 @media only screen and (min-width: 1400px) {

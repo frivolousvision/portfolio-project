@@ -31,7 +31,7 @@
   margin: 0 auto;
 }
 .contact-header {
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin-top: -2rem;
 }
 .contact-header-light {
@@ -138,12 +138,11 @@ textarea {
   }
 }
 @media only screen and (min-width: 1000px) {
-  .contact {
-    height: 100vh;
-  }
   .contact-container {
     width: 80%;
-    height: 80%;
+    /* height: 80%; */
+    min-height: 44rem;
+    /* max-height: 40rem; */
     margin-top: 4rem;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;

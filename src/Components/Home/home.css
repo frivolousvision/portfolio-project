@@ -152,8 +152,8 @@
     align-items: center;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
-    min-height: 32rem;
-    max-height: 36rem;
+    min-height: 44rem;
+    max-height: 44rem;
   }
   .home {
     height: 100%;
@@ -186,9 +186,6 @@
   .image-container img {
     min-height: 26rem;
     max-height: 30rem;
-  }
-  .home-container {
-    min-height: 44rem;
   }
 }
 @media only screen and (min-width: 1800px) {

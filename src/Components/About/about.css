@@ -82,8 +82,8 @@
 }
 @media only screen and (min-width: 1000px) {
   .about-container {
-    min-height: 36rem;
-    max-height: 36rem;
+    min-height: 44rem;
+    max-height: 44rem;
   }
 }
 @media only screen and (min-width: 1200px) {
