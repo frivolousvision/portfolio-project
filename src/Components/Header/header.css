@@ -51,6 +51,20 @@ a {
   border-bottom: 1px solid cornflowerblue;
   box-shadow: 0 5px 5px -5px cornflowerblue;
 }
+.project-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  cursor: pointer;
+}
+.is-active .project-link {
+  margin-bottom: -1px;
+  border-bottom-width: 100%;
+  border-bottom: 1px solid cornflowerblue;
+  box-shadow: 0 5px 5px -5px cornflowerblue;
+}
 .header-content-light li {
   color: black;
 }
@@ -89,7 +103,7 @@ a {
   cursor: pointer;
 }
 .fa-plus-minus {
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 0.1rem;
 }
 .projects-plus {

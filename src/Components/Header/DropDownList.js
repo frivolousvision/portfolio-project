@@ -17,34 +17,46 @@ const DropDownList = (props) => {
       `}
     >
       <ul>
-        <NavLink to='/e-commerce-app'>
+        <NavLink to='/e-commerce-app' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`${props.dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link ${
+              props.dark ? "text-dark" : "text-light"
+            }`}
           >
             E-Commerce-App
           </li>
         </NavLink>
-        <NavLink to='/reddit-app'>
+        <NavLink to='/reddit-app' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`${props.dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link ${
+              props.dark ? "text-dark" : "text-light"
+            }`}
           >
             Reddit API App
           </li>
         </NavLink>
-        <NavLink to='/coding-challenge'>
+        <NavLink
+          to='/coding-challenge'
+          exact={true}
+          activeClassName='is-active'
+        >
           <li
             onClick={props.toggleDropMenu}
-            className={`${props.dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link ${
+              props.dark ? "text-dark" : "text-light"
+            }`}
           >
             Coding Challenge
           </li>
         </NavLink>
-        <NavLink to='/projects'>
+        <NavLink to='/projects' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`${props.dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link ${
+              props.dark ? "text-dark" : "text-light"
+            }`}
           >
             View all
           </li>

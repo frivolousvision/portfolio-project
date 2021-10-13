@@ -6,6 +6,7 @@
   width: 60rem;
   height: 50rem;
   border: 0.5px solid rgb(66, 66, 66);
+  box-shadow: 0.5px 0.5px 3px rgb(66, 66, 66);
   transition: 800ms ease-in-out;
 }
 .dropdown-container-show {
@@ -30,6 +31,10 @@
   font-size: 1.5rem;
   margin-top: 1rem;
   transition: 400ms;
+}
+.is-active .drop-down-link {
+  border-bottom: 1px solid cornflowerblue;
+  box-shadow: 0 5px 5px -5px cornflowerblue;
 }
 .dropdown-container li:hover {
   color: cornflowerblue;

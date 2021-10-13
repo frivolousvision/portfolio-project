@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Components/Header/Header";
@@ -20,20 +20,26 @@ function App() {
   const [activeState, setActiveState] = useState(false);
   const [showDropMenu, setShowDropMenu] = useState(false);
 
-  let path = window.location.href;
+  const path = useRef();
+
+  const checkActiveState = useCallback(() => {
+    setTimeout(() => {
+      path.current = window.location.pathname;
+      if (
+        /reddit-app/.test(window.location.href) ||
+        /e-commerce-app/.test(window.location.href) ||
+        /coding-challenge/.test(window.location.href) ||
+        /projects/.test(window.location.href)
+      ) {
+        setActiveState(true);
+      } else {
+        setActiveState(false);
+      }
+    }, 100);
+  }, []);
   useEffect(() => {
-    setActiveState(false);
-    if (
-      /reddit-app/.test(window.location.href) ||
-      /e-commerce-app/.test(window.location.href) ||
-      /coding-challenge/.test(window.location.href) ||
-      /projects/.test(window.location.href)
-    ) {
-      setActiveState(true);
-    } else {
-      setActiveState(false);
-    }
-  }, [path]);
+    checkActiveState();
+  }, [path, checkActiveState]);
 
   const toggleDark = () => {
     if (dark) {
@@ -44,11 +50,9 @@ function App() {
     }
   };
   const toggleDropMenu = () => {
+    checkActiveState();
     if (showDropMenu) setShowDropMenu(false);
-    if (!showDropMenu) {
-      setShowDropMenu(true);
-      setActiveState(true);
-    }
+    if (!showDropMenu) setShowDropMenu(true);
   };
   const toggleMobileNav = () => {
     if (showNav) {
@@ -64,6 +68,7 @@ function App() {
     }
   };
   const closeAllNav = () => {
+    checkActiveState();
     if (showNav) {
       setShowNav(false);
       setDisplayContent(false);
@@ -98,6 +103,7 @@ function App() {
           toggleMobileNav={toggleMobileNav}
           toggleSubMenu={toggleSubMenu}
           activeState={activeState}
+          checkActiveState={checkActiveState}
         />
         <DropDownList
           dark={dark}
