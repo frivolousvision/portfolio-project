@@ -79,7 +79,12 @@
     margin-top: 4rem;
   }
 }
-
+@media only screen and (min-width: 1000px) {
+  .about-container {
+    min-height: 36rem;
+    max-height: 36rem;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .about-text-container {
     padding-top: 0;
@@ -92,7 +97,15 @@
     flex-direction: row;
   }
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1400px) {
+  .about-container {
+    min-height: 44rem;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .about-container {
+    min-height: 54rem;
+  }
   .about-text-container {
     width: 40%;
   }
