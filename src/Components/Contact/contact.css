@@ -184,3 +184,15 @@ textarea {
     min-height: 50rem;
   }
 }
+@media only screen and (min-height: 900px) {
+  .contact-container {
+    height: 50rem;
+    border: 1px solid red;
+  }
+  .contact-container .connect-message {
+    width: 60%;
+  }
+  .contact-links {
+    margin-top: 6rem;
+  }
+}
