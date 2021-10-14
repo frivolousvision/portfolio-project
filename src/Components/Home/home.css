@@ -194,6 +194,9 @@
     min-height: 26rem;
     max-height: 30rem;
   }
+  .home-container {
+    margin-top: 3rem;
+  }
 }
 @media only screen and (min-width: 1600px) {
   .home {

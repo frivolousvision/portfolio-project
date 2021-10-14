@@ -93,6 +93,11 @@
     margin-top: 0.6rem;
   }
 }
+@media only screen and (min-width: 1400px) {
+  .projects-container {
+    margin-top: 3rem;
+  }
+}
 @media only screen and (min-width: 1600px) {
   .projects-container {
     margin-top: 4rem;
