@@ -162,6 +162,9 @@ textarea {
   label {
     font-size: 1.4rem;
   }
+  .contact-container .connect-message {
+    width: 60%;
+  }
 }
 @media only screen and (min-width: 1400px) {
   .contact-container {
