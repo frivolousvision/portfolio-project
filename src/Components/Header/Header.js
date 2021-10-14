@@ -150,11 +150,6 @@ const Header = (props) => {
           `}
           >
             <ul>
-              <NavLink to='/projects' exact={true} activeClassName='is-active'>
-                <div className='sub-menu-mobile-link-container'>
-                  <li onClick={props.toggleMobileNav}>See all</li>
-                </div>
-              </NavLink>
               <NavLink
                 to='/e-commerce-app'
                 exact={true}
@@ -180,6 +175,11 @@ const Header = (props) => {
               >
                 <div className='sub-menu-mobile-link-container'>
                   <li onClick={props.toggleMobileNav}>Coding Challenge</li>
+                </div>
+              </NavLink>
+              <NavLink to='/projects' exact={true} activeClassName='is-active'>
+                <div className='sub-menu-mobile-link-container'>
+                  <li onClick={props.toggleMobileNav}>View all</li>
                 </div>
               </NavLink>
             </ul>
