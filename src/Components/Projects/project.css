@@ -89,6 +89,11 @@
     max-width: 70%;
   }
 }
+@media only screen and (max-width: 1000px) and (min-height: 1000px) {
+  .project-container {
+    height: 50rem;
+  }
+}
 @media only screen and (min-width: 1000px) {
   .project {
     height: 100vh;

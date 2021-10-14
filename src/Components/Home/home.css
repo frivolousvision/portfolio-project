@@ -180,6 +180,11 @@
     border-radius: 5px;
   }
 }
+@media only screen and (max-width: 1000px) and (min-height: 1000px) {
+  .home-container {
+    height: 50rem;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .text-container {
     width: 40%;

@@ -144,6 +144,17 @@ textarea {
     margin-bottom: -1.5rem;
   }
 }
+@media only screen and (max-width: 1000px) and (min-height: 1000px) {
+  .contact-container {
+    height: 50rem;
+  }
+  .contact-container .connect-message {
+    width: 60%;
+  }
+  .contact-links {
+    margin-top: 6rem;
+  }
+}
 @media only screen and (min-width: 1000px) {
   .contact-container {
     width: 80%;

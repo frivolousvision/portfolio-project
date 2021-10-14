@@ -80,6 +80,11 @@
     margin-top: 4rem;
   }
 }
+@media only screen and (max-width: 1000px) and (min-height: 1000px) {
+  .about-container {
+    height: 50rem;
+  }
+}
 @media only screen and (min-width: 1000px) {
   .about-container {
     min-height: 40rem;
