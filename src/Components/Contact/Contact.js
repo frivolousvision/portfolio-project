@@ -7,7 +7,6 @@ import emailjs from "emailjs-com";
 const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,

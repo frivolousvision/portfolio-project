@@ -100,13 +100,18 @@
 }
 @media only screen and (min-width: 1600px) {
   .projects-container {
-    margin-top: 4rem;
     min-height: 50rem;
   }
   .each-project-container {
     max-width: 35%;
     margin-top: -1rem;
     margin-bottom: -1rem;
+  }
+  .projects-header {
+    margin-top: 1rem;
+  }
+  .projects-content {
+    margin-top: 1.5rem;
   }
 }
 @media only screen and (max-width: 1200px) and (min-height: 900px) {

@@ -107,7 +107,6 @@
 @media only screen and (min-width: 1600px) {
   .about-container {
     min-height: 50rem;
-    margin-top: 4rem;
   }
   .about-text-container {
     width: 40%;

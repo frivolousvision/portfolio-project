@@ -12,23 +12,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) => {
-  // const [showDropMenu, setShowDropMenu] = useState(false);
-  // const [activeState, setActiveState] = useState(false);
-  // let path = window.location.href;
-  // useEffect(() => {
-  //   setActiveState(false);
-  //   if (
-  //     /reddit-app/.test(window.location.href) ||
-  //     /e-commerce-app/.test(window.location.href) ||
-  //     /coding-challenge/.test(window.location.href) ||
-  //     /projects/.test(window.location.href)
-  //   ) {
-  //     setActiveState(true);
-  //   } else {
-  //     setActiveState(false);
-  //   }
-  // }, [path]);
-
   return (
     <div className='header-wrapper'>
       <nav className={`header ${props.dark ? "header-dark" : "header-light"}`}>

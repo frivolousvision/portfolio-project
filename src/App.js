@@ -2,6 +2,7 @@ import "./App.css";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import ScrollToTop from "./Components/ScrollToTop";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
@@ -37,6 +38,7 @@ function App() {
       }
     }, 100);
   }, []);
+
   useEffect(() => {
     checkActiveState();
   }, [path, checkActiveState]);
@@ -91,6 +93,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
+        <ScrollToTop />
         <Header
           dark={dark}
           toggleDark={toggleDark}
