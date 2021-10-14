@@ -147,6 +147,7 @@
 }
 @media only screen and (min-width: 1000px) {
   .home-container {
+    margin-top: 2rem;
     flex-direction: row;
     justify-content: center;
     align-items: center;
