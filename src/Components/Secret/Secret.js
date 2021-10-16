@@ -36,6 +36,7 @@ const Secret = (props) => {
         }`}
       >
         <p>Hi</p>
+        <p>Ever wanted to know the sum of all numbers of a number? Well...</p>
         <form onSubmit={(e) => sumOfAllNumbers(e, number)}>
           <input
             type='number'
