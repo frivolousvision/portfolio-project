@@ -12,6 +12,7 @@ import ECommerceApp from "./Components/Projects/ECommerceApp";
 import CodingChallenge from "./Components/Projects/CodingChallenge";
 import RedditApp from "./Components/Projects/RedditApp";
 import DropDownList from "./Components/Header/DropDownList";
+import Secret from "./Components/Secret/Secret";
 
 function App() {
   const [dark, setDark] = useState(true);
@@ -146,6 +147,9 @@ function App() {
               showNav={showNav}
               closeAllNav={closeAllNav}
             />
+          </Route>
+          <Route path='/secret' exact>
+            <Secret dark={dark} showNav={showNav} closeAllNav={closeAllNav} />
           </Route>
         </Switch>
       </Router>
