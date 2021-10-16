@@ -27,12 +27,12 @@ const Secret = (props) => {
 
   return (
     <div
-      className={`secret ${props.dark ? "secret-dark" : "secret-dark"}`}
+      className={`secret ${props.dark ? "secret-dark" : "secret-light"}`}
       onClick={props.closeAllNav}
     >
       <div
         className={`secret-container ${
-          props.dark ? "secret-dark" : "secret-dark"
+          props.dark ? "secret-dark" : "secret-light"
         }`}
       >
         <p>Hi</p>
