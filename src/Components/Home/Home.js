@@ -1,5 +1,5 @@
 import "./home.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DanPhoto from "./Dan-photo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
@@ -8,13 +8,18 @@ const Home = (props) => {
   const [menuIcon, setMenuIcon] = useState(false);
   const [firstVisit, setFirstVisit] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setMenuIcon(true);
+    }, 2000);
+    setTimeout(() => {
+      setMenuIcon(false);
+    }, 6000);
+  }, []);
   setTimeout(() => {
     setFirstVisit(false);
   }, 1000 * 10);
-  setTimeout(() => {
-    if (!menuIcon) setMenuIcon(true);
-    if (menuIcon) setMenuIcon(false);
-  }, 4000);
+
   return (
     <div
       onClick={props.closeAllNav}
