@@ -6,7 +6,6 @@ import {
   faSun,
   faMoon,
   faBars,
-  faTimes,
   faMinus,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
