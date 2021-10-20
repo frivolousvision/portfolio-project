@@ -189,16 +189,3 @@ textarea {
     margin-top: 6rem;
   }
 }
-/* @media only screen and (max-width: 1200px) and (min-height: 1000px) {
-  .contact-container {
-    min-height: 60rem;
-    margin-top: 2rem;
-    border: 1px solid yellow;
-  }
-  .contact-container .connect-message {
-    width: 60%;
-  }
-  .contact-links {
-    margin-top: 6rem;
-  }
-} */
