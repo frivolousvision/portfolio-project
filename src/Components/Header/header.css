@@ -201,9 +201,14 @@ a {
   margin-bottom: 3rem;
 }
 .mobile-nav-content-hide {
-  margin-left: -20rem;
+  margin-top: 30rem;
+  transform: translateX(-20rem);
+  margin-left: 30rem;
+  transition: 600ms;
 }
 .mobile-nav-content-show {
+  transform: translateX(0rem);
+  transform: rotate(-60deg);
   /* margin-left: 0; */
 }
 .mobile-nav-content-dark li {
