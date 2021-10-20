@@ -86,13 +86,13 @@ const Header = (props) => {
               : "mobile-nav-content-hide"
           }`}
         >
-          <li>
+          {/* <li>
             <FontAwesomeIcon
               icon={faTimes}
               onClick={props.toggleMobileNav}
               className={`fa-times ${props.dark ? `fa-dark` : `fa-light`}`}
             />
-          </li>
+          </li> */}
           <NavLink to='/' exact={true} activeClassName='is-active'>
             <div className='mobile-link-container'>
               <li onClick={props.toggleMobileNav}>home</li>
@@ -103,7 +103,12 @@ const Header = (props) => {
               <li onClick={props.toggleMobileNav}>about</li>
             </div>
           </NavLink>
-          <div
+          <NavLink to='/projects' exact={true} activeClassName='is-active'>
+            <div className='mobile-link-container'>
+              <li onClick={props.toggleMobileNav}>projects</li>
+            </div>
+          </NavLink>
+          {/* <div COMMENTING OUT TO TEST PROJECT JUST AS NAVLINK
             className={`${props.showSubMenu ? "is-active" : null} ${
               props.activeState ? "is-active" : null
             }`}
@@ -119,7 +124,7 @@ const Header = (props) => {
                 />
               </li>
             </div>
-          </div>
+          </div> */}
 
           <div
             className={`mobile-sub-menu ${

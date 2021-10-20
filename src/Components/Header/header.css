@@ -129,7 +129,7 @@ a {
 .bars {
   font-size: 3rem;
   position: fixed;
-  left: 1rem;
+  right: 1rem;
   z-index: 30;
 }
 .bars-light {
@@ -171,9 +171,11 @@ a {
 }
 .mobile-nav-light {
   background-color: white;
+  transition: 600ms;
 }
 .mobile-nav-dark {
   background-color: rgb(34, 34, 34);
+  transition: 600ms;
 }
 .mobile-nav-hide {
   top: -55rem;
@@ -191,7 +193,7 @@ a {
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin-top: 40rem;
+  margin-top: 42rem;
   margin-left: 14rem;
   transition: 600ms;
   transform: rotate(-60deg);
@@ -252,7 +254,12 @@ a {
     display: none;
   }
   .toggle-container {
-    margin-right: -1rem;
+    position: fixed;
+    left: 1rem;
+  }
+  .toggle-container {
+    border-radius: 1rem;
+    margin-left: 0;
   }
 }
 @media only screen and (min-width: 700px) {
