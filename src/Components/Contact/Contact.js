@@ -47,8 +47,7 @@ const Contact = (props) => {
             props.dark ? "text-dark" : "text-light"
           }`}
         >
-          Want to connect? Send me a quick message or click any of the links
-          below.
+          Want to connect? Send me a message or hit the links below!
         </h3>
         <div className='form-container'>
           <form onSubmit={handleSubmit}>
