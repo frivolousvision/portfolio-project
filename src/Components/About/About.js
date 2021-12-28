@@ -16,7 +16,11 @@ const About = (props) => {
           props.dark ? "about-container-dark" : "about-container-light"
         }`}
       >
-        <img src={props.dark ? resumeDark : resumeLight} className='resume' />
+        <img
+          src={props.dark ? resumeDark : resumeLight}
+          alt='resume for Dan Durnell'
+          className='resume'
+        />
         {/* <div className='resume-container'>
           <img src={resumeLight} />
         </div> */}
