@@ -7,7 +7,6 @@
   transform: rotate(30deg) translateX(1.5rem);
   transition: 600ms;
   font-family: "Permanent Marker", cursive;
-  z-index: 30;
 }
 .menu-icon-hide {
   position: fixed;
@@ -17,12 +16,10 @@
   transform: rotate(0.9turn) translateX(-2rem);
   transition: 600ms;
   font-family: "Permanent Marker", cursive;
-  z-index: 30;
 }
 .fa-share {
   transform: scaleX(-1);
   transform: rotate(0.7turn);
-  z-index: 30;
 }
 .home {
   display: flex;
@@ -84,6 +81,7 @@
 }
 .home-container h2 {
   font-weight: 400;
+  margin-bottom: 3rem;
 }
 .home-header-hide {
   margin-top: 2rem;
@@ -101,11 +99,11 @@
 }
 @media only screen and (max-width: 600px) {
   .home {
-    height: 100vh;
+    height: min-100vh;
     overflow: hidden;
     margin: 0;
     /* padding-top: 4rem; */
-    position: fixed;
+    /* position: fixed; */
   }
   .image-container img {
     width: 90%;
@@ -116,7 +114,14 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-    margin-top: -9rem;
+    margin-top: 2rem;
+  }
+  .home-container p {
+    font-size: 1rem;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -2rem;
   }
   .home-container h2 {
     margin-left: 1rem;

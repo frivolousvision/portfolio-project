@@ -1,4 +1,5 @@
 import "./about.css";
+// import resumeLight from "./resume-light.png";
 
 const About = (props) => {
   return (
@@ -13,13 +14,25 @@ const About = (props) => {
           props.dark ? "about-container-dark" : "about-container-light"
         }`}
       >
+        {/* <div className='resume-container'>
+          <img src={resumeLight} />
+        </div> */}
         <div className='about-text-container'>
           <h2 className='about-header'>About</h2>
           <p>
-            I'm an Atlanta-based developer who enjoys building and creating
-            dynamic applications that look and feel fantastic. I love learning
-            how to solve tricky problems and live for those "aha!" moments when
-            everything clicks.
+            I'm an Atlanta based developer specializing in the PERN stack who
+            loves learning, problem-solving, creating dynamic content, and
+            working with people. A strong foundation in modern web development
+            languages such as JavaScript ES6, CSS3, and HTML5, with an affinity
+            for creating dynamic single-page applications with React and Redux.
+            Proficient in building responsive UI's that delight users with their
+            functionality and a sharp ability to design pages based on
+            wireframes. Proficient in using NodeJS to build the backend under
+            the Express framework to create servers and route requests to manage
+            CRUD functionality. Experience in relational databases creating and
+            working with RESTful APIs to manage and deliver content via
+            PostgreSQL. Extensive experience in customer service building and
+            managing relationships.
           </p>
           <h2 className='skills-header'>Technologies I Use</h2>
           <div className='skills-container'>
