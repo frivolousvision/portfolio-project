@@ -7,6 +7,10 @@
   width: 100%;
   min-height: 100vh;
 }
+.resume {
+  margin-top: -14rem;
+  max-width: 95%;
+}
 .about-light {
   background-color: white;
 }
@@ -140,5 +144,15 @@
   .about-container {
     height: 50rem;
     margin-top: 2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .about-text-container {
+    display: none;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .resume {
+    display: none;
   }
 }

@@ -58,6 +58,30 @@ const Home = (props) => {
           >
             Thanks for stopping by! Hope to see you around!
           </h2>
+          <br />
+          <p className={`home-about-text`}>
+            I'm an Atlanta based developer specializing in the PERN stack who
+            loves learning, problem-solving, creating dynamic content, and
+            working with people.
+          </p>
+          <br />
+          <br />
+          <p>
+            A strong foundation in modern web development languages such as
+            JavaScript ES6, CSS3, and HTML5, with an affinity for creating
+            dynamic single-page applications with React and Redux. Proficient in
+            building responsive UI's that delight users with their functionality
+            and a sharp ability to design pages based on wireframes.
+          </p>
+          <br />
+          <br />
+          <p>
+            Versed in back-end design using NodeJS under the Express framework
+            to create servers and route requests to manage CRUD functionality.
+            Experience in relational databases creating and working with RESTful
+            APIs to manage and deliver content via PostgreSQL. Extensive
+            experience in customer service building and managing relationships.
+          </p>
         </div>
       </div>
     </div>

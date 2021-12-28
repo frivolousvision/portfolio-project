@@ -184,6 +184,11 @@
     margin-right: 2rem;
   }
 }
+@media only screen and (min-width: 400px) {
+  .home-about-text {
+    display: none;
+  }
+}
 @media only screen and (min-width: 600px) {
   .home-container {
     border: 0.5px solid rgb(66, 66, 66);

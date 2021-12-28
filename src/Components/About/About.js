@@ -1,5 +1,7 @@
 import "./about.css";
-// import resumeLight from "./resume-light.png";
+import "./dan-durnell-resume.pdf";
+import resumeLight from "./resume-light.png";
+import resumeDark from "./resume-dark.png";
 
 const About = (props) => {
   return (
@@ -14,6 +16,7 @@ const About = (props) => {
           props.dark ? "about-container-dark" : "about-container-light"
         }`}
       >
+        <img src={props.dark ? resumeDark : resumeLight} className='resume' />
         {/* <div className='resume-container'>
           <img src={resumeLight} />
         </div> */}
