@@ -97,6 +97,9 @@
 .goodbye-header-hide {
   transform: translateX(-100rem);
 }
+.home-about-text {
+  margin-top: 1rem;
+}
 @media only screen and (max-width: 600px) {
   .home {
     height: min-100vh;
@@ -184,11 +187,7 @@
     margin-right: 2rem;
   }
 }
-@media only screen and (min-width: 400px) {
-  .home-about-text {
-    display: none;
-  }
-}
+
 @media only screen and (min-width: 600px) {
   .home-container {
     border: 0.5px solid rgb(66, 66, 66);
@@ -230,5 +229,10 @@
   .home-container {
     height: 50rem;
     margin-top: 2rem;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .home-about-text {
+    display: none;
   }
 }
