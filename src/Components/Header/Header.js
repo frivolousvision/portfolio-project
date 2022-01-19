@@ -1,5 +1,6 @@
 import "./header.css";
-import React from "react";
+import React, { useContext } from "react";
+import { DarkContext } from "../../App";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,17 +13,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) => {
+  const dark = useContext(DarkContext);
+
   return (
     <div className='header-wrapper'>
-      <nav className={`header ${props.dark ? "header-dark" : "header-light"}`}>
+      <nav className={`header ${dark ? "header-dark" : "header-light"}`}>
         <ul
           className={`header-content ${
-            props.dark ? "header-content-dark" : "header-content-light"
+            dark ? "header-content-dark" : "header-content-light"
           }`}
         >
           <FontAwesomeIcon
             icon={faBars}
-            className={`bars ${props.dark ? "bars-dark" : "bars-light"}`}
+            className={`bars ${dark ? "bars-dark" : "bars-light"}`}
             onClick={props.toggleMobileNav}
           />
           <NavLink to='/' exact={true} activeClassName='is-active'>
@@ -58,11 +61,11 @@ const Header = (props) => {
           </NavLink>
           <div
             className={`toggle-container ${
-              props.dark ? "toggle-container-dark" : "toggle-container-light"
+              dark ? "toggle-container-dark" : "toggle-container-light"
             }`}
             onClick={props.toggleDark}
           >
-            {props.dark ? (
+            {dark ? (
               <FontAwesomeIcon icon={faMoon} className='moon' />
             ) : (
               <FontAwesomeIcon icon={faSun} className='sun' />
@@ -72,14 +75,12 @@ const Header = (props) => {
       </nav>
       {/* BEGIN MOBILE MENU */}
       <nav
-        className={`mobile-nav ${
-          props.dark ? "mobile-nav-dark" : "mobile-nav-light"
-        }
+        className={`mobile-nav ${dark ? "mobile-nav-dark" : "mobile-nav-light"}
            ${props.showNav ? "mobile-nav-show" : "mobile-nav-hide"}`}
       >
         <ul
           className={`mobile-nav-content ${
-            props.dark ? "mobile-nav-content-dark" : "mobile-nav-content-light"
+            dark ? "mobile-nav-content-dark" : "mobile-nav-content-light"
           } ${
             props.displayContent
               ? "mobile-nav-content-show"
@@ -103,9 +104,7 @@ const Header = (props) => {
           </NavLink>
 
           <div
-            className={`mobile-sub-menu ${
-              props.dark ? "text-dark" : "text-light"
-            }
+            className={`mobile-sub-menu ${dark ? "text-dark" : "text-light"}
             ${
               props.showSubMenu
                 ? "mobile-sub-menu-show"
@@ -157,7 +156,7 @@ const Header = (props) => {
             <FontAwesomeIcon
               icon={faTimes}
               onClick={props.toggleMobileNav}
-              className={`fa-times ${props.dark ? `fa-dark` : `fa-light`}`}
+              className={`fa-times ${dark ? `fa-dark` : `fa-light`}`}
             />
           </li>
         </ul>

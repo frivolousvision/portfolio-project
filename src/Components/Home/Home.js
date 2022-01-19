@@ -1,12 +1,14 @@
 import "./home.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import DanPhoto from "./Dan-photo.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
+import { DarkContext } from "../../App";
 
 const Home = (props) => {
   const [menuIcon, setMenuIcon] = useState(false);
   const [firstVisit, setFirstVisit] = useState(true);
+  const dark = useContext(DarkContext);
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,7 +25,7 @@ const Home = (props) => {
   return (
     <div
       onClick={props.closeAllNav}
-      className={`home ${props.dark ? "home-dark" : "home-light"} ${
+      className={`home ${dark ? "home-dark" : "home-light"} ${
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
@@ -36,7 +38,7 @@ const Home = (props) => {
       </p>
       <div
         className={`home-container ${
-          props.dark ? "home-container-dark" : "home-container-light"
+          dark ? "home-container-dark" : "home-container-light"
         }`}
       >
         <div className='image-container'>

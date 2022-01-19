@@ -1,19 +1,22 @@
 import "./project.css";
 import codingChallenge from "../ProjectList/coding-challenge.jpg";
+import { useContext } from "react";
+import { DarkContext } from "../../App";
 
 const CodingChallenge = (props) => {
+  const dark = useContext(DarkContext);
   return (
     <div
       onClick={props.closeAllNav}
       className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
-        props.dark ? "background-dark" : "background-light"
+        dark ? "background-dark" : "background-light"
       }`}
     >
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
             className={`project-header ${
-              props.dark
+              dark
                 ? "text-dark project-header-dark"
                 : "text-light project-header-light"
             }`}
@@ -23,7 +26,7 @@ const CodingChallenge = (props) => {
           <div className='project-content'>
             <div className='project-image-container'>
               <img src={codingChallenge} alt='' />
-              <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+              <p className={`${dark ? "text-dark" : "text-light"}`}>
                 View the project live{" "}
                 <a
                   href='https://www.dan-demos.com/'
@@ -33,7 +36,7 @@ const CodingChallenge = (props) => {
                   here
                 </a>
               </p>
-              <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+              <p className={`${dark ? "text-dark" : "text-light"}`}>
                 View this project's repository{" "}
                 <a
                   href='https://github.com/frivolousvision/coding-challenge'
@@ -45,7 +48,7 @@ const CodingChallenge = (props) => {
               </p>
             </div>
             <div className='text-container'>
-              <p className={`${props.dark ? "text-dark" : "text-light"}`}>
+              <p className={`${dark ? "text-dark" : "text-light"}`}>
                 A frontend application made with React to compare target
                 companies with CRUD functionality. The site is hosted via
                 Netlify and is linked to GitHub to allow for continuous
@@ -60,7 +63,7 @@ const CodingChallenge = (props) => {
               <br />
               <p
                 className={`view-project-text-desktop ${
-                  props.dark ? "text-dark" : "text-light"
+                  dark ? "text-dark" : "text-light"
                 }`}
               >
                 View the project live{" "}
@@ -74,7 +77,7 @@ const CodingChallenge = (props) => {
               </p>
               <p
                 className={`view-project-text-desktop ${
-                  props.dark ? "text-dark" : "text-light"
+                  dark ? "text-dark" : "text-light"
                 }`}
               >
                 View this project's repository{" "}

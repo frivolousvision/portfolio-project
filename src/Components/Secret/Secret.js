@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./secret.css";
+import { useContext } from "react";
+import { DarkContext } from "../../App";
 
 const Secret = (props) => {
+  const dark = useContext(DarkContext);
   const [number, setNumber] = useState(100);
   const [loading, setLoading] = useState(false);
   const [solution, setSolution] = useState(null);
@@ -27,13 +30,11 @@ const Secret = (props) => {
 
   return (
     <div
-      className={`secret ${props.dark ? "secret-dark" : "secret-light"}`}
+      className={`secret ${dark ? "secret-dark" : "secret-light"}`}
       onClick={props.closeAllNav}
     >
       <div
-        className={`secret-container ${
-          props.dark ? "secret-dark" : "secret-light"
-        }`}
+        className={`secret-container ${dark ? "secret-dark" : "secret-light"}`}
       >
         <p>Hi</p>
         <p>Ever wanted to know the sum of all numbers of a number? Well...</p>

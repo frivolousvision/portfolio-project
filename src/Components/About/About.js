@@ -2,22 +2,25 @@ import "./about.css";
 import "./dan-durnell-resume.pdf";
 import resumeLight from "./resume-light.png";
 import resumeDark from "./resume-dark.png";
+import { useContext } from "react";
+import { DarkContext } from "../../App";
 
 const About = (props) => {
+  const dark = useContext(DarkContext);
   return (
     <div
       onClick={props.closeAllNav}
-      className={`about ${props.dark ? "about-dark" : "about-light"} ${
+      className={`about ${dark ? "about-dark" : "about-light"} ${
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
       <div
         className={`about-container ${
-          props.dark ? "about-container-dark" : "about-container-light"
+          dark ? "about-container-dark" : "about-container-light"
         }`}
       >
         <img
-          src={props.dark ? resumeDark : resumeLight}
+          src={dark ? resumeDark : resumeLight}
           alt='resume for Dan Durnell'
           className='resume'
         />

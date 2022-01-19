@@ -1,10 +1,14 @@
 import "./contact.css";
+import { useContext } from "react";
+import { DarkContext } from "../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import emailjs from "emailjs-com";
 
 const Contact = (props) => {
+  const dark = useContext(DarkContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -30,36 +34,32 @@ const Contact = (props) => {
   return (
     <div
       onClick={props.closeAllNav}
-      className={`contact ${props.dark ? "contact-dark" : "contact-light"} ${
+      className={`contact ${dark ? "contact-dark" : "contact-light"} ${
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
       <div className={`contact-container`}>
         <h2
           className={`contact-header ${
-            props.dark ? "contact-header-dark" : "contact-header-light"
+            dark ? "contact-header-dark" : "contact-header-light"
           }`}
         >
           Contact
         </h2>
-        <h3
-          className={`connect-message ${
-            props.dark ? "text-dark" : "text-light"
-          }`}
-        >
+        <h3 className={`connect-message ${dark ? "text-dark" : "text-light"}`}>
           Want to connect? Send me a message or hit the links below!
         </h3>
         <div className='form-container'>
           <form onSubmit={handleSubmit}>
-            <label className={`${props.dark ? "text-dark" : "text-light"}`}>
+            <label className={`${dark ? "text-dark" : "text-light"}`}>
               Name
               <input type='text' name='name' required />
             </label>
-            <label className={`${props.dark ? "text-dark" : "text-light"}`}>
+            <label className={`${dark ? "text-dark" : "text-light"}`}>
               Email
               <input type='text' name='name' required />
             </label>
-            <label className={`${props.dark ? "text-dark" : "text-light"}`}>
+            <label className={`${dark ? "text-dark" : "text-light"}`}>
               Message
               <textarea type='text' name='message' required />
             </label>
@@ -69,7 +69,7 @@ const Contact = (props) => {
         <div className='contact-links'>
           <div
             className={`contact-link-container ${
-              props.dark ? "text-dark" : "text-light"
+              dark ? "text-dark" : "text-light"
             }`}
           >
             <a
@@ -83,7 +83,7 @@ const Contact = (props) => {
           </div>
           <div
             className={`contact-link-container ${
-              props.dark ? "text-dark" : "text-light"
+              dark ? "text-dark" : "text-light"
             }`}
           >
             <a
@@ -97,7 +97,7 @@ const Contact = (props) => {
           </div>
           <div
             className={`contact-link-container ${
-              props.dark ? "text-dark" : "text-light"
+              dark ? "text-dark" : "text-light"
             }`}
           >
             <a
