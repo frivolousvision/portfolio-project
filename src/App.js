@@ -84,13 +84,10 @@ function App() {
   const toggleSubMenu = () => {
     if (showSubMenu) {
       setShowSubMenu(false);
-      // setDisplaySubMenu(false);
     }
     if (!showSubMenu) {
       setShowSubMenu(true);
-      setTimeout(() => {
-        // setDisplaySubMenu(true);
-      }, 200);
+      setTimeout(() => {}, 200);
     }
   };
   return (

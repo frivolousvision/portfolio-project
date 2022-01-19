@@ -1,14 +1,16 @@
 import "./dropdown.css";
-import React from "react";
+import React, { useContext } from "react";
+import { DarkContext } from "../../App";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const DropDownList = (props) => {
+  const dark = useContext(DarkContext);
   return (
     <div
       className={`dropdown-container ${
-        props.dark ? "drop-down-dark" : "drop-down-light"
+        dark ? "drop-down-dark" : "drop-down-light"
       } ${
         props.showDropMenu
           ? "dropdown-container-show"
@@ -20,9 +22,7 @@ const DropDownList = (props) => {
         <NavLink to='/e-commerce-app' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${
-              props.dark ? "text-dark" : "text-light"
-            }`}
+            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
             E-Commerce-App
           </li>
@@ -30,9 +30,7 @@ const DropDownList = (props) => {
         <NavLink to='/reddit-app' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${
-              props.dark ? "text-dark" : "text-light"
-            }`}
+            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
             Reddit API App
           </li>
@@ -44,9 +42,7 @@ const DropDownList = (props) => {
         >
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${
-              props.dark ? "text-dark" : "text-light"
-            }`}
+            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
             Coding Challenge
           </li>
@@ -54,9 +50,7 @@ const DropDownList = (props) => {
         <NavLink to='/projects' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${
-              props.dark ? "text-dark" : "text-light"
-            }`}
+            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
             View all
           </li>
@@ -64,7 +58,7 @@ const DropDownList = (props) => {
         <FontAwesomeIcon
           onClick={props.toggleDropMenu}
           icon={faTimes}
-          className={`drop-menu-x ${props.dark ? "text-dark" : "text-light"}`}
+          className={`drop-menu-x ${dark ? "text-dark" : "text-light"}`}
         />
       </ul>
     </div>
