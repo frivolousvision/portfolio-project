@@ -1,5 +1,5 @@
 import "./project.css";
-import codingChallenge from "../ProjectList/coding-challenge.jpg";
+import codingChallenge from "../ProjectList/findyourwordle.png";
 import { useContext } from "react";
 import { DarkContext } from "../../App";
 
@@ -21,7 +21,7 @@ const CodingChallenge = (props) => {
                 : "text-light project-header-light"
             }`}
           >
-            Coding Challenge
+            Find Your Wordle
           </h2>
           <div className='project-content'>
             <div className='project-image-container'>
@@ -29,7 +29,7 @@ const CodingChallenge = (props) => {
               <p className={`${dark ? "text-dark" : "text-light"}`}>
                 View the project live{" "}
                 <a
-                  href='https://www.dan-demos.com/'
+                  href='https://www.findyourwordle.com/'
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -39,7 +39,7 @@ const CodingChallenge = (props) => {
               <p className={`${dark ? "text-dark" : "text-light"}`}>
                 View this project's repository{" "}
                 <a
-                  href='https://github.com/frivolousvision/coding-challenge'
+                  href='https://github.com/frivolousvision/find-your-wordle'
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -49,15 +49,14 @@ const CodingChallenge = (props) => {
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
-                A frontend application made with React to compare target
-                companies with CRUD functionality. The site is hosted via
-                Netlify and is linked to GitHub to allow for continuous
-                integration.
+                A frontend application made with React that recieves user inputs
+                and consumes an external Api. The site is hosted via Netlify and
+                is linked to GitHub to allow for continuous integration.
                 <br />
                 <br />
-                The goal of this challenge was to view a list of targets, edit
-                an existing target, create a new target and delete a target
-                using a modern JavaScript framework.
+                The goal of this project was to create a fun lightweight
+                application that helps my friends cheat at... I mean *solve*
+                their NYTimes' Wordle.
               </p>
 
               <br />
@@ -68,7 +67,7 @@ const CodingChallenge = (props) => {
               >
                 View the project live{" "}
                 <a
-                  href='https://www.dan-demos.com/'
+                  href='https://www.findyourwordle.com/'
                   target='_blank'
                   rel='noreferrer'
                 >

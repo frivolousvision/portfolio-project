@@ -44,7 +44,7 @@ const DropDownList = (props) => {
             onClick={props.toggleDropMenu}
             className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
-            Coding Challenge
+            Find Your Wordle
           </li>
         </NavLink>
         <NavLink to='/projects' exact={true} activeClassName='is-active'>

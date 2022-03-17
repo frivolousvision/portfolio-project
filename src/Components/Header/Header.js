@@ -137,7 +137,7 @@ const Header = (props) => {
                 activeClassName='is-active'
               >
                 <div className='sub-menu-mobile-link-container'>
-                  <li onClick={props.toggleMobileNav}>Coding Challenge</li>
+                  <li onClick={props.toggleMobileNav}>Find Your Wordle</li>
                 </div>
               </NavLink>
               <NavLink to='/projects' exact={true} activeClassName='is-active'>

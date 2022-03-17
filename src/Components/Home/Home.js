@@ -37,6 +37,7 @@ const Home = (props) => {
         <FontAwesomeIcon icon={faShare} className='fa-share' /> menu!
       </p>
       <div
+        onClick={props.closeAllNav}
         className={`home-container ${
           dark ? "home-container-dark" : "home-container-light"
         }`}

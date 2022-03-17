@@ -4,7 +4,7 @@ import { DarkContext } from "../../App";
 import { Link } from "react-router-dom";
 import eCommercePhoto from "./e-commerce-app.jpg";
 import redditPhoto from "./reddit-screenshot.jpg";
-import codingChallenge from "./coding-challenge.jpg";
+import codingChallenge from "./findyourwordle.png";
 
 const Projects = (props) => {
   const dark = useContext(DarkContext);
@@ -46,13 +46,13 @@ const Projects = (props) => {
           <div className={`each-project-container`}>
             <Link to='/coding-challenge'>
               <h5 className={`${dark ? "text-dark" : "text-light"}`}>
-                Coding Challenge
+                Find Your Wordle
               </h5>
               <img src={codingChallenge} alt='' />
             </Link>
             <p className={`${dark ? "text-dark" : "text-light"}`}>
-              A frontend application made with React to compare target companies
-              with CRUD functionality
+              A React app to that helps users find solutions to the popular
+              NYTimes game, Wordle
             </p>
           </div>
         </div>
