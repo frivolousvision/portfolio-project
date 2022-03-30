@@ -49,14 +49,12 @@ const CodingChallenge = (props) => {
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
-                A frontend application made with React that recieves user inputs
-                and consumes an external Api. The site is hosted via Netlify and
-                is linked to GitHub to allow for continuous integration.
+                A React app that recieves user inputs and queries data from an
+                API to help users cheat... I mean *solve* their NYTimes' Wordle.
                 <br />
                 <br />
-                The goal of this project was to create a fun lightweight
-                application that helps my friends cheat at... I mean *solve*
-                their NYTimes' Wordle.
+                The site is hosted via Netlify and is linked to GitHub to allow
+                for continuous integration.
               </p>
 
               <br />
