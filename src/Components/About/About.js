@@ -1,7 +1,8 @@
 import "./about.css";
 import "./dan-durnell-resume.pdf";
-import resumeLight from "./resume-light.png";
-import resumeDark from "./resume-dark.png";
+// import resumeLight from "./resume-light.png";
+// import resumeDark from "./resume-dark.png";
+import resumeNew from "./resume-10-22.png";
 import { useContext } from "react";
 import { DarkContext } from "../../App";
 
@@ -20,11 +21,7 @@ const About = (props) => {
           dark ? "about-container-dark" : "about-container-light"
         }`}
       >
-        <img
-          src={dark ? resumeDark : resumeLight}
-          alt='resume for Dan Durnell'
-          className='resume'
-        />
+        <img src={resumeNew} alt='resume for Dan Durnell' className='resume' />
         {/* <div className='resume-container'>
           <img src={resumeLight} />
         </div> */}

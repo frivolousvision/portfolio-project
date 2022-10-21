@@ -21,6 +21,18 @@ const Projects = (props) => {
         </h2>
         <div className={`projects-content`}>
           <div className={`each-project-container`}>
+            <Link to='/coding-challenge'>
+              <h5 className={`${dark ? "text-dark" : "text-light"}`}>
+                Find Your Wordle
+              </h5>
+              <img src={codingChallenge} alt='' />
+            </Link>
+            <p className={`${dark ? "text-dark" : "text-light"}`}>
+              A React app to that helps users find solutions to the popular
+              NYTimes game, Wordle
+            </p>
+          </div>
+          <div className={`each-project-container`}>
             <Link to='/e-commerce-app'>
               <h5 className={`${dark ? "text-dark" : "text-light"}`}>
                 E-Commerce-App
@@ -41,18 +53,6 @@ const Projects = (props) => {
             <p className={`${dark ? "text-dark" : "text-light"}`}>
               A frontend application made with React and Redux using Reddit's
               API
-            </p>
-          </div>
-          <div className={`each-project-container`}>
-            <Link to='/coding-challenge'>
-              <h5 className={`${dark ? "text-dark" : "text-light"}`}>
-                Find Your Wordle
-              </h5>
-              <img src={codingChallenge} alt='' />
-            </Link>
-            <p className={`${dark ? "text-dark" : "text-light"}`}>
-              A React app to that helps users find solutions to the popular
-              NYTimes game, Wordle
             </p>
           </div>
         </div>

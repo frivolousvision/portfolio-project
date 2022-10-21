@@ -63,29 +63,28 @@ const Home = (props) => {
           </h2>
           <div className={`home-about-text`}>
             <p>
-              I'm an Atlanta based developer specializing in the PERN stack who
-              loves learning, problem-solving, creating dynamic content, and
-              working with people.
+              I'm an Atlanta based Frontend / Fullstack developer. I love
+              learning, solving problems, creating dynamic content, and working
+              with people.
             </p>
             <br />
             <br />
             <p>
-              A strong foundation in modern web development languages such as
-              JavaScript ES6, CSS3, and HTML5, with an affinity for creating
-              dynamic single-page applications with React and Redux. Proficient
-              in building responsive UI's that delight users with their
-              functionality and a sharp ability to design pages based on
-              wireframes.
+              I have strong foundation in modern web development languages such
+              as TypeScript, JavaScript ES6, CSS3, HTML5, and like creating
+              dynamic single-page applications with React and Redux. I am
+              proficient in building screen responsive, user-friendly UI's and
+              have a sharp ability to design pages based on Figma wireframes.
             </p>
             <br />
             <br />
             <p>
-              Versed in back-end design using NodeJS under the Express framework
-              to create servers and route requests to manage CRUD functionality.
-              Experience in relational databases creating and working with
-              RESTful APIs to manage and deliver content via PostgreSQL.
-              Extensive experience in customer service building and managing
-              relationships.
+              I am well versed in backend services using NodeJS / Express and C#
+              / ASP.NET to create servers and route requests to implement CRUD
+              functionality. I have experience working with relational databases
+              and RESTful APIs, connect the client and service to deliver
+              dynamic content. Also, I have very extensive experience in
+              customer service building and maintaining relationships.
             </p>
           </div>
         </div>
