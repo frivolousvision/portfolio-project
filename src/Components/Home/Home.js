@@ -64,7 +64,7 @@ const Home = (props) => {
           <div className={`home-about-text`}>
             <p>
               I'm an Atlanta based Frontend / Fullstack developer. I love
-              learning, solving problems, creating dynamic content, and working
+              learning, solving problems, creating dynamic apps, and working
               with people.
             </p>
             <br />
