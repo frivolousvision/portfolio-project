@@ -1,6 +1,6 @@
 import "./home.css";
 import React, { useState, useEffect, useContext } from "react";
-import DanPhoto from "./Dan-photo.jpg";
+import DanPhoto from "./dan-photo-2.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
 import { DarkContext } from "../../App";
@@ -70,7 +70,7 @@ const Home = (props) => {
             <br />
             <br />
             <p>
-              I have strong foundation in modern web development languages such
+              I have experience using modern web development technologies such
               as TypeScript, JavaScript ES6, CSS3, HTML5, and like creating
               dynamic single-page applications with React and Redux. I am
               proficient in building screen responsive, user-friendly UI's and
