@@ -26,7 +26,10 @@ const ECommerceApp = (props) => {
           <div className='project-content'>
             <div className='project-image-container'>
               <img src={eCommercePhoto} alt='' />
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p
+                style={{ textDecoration: "line-through" }}
+                className={`${dark ? "text-dark" : "text-light"}`}
+              >
                 View the project live{" "}
                 <a
                   href='https://e-commerce-apple-clone.herokuapp.com/'
@@ -35,6 +38,10 @@ const ECommerceApp = (props) => {
                 >
                   here
                 </a>
+              </p>
+
+              <p className={`${dark ? "text-dark" : "text-light"}`}>
+                * no longer live because Heroku & Saleforce *
               </p>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
                 View this project's repository{" "}
@@ -63,6 +70,7 @@ const ECommerceApp = (props) => {
 
               <br />
               <p
+                style={{ textDecoration: "line-through" }}
                 className={`view-project-text-desktop ${
                   dark ? "text-dark" : "text-light"
                 }`}

@@ -1,6 +1,6 @@
 import "./home.css";
 import React, { useState, useEffect, useContext } from "react";
-import DanPhoto from "./dan-photo.jpg";
+import DanPhoto from "./dan-photo-3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
 import { DarkContext } from "../../App";
