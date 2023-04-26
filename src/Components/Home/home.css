@@ -28,6 +28,7 @@
   transition: 600ms;
   width: 100%;
   padding-bottom: 2rem;
+  min-height: 100vh;
 }
 .home-light {
   background-color: white;

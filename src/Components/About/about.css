@@ -185,13 +185,13 @@
     margin-top: 2rem;
   }
 }
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
   .about-text-container {
     display: none;
   }
+} */
+/* @media only screen and (min-width: 400px) { */
+.resume {
+  display: none;
 }
-@media only screen and (min-width: 400px) {
-  .resume {
-    display: none;
-  }
-}
+/* } */
