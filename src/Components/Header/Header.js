@@ -114,6 +114,15 @@ const Header = (props) => {
           >
             <ul>
               <NavLink
+                to='/coding-challenge'
+                exact={true}
+                activeClassName='is-active'
+              >
+                <div className='sub-menu-mobile-link-container'>
+                  <li onClick={props.toggleMobileNav}>Find Your Wordle</li>
+                </div>
+              </NavLink>
+              <NavLink
                 to='/e-commerce-app'
                 exact={true}
                 activeClassName='is-active'
@@ -129,15 +138,6 @@ const Header = (props) => {
               >
                 <div className='sub-menu-mobile-link-container'>
                   <li onClick={props.toggleMobileNav}>Reddit API App</li>
-                </div>
-              </NavLink>
-              <NavLink
-                to='/coding-challenge'
-                exact={true}
-                activeClassName='is-active'
-              >
-                <div className='sub-menu-mobile-link-container'>
-                  <li onClick={props.toggleMobileNav}>Find Your Wordle</li>
                 </div>
               </NavLink>
               <NavLink to='/projects' exact={true} activeClassName='is-active'>

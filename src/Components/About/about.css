@@ -1,4 +1,5 @@
 .about {
+  scroll-behavior: smooth;
   display: flex;
   justify-content: center;
   transition: 600ms;
@@ -55,6 +56,41 @@
 .about-text-container p {
   margin-top: -1rem;
 }
+.add-a-new-skill-contianer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.add-a-new-skill-contianer form {
+  width: 100%;
+}
+.add-a-new-skill-contianer h4 {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.add-a-new-skill-contianer button {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.add-a-new-skill-contianer button:disabled {
+  background-color: #494949;
+}
+.skill-type-check-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.skill-type-check-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-type-check-container input {
+  /* display: flex; */
+  width: 2rem;
+}
 @media only screen and (max-width: 600px) {
   .about-container {
     width: 95%;
@@ -63,6 +99,9 @@
     align-items: center;
   }
   .skills-container {
+    flex-direction: column;
+  }
+  .skill-type-check-container {
     flex-direction: column;
   }
 }
