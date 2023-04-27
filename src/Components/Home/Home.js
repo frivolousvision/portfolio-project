@@ -1,13 +1,13 @@
 import "./home.css";
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import DanPhoto from "./dan-photo-3.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShare } from "@fortawesome/free-solid-svg-icons";
 import { DarkContext } from "../../App";
 
 const Home = (props) => {
-  const [menuIcon, setMenuIcon] = useState(false);
-  const [firstVisit, setFirstVisit] = useState(true);
+  // const [menuIcon, setMenuIcon] = useState(false);
+  // const [firstVisit, setFirstVisit] = useState(true);
   const dark = useContext(DarkContext);
 
   // useEffect(() => {
@@ -47,20 +47,21 @@ const Home = (props) => {
         </div>
         <div className='text-container'>
           <h2
-            className={`home-header ${
-              firstVisit ? "home-header-show" : "home-header-hide"
-            }`}
+            className='home-header '
+            //   ${
+            //    firstVisit ? "home-header-show" : "home-header-hide"}`
+            // }
           >
             Hey there! My name's Dan and I make websites.
           </h2>
 
-          <h2
+          {/* <h2
             className={`goodbye-header ${
               firstVisit ? "goodbye-header-hide" : "goodbye-header-show"
             }`}
           >
             Thanks for stopping by! Hope to see you around!
-          </h2>
+          </h2> */}
           <div className={`home-about-text`}>
             <p>
               I'm an Atlanta based Frontend / Fullstack developer. I love
