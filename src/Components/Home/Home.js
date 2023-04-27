@@ -29,13 +29,13 @@ const Home = (props) => {
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
-      <p
+      {/* <p
         className={`menu-icon ${
           menuIcon ? "menu-icon-show" : "menu-icon-hide"
         }`}
       >
         <FontAwesomeIcon icon={faShare} className='fa-share' /> menu!
-      </p>
+      </p> */}
       <div
         onClick={props.closeAllNav}
         className={`home-container ${
