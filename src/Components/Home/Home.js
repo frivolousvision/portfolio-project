@@ -10,17 +10,17 @@ const Home = (props) => {
   const [firstVisit, setFirstVisit] = useState(true);
   const dark = useContext(DarkContext);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setMenuIcon(true);
-    }, 2000);
-    setTimeout(() => {
-      setMenuIcon(false);
-    }, 6000);
-  }, []);
-  setTimeout(() => {
-    setFirstVisit(false);
-  }, 1000 * 10);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setMenuIcon(true);
+  //   }, 2000);
+  //   setTimeout(() => {
+  //     setMenuIcon(false);
+  //   }, 6000);
+  // }, []);
+  // setTimeout(() => {
+  //   setFirstVisit(false);
+  // }, 1000 * 10);
 
   return (
     <div
@@ -51,7 +51,7 @@ const Home = (props) => {
               firstVisit ? "home-header-show" : "home-header-hide"
             }`}
           >
-            Hey there! My name's Dan and I design and build websites.
+            Hey there! My name's Dan and I make websites.
           </h2>
 
           <h2

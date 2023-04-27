@@ -9,59 +9,76 @@ import { DarkContext } from "../../App";
 const About = (props) => {
   const dark = useContext(DarkContext);
   const [skills, setSkills] = useState({
-    editMode: false,
+    addMode: false,
+    deleteMode: false,
+    editAboutMode: false,
+    aboutMe:
+      "I'm an Atlanta based Frontend / Fullstack developer excelling in problem-solving, building modern applications, and learning all the time! Highly motivated self-starter who loves working with people. Knowledge in current web development technologies, with an affinity for creating dynamic single-page applications. Experience building responsive UI's with clean functionality with precise attention to design details based on wire frames. Skilled in using backend frameworks to create services to deliver and manage data through relational databases. Extensive experience in customer service - building and maintaining client relationships.",
     newSkill: "",
     newSkillType: "frontendSkills",
     frontendSkills: [
       "TypeScript",
       "JavaScript ES6",
       "React",
-      "JSX / TSX",
-      "Redux",
+      "Vue",
+      "Vanilla JS",
+      "Redux/MobX",
       "CSS3",
       "Ant Design",
       "Figma",
       "HTML5",
     ],
     backendSkills: [
+      "Python",
       "Node.js",
       "Express.js",
-      "PostgreSQL",
-      "SQL Server",
       "C# / ASP.NET",
+      "SQL Server Management Studio",
+      "PostgreSQL",
       "Database Design",
+      "RESTful Services",
     ],
     otherSkills: [
-      "RESTful APIs",
+      "AEM",
       "Responsive Design",
       "AJAX",
-      "Git/Github",
+      "Git / Github / Bitbucket",
       "Azure",
-      "Netlify",
-      "Heroku",
+      "Agile",
+      "Jira",
       "CI / CD",
     ],
+    sortDirection: "aToZ",
   });
-  const handleSetEditMode = () => {
+
+  const handleSetAddMode = () => {
     setTimeout(() => {
       window.scrollTo(0, document.body.scrollHeight);
     }, 100);
 
     setSkills({
       ...skills,
-      editMode: !skills.editMode,
+      addMode: !skills.addMode,
+    });
+  };
+  const handleSetDeleteMode = () => {
+    // setTimeout(() => {
+    //   window.scrollTo(0, document.body.scrollHeight);
+    // }, 100);
+
+    setSkills({
+      ...skills,
+      deleteMode: !skills.deleteMode,
     });
   };
   const handleAddSkill = (e) => {
     e.preventDefault();
     if (skills.newSkill.length === 0) return;
     let newArray;
-    console.log("new skill", skills.newSkillType);
     switch (skills.newSkillType) {
       case "frontendSkills":
         newArray = skills.frontendSkills;
         newArray.push(skills.newSkill);
-        console.log("new array", newArray);
         setSkills({ ...skills, frontendSkills: newArray, newSkill: "" });
         break;
       case "backendSkills":
@@ -77,6 +94,73 @@ const About = (props) => {
       default:
         break;
     }
+  };
+  const handleDeleteSkill = (type, index) => {
+    if (!skills.deleteMode) return;
+    let newArray;
+    switch (type) {
+      case "frontendSkills":
+        newArray = skills.frontendSkills;
+        newArray.splice(index, 1);
+        setSkills({ ...skills, frontendSkills: newArray, newSkill: "" });
+        break;
+      case "backendSkills":
+        newArray = skills.backendSkills;
+        newArray.splice(index, 1);
+        setSkills({ ...skills, backendSkills: newArray, newSkill: "" });
+        break;
+      case "otherSkills":
+        newArray = skills.otherSkills;
+        newArray.splice(index, 1);
+        setSkills({ ...skills, otherSkills: newArray, newSkill: "" });
+        break;
+      default:
+        break;
+    }
+  };
+  const handleSortSkills = () => {
+    let frontendSkillsArray = skills.frontendSkills;
+    let backendSkillsArray = skills.backendSkills;
+    let otherSkillsArray = skills.otherSkills;
+    if (skills.sortDirection === "aToZ") {
+      frontendSkillsArray.sort();
+      backendSkillsArray = backendSkillsArray.sort();
+      otherSkillsArray = otherSkillsArray.sort();
+    } else {
+      frontendSkillsArray.sort((a, b) => {
+        if (a > b) {
+          return -1;
+        }
+        if (a < b) {
+          return 1;
+        }
+        return 0;
+      });
+      backendSkillsArray = backendSkillsArray.sort((a, b) => {
+        if (a > b) {
+          return -1;
+        }
+        if (a < b) {
+          return 1;
+        }
+        return 0;
+      });
+      otherSkillsArray = otherSkillsArray.sort((a, b) => {
+        if (a > b) {
+          return -1;
+        }
+        if (a < b) {
+          return 1;
+        }
+        return 0;
+      });
+    }
+    setSkills({
+      ...skills,
+      frontendSkills: frontendSkillsArray,
+      backendSkills: backendSkillsArray,
+      otherSkills: otherSkillsArray,
+    });
   };
   return (
     <div
@@ -96,60 +180,124 @@ const About = (props) => {
           <img src={resumeLight} />
         </div> */}
         <div className='about-text-container' onClick={props.closeAllNav}>
-          <h2 className='about-header'>About</h2>
-          <p>
-            I'm an Atlanta based Frontend / Fullstack developer excelling in
-            problem-solving, building modern applications, and learning all the
-            time! Highly motivated self-starter who loves working with people.
-            Knowledge in current web development technologies, with an affinity
-            for creating dynamic single-page applications. Experience building
-            responsive UI's with clean functionality with precise attention to
-            design details based on wire frames. Skilled in using backend
-            frameworks to create services to deliver and manage data through
-            relational databases. Extensive experience in customer service -
-            building and maintaining client relationships.
-          </p>
-          <h2 className='skills-header'>Technologies I Use</h2>
+          <div className='about-header-container'>
+            <h2 className='about-header'>About</h2>
+            {skills.editAboutMode ? (
+              <button
+                onClick={() =>
+                  setSkills({ ...skills, editAboutMode: !skills.editAboutMode })
+                }
+              >
+                Save
+              </button>
+            ) : (
+              <button
+                onClick={() =>
+                  setSkills({ ...skills, editAboutMode: !skills.editAboutMode })
+                }
+              >
+                Edit
+              </button>
+            )}
+          </div>
+          {skills.editAboutMode ? (
+            <textarea
+              autoFocus
+              value={skills.aboutMe}
+              onChange={(e) =>
+                setSkills({ ...skills, aboutMe: e.target.value })
+              }
+            ></textarea>
+          ) : (
+            <p>{skills.aboutMe}</p>
+          )}
+          <div className='skills-header-container'>
+            <h2 className='skills-header'>Technologies I Use</h2>
+            <div className='skills-select-container'>
+              <button onClick={handleSortSkills}>Sort skills</button>
+              <select
+                onChange={(e) =>
+                  setSkills({ ...skills, sortDirection: e.target.value })
+                }
+              >
+                <option value='aToZ'>A to Z</option>
+                <option value='zToA'>Z to A</option>
+              </select>
+            </div>
+          </div>
           <div className='skills-container'>
             <div>
+              <h3>Frontend:</h3>
               <ul>
-                <h3>Frontend:</h3>
-                {skills.frontendSkills &&
+                {skills.frontendSkills.length > 0 ? (
                   skills.frontendSkills.map((skill, i) => (
-                    <li key={i}>{skill}</li>
-                  ))}
+                    <li
+                      className={`${
+                        skills.deleteMode ? "list-delete-mode" : ""
+                      }`}
+                      key={i}
+                      onClick={() => handleDeleteSkill("frontendSkills", i)}
+                    >
+                      {skill}
+                    </li>
+                  ))
+                ) : (
+                  <li className='no-skills'>🙃</li>
+                )}
               </ul>
             </div>
             <div>
+              <h3>Backend:</h3>
               <ul>
-                <h3>Backend:</h3>
-                {skills.backendSkills &&
+                {skills.backendSkills.length > 0 ? (
                   skills.backendSkills.map((skill, i) => (
-                    <li key={i}>{skill}</li>
-                  ))}
+                    <li
+                      className={`${
+                        skills.deleteMode ? "list-delete-mode" : ""
+                      }`}
+                      key={i}
+                      onClick={() => handleDeleteSkill("backendSkills", i)}
+                    >
+                      {skill}
+                    </li>
+                  ))
+                ) : (
+                  <li className='no-skills'>🙃</li>
+                )}
               </ul>
             </div>
             <div>
+              <h3>Other:</h3>
               <ul>
-                <h3>Other Competancies:</h3>
-                {skills.otherSkills &&
+                {skills.otherSkills.length > 0 ? (
                   skills.otherSkills.map((skill, i) => (
-                    <li key={i}>{skill}</li>
-                  ))}
+                    <li
+                      className={`${
+                        skills.deleteMode ? "list-delete-mode" : ""
+                      }`}
+                      key={i}
+                      onClick={() => handleDeleteSkill("otherSkills", i)}
+                    >
+                      {skill}
+                    </li>
+                  ))
+                ) : (
+                  <li className='no-skills'>🙃</li>
+                )}
               </ul>
             </div>
           </div>
-          <div className='add-a-new-skill-contianer'>
-            {skills.editMode ? (
-              <h4 onClick={() => handleSetEditMode()}>
-                Click here again to close this form
+          <div className='add-a-new-skill-container'>
+            {skills.addMode ? (
+              <h4 onClick={() => handleSetAddMode()}>
+                Click to close this form
               </h4>
             ) : (
-              <h4 onClick={() => handleSetEditMode()}>
-                Click here to add a new skill for me!
+              <h4 onClick={() => handleSetAddMode()}>
+                Click to add a new skill for me!
               </h4>
             )}
-            {skills.editMode && (
+            {skills.addMode && (
               <form onSubmit={(e) => handleAddSkill(e)}>
                 <div className='skill-type-check-container'>
                   <label>
@@ -197,9 +345,20 @@ const About = (props) => {
                   }}
                 ></input>
                 <button type='submit' disabled={skills.newSkill.length === 0}>
-                  Save Changes
+                  Save Skill
                 </button>
               </form>
+            )}
+          </div>
+          <div className='add-a-new-skill-container'>
+            {skills.deleteMode ? (
+              <h4 onClick={() => handleSetDeleteMode()}>
+                Click to stopping deleting my skills
+              </h4>
+            ) : (
+              <h4 onClick={() => handleSetDeleteMode()}>
+                Click to delete some of my skills!
+              </h4>
             )}
           </div>
         </div>

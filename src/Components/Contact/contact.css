@@ -57,6 +57,9 @@
   align-items: center;
   text-align: center;
 }
+.form-container label:last-of-type {
+  width: 100%;
+}
 label {
   display: flex;
   flex-direction: column;
@@ -68,19 +71,20 @@ input {
   margin-bottom: 1rem;
 }
 
-textarea {
+.form-container textarea {
   height: 4rem;
-  width: 17rem;
+  width: 100%;
 }
 .submit-button {
   margin-top: 0.5rem;
   border: none;
   border-radius: 5px;
-  background-color: black;
+  background-color: rgb(34, 34, 34);
   font-size: 1.2rem;
   height: 3rem;
   color: white;
   cursor: pointer;
+  border: 0.5px solid rgb(66, 66, 66);
 }
 .contact-link-container {
   margin: 0rem 4rem;
@@ -88,6 +92,9 @@ textarea {
 .contact-link-container p {
   font-size: 1rem;
   margin-bottom: -1rem;
+}
+.contact-dark .contact-link-container a:hover {
+  color: cornflowerblue;
 }
 .icon {
   margin-top: -2rem;
@@ -143,6 +150,9 @@ textarea {
     justify-content: center;
     margin-bottom: -1.5rem;
   }
+  .submit-button:hover {
+    opacity: 0.7;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -155,9 +165,6 @@ textarea {
   input,
   textarea {
     width: 26rem;
-  }
-  .submit-button:hover {
-    opacity: 0.5;
   }
   label {
     font-size: 1.4rem;

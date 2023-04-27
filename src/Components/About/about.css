@@ -35,7 +35,20 @@
 }
 .skills-container {
   display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
+.skills-container div {
+  width: 30%;
+  min-width: 170px;
+}
+/* .skills-container ul {
+  margin-top: 1rem;
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  justify-content: space-evenly;
+} */
 .skills-header {
   margin-bottom: 0rem;
 }
@@ -52,30 +65,119 @@
 .about-container-dark {
   color: white;
 }
-
-.about-text-container p {
+.about-dark textarea {
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+.about-text-container textarea {
+  /* padding: 0.5rem; */
+  width: 100%;
+  line-height: 2rem;
+  font-size: 1rem;
+  min-height: 14rem;
   margin-top: -1rem;
 }
-.add-a-new-skill-contianer {
+.about-text-container p {
+  margin-top: -1rem;
+  white-space: pre-line;
+}
+.about-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.skills-header-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.skills-select-container {
+  display: flex;
+  align-items: center;
+  /* width: 25%; */
+}
+.skills-container h3 {
+  margin-bottom: -1rem;
+}
+.add-a-new-skill-container h4 {
+  margin: 0.5rem;
+}
+.add-a-new-skill-container button {
+  border: 0.5px solid rgb(66, 66, 66);
+}
+.skills-select-container button {
+  height: 2.5rem;
+  min-width: 5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  border: 0.5px solid rgb(66, 66, 66);
+}
+.skills-header-container select {
+  height: 2.5rem;
+  min-width: 5rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 0.5px solid rgb(66, 66, 66);
+}
+.no-skills {
+  list-style: none;
+  padding: 0;
+  font-size: 2rem;
+}
+.about-dark .skills-header-container select {
+  background-color: rgb(34, 34, 34);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.about-dark .skills-header-container select:hover {
+  opacity: 0.7;
+}
+.about-header-container button {
+  height: 2.5rem;
+  min-width: 5rem;
+  /* margin-left: 2rem; */
+  cursor: pointer;
+  border: 0.5px solid rgb(66, 66, 66);
+}
+.add-a-new-skill-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80%;
   margin: 0 auto;
 }
-.add-a-new-skill-contianer form {
+.add-a-new-skill-container form {
   width: 100%;
 }
-.add-a-new-skill-contianer h4 {
+.add-a-new-skill-container h4 {
   cursor: pointer;
   text-decoration: underline;
 }
-.add-a-new-skill-contianer button {
+.list-delete-mode {
+  cursor: pointer;
+  list-style: none;
+  list-style-type: none;
+}
+.list-delete-mode:before {
+  content: "❌";
+  color: red;
+  font-weight: bolder;
+  margin-right: 0.6rem;
+  margin-left: -1.85rem;
+}
+.add-a-new-skill-container button {
   margin-bottom: 2rem;
   cursor: pointer;
 }
-.add-a-new-skill-contianer button:disabled {
-  background-color: #494949;
+.add-a-new-skill-container button:disabled {
+  opacity: 0.3;
+  background-color: rgb(89, 89, 89);
+  cursor: def;
 }
 .skill-type-check-container {
   display: flex;
@@ -98,11 +200,15 @@
     flex-direction: column;
     align-items: center;
   }
-  .skills-container {
+  /* .skills-container {
     flex-direction: column;
-  }
+    align-items: center;
+  } */
   .skill-type-check-container {
     flex-direction: column;
+  }
+  .about-header-container button {
+    margin-right: 3.5rem;
   }
 }
 
@@ -123,14 +229,12 @@
     align-items: center;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
-    margin-top: 4rem;
-    padding-top: 6rem;
+    margin-top: 2rem;
     padding-bottom: 6rem;
   }
 }
 @media only screen and (min-width: 700px) {
   .about-container {
-    padding-top: 4.5rem;
     padding-bottom: 6rem;
   }
 }
@@ -144,8 +248,6 @@
   .about-container {
     margin-top: 2rem;
     min-height: 40rem;
-    /* max-height: 40rem; */
-    /* padding-top: ; */
     padding-bottom: 2rem;
   }
 }
@@ -154,7 +256,6 @@
     padding-top: 0;
     padding-bottom: 0;
     width: 90%;
-    /* margin-top: 3rem; */
     margin-bottom: 3rem;
   }
   .about-container {
