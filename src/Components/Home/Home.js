@@ -1,8 +1,6 @@
 import "./home.css";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import DanPhoto from "./dan-photo-3.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShare } from "@fortawesome/free-solid-svg-icons";
 import { DarkContext } from "../../App";
 
 const Home = (props) => {
