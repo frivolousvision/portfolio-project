@@ -145,7 +145,7 @@
     margin-top: 2rem;
     min-height: 40rem;
     /* max-height: 40rem; */
-    padding-top: 2rem;
+    /* padding-top: ; */
     padding-bottom: 2rem;
   }
 }
@@ -154,7 +154,7 @@
     padding-top: 0;
     padding-bottom: 0;
     width: 90%;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     margin-bottom: 3rem;
   }
   .about-container {
@@ -163,7 +163,7 @@
 }
 @media only screen and (min-width: 1400px) {
   .about-container {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
   }
 }
 @media only screen and (min-width: 1600px) {
