@@ -147,38 +147,38 @@ const About = (props) => {
       frontendSkillsArray = frontendSkillsArray.sort((a, b) => {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if (a == b) return 0;
+        if (a === b) return 0;
         return a < b ? -1 : 1;
       });
       backendSkillsArray = backendSkillsArray.sort((a, b) => {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if (a == b) return 0;
+        if (a === b) return 0;
         return a < b ? -1 : 1;
       });
       otherSkillsArray = otherSkillsArray.sort((a, b) => {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if (a == b) return 0;
+        if (a === b) return 0;
         return a < b ? -1 : 1;
       });
     } else if (value === "zToA") {
       frontendSkillsArray.sort((a, b) => {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if (a == b) return 0;
+        if (a === b) return 0;
         return a > b ? -1 : 1;
       });
       backendSkillsArray = backendSkillsArray.sort((a, b) => {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if (a == b) return 0;
+        if (a === b) return 0;
         return a > b ? -1 : 1;
       });
       otherSkillsArray = otherSkillsArray.sort((a, b) => {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if (a == b) return 0;
+        if (a === b) return 0;
         return a > b ? -1 : 1;
       });
     } else {
