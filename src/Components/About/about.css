@@ -109,6 +109,9 @@
 .add-a-new-skill-container button {
   border: 0.5px solid rgb(66, 66, 66);
 }
+.skills-select-container span {
+  margin-right: 1rem;
+}
 .skills-select-container button {
   height: 2.5rem;
   min-width: 5rem;

@@ -8,6 +8,38 @@ import { DarkContext } from "../../App";
 
 const About = (props) => {
   const dark = useContext(DarkContext);
+  const frontendSkills = [
+    "TypeScript",
+    "JavaScript ES6",
+    "React",
+    "Vue",
+    "Vanilla JS",
+    "Redux/MobX",
+    "CSS3",
+    "Ant Design",
+    "Figma",
+    "HTML5",
+  ];
+  const backendSkills = [
+    "Python",
+    "Node.js",
+    "Express.js",
+    "C# / ASP.NET",
+    "SQL Server Management Studio",
+    "PostgreSQL",
+    "Database Design",
+    "RESTful Services",
+  ];
+  const otherSkills = [
+    "AEM",
+    "Responsive Design",
+    "AJAX",
+    "Git / Github / Bitbucket",
+    "Azure",
+    "Agile",
+    "Jira",
+    "CI / CD",
+  ];
   const [skills, setSkills] = useState({
     addMode: false,
     deleteMode: false,
@@ -16,39 +48,11 @@ const About = (props) => {
       "I'm an Atlanta based Frontend / Fullstack developer excelling in problem-solving, building modern applications, and learning all the time! Highly motivated self-starter who loves working with people. Knowledge in current web development technologies, with an affinity for creating dynamic single-page applications. Experience building responsive UI's with clean functionality with precise attention to design details based on wire frames. Skilled in using backend frameworks to create services to deliver and manage data through relational databases. Extensive experience in customer service - building and maintaining client relationships.",
     newSkill: "",
     newSkillType: "frontendSkills",
-    frontendSkills: [
-      "TypeScript",
-      "JavaScript ES6",
-      "React",
-      "Vue",
-      "Vanilla JS",
-      "Redux/MobX",
-      "CSS3",
-      "Ant Design",
-      "Figma",
-      "HTML5",
-    ],
-    backendSkills: [
-      "Python",
-      "Node.js",
-      "Express.js",
-      "C# / ASP.NET",
-      "SQL Server Management Studio",
-      "PostgreSQL",
-      "Database Design",
-      "RESTful Services",
-    ],
-    otherSkills: [
-      "AEM",
-      "Responsive Design",
-      "AJAX",
-      "Git / Github / Bitbucket",
-      "Azure",
-      "Agile",
-      "Jira",
-      "CI / CD",
-    ],
-    sortDirection: "aToZ",
+    frontendSkills: frontendSkills,
+    backendSkills,
+    otherSkills,
+    sortDirection: "default",
+    sorted: true,
   });
 
   const handleSetAddMode = () => {
@@ -79,17 +83,32 @@ const About = (props) => {
       case "frontendSkills":
         newArray = skills.frontendSkills;
         newArray.push(skills.newSkill);
-        setSkills({ ...skills, frontendSkills: newArray, newSkill: "" });
+        setSkills({
+          ...skills,
+          frontendSkills: newArray,
+          newSkill: "",
+          sorted: false,
+        });
         break;
       case "backendSkills":
         newArray = skills.backendSkills;
         newArray.push(skills.newSkill);
-        setSkills({ ...skills, backendSkills: newArray, newSkill: "" });
+        setSkills({
+          ...skills,
+          backendSkills: newArray,
+          newSkill: "",
+          sorted: false,
+        });
         break;
       case "otherSkills":
         newArray = skills.otherSkills;
         newArray.push(skills.newSkill);
-        setSkills({ ...skills, otherSkills: newArray, newSkill: "" });
+        setSkills({
+          ...skills,
+          otherSkills: newArray,
+          newSkill: "",
+          sorted: false,
+        });
         break;
       default:
         break;
@@ -118,48 +137,61 @@ const About = (props) => {
         break;
     }
   };
-  const handleSortSkills = () => {
+  const handleSortSkills = (sort = null) => {
+    let value = sort;
     let frontendSkillsArray = skills.frontendSkills;
     let backendSkillsArray = skills.backendSkills;
     let otherSkillsArray = skills.otherSkills;
-    if (skills.sortDirection === "aToZ") {
-      frontendSkillsArray.sort();
-      backendSkillsArray = backendSkillsArray.sort();
-      otherSkillsArray = otherSkillsArray.sort();
-    } else {
-      frontendSkillsArray.sort((a, b) => {
-        if (a > b) {
-          return -1;
-        }
-        if (a < b) {
-          return 1;
-        }
-        return 0;
+    if (value === "aToZ") {
+      console.log(frontendSkillsArray);
+      frontendSkillsArray = frontendSkillsArray.sort((a, b) => {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a == b) return 0;
+        return a < b ? -1 : 1;
       });
       backendSkillsArray = backendSkillsArray.sort((a, b) => {
-        if (a > b) {
-          return -1;
-        }
-        if (a < b) {
-          return 1;
-        }
-        return 0;
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a == b) return 0;
+        return a < b ? -1 : 1;
       });
       otherSkillsArray = otherSkillsArray.sort((a, b) => {
-        if (a > b) {
-          return -1;
-        }
-        if (a < b) {
-          return 1;
-        }
-        return 0;
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a == b) return 0;
+        return a < b ? -1 : 1;
       });
+    } else if (value === "zToA") {
+      frontendSkillsArray.sort((a, b) => {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a == b) return 0;
+        return a > b ? -1 : 1;
+      });
+      backendSkillsArray = backendSkillsArray.sort((a, b) => {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a == b) return 0;
+        return a > b ? -1 : 1;
+      });
+      otherSkillsArray = otherSkillsArray.sort((a, b) => {
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a == b) return 0;
+        return a > b ? -1 : 1;
+      });
+    } else {
+      setSkills({ ...skills, sortDirection: value });
+      return;
     }
     setSkills({
       ...skills,
       frontendSkills: frontendSkillsArray,
       backendSkills: backendSkillsArray,
       otherSkills: otherSkillsArray,
+      sorted: true,
+      sortDirection: value,
     });
   };
   return (
@@ -214,12 +246,15 @@ const About = (props) => {
           <div className='skills-header-container'>
             <h2 className='skills-header'>Technologies I Use</h2>
             <div className='skills-select-container'>
-              <button onClick={handleSortSkills}>Sort skills</button>
-              <select
-                onChange={(e) =>
-                  setSkills({ ...skills, sortDirection: e.target.value })
-                }
-              >
+              {!skills.sorted && skills.sortDirection !== "default" ? (
+                <button onClick={() => handleSortSkills(skills.sortDirection)}>
+                  Sort again
+                </button>
+              ) : (
+                <span>Sort skills:</span>
+              )}
+              <select onChange={(e) => handleSortSkills(e.target.value)}>
+                <option value='default'></option>
                 <option value='aToZ'>A to Z</option>
                 <option value='zToA'>Z to A</option>
               </select>
@@ -242,7 +277,7 @@ const About = (props) => {
                     </li>
                   ))
                 ) : (
-                  <li className='no-skills'>🙃</li>
+                  <li className='no-skills'>🙉</li>
                 )}
               </ul>
             </div>
@@ -262,7 +297,7 @@ const About = (props) => {
                     </li>
                   ))
                 ) : (
-                  <li className='no-skills'>🙃</li>
+                  <li className='no-skills'>🙈</li>
                 )}
               </ul>
             </div>
@@ -282,7 +317,7 @@ const About = (props) => {
                     </li>
                   ))
                 ) : (
-                  <li className='no-skills'>🙃</li>
+                  <li className='no-skills'>🙊</li>
                 )}
               </ul>
             </div>
