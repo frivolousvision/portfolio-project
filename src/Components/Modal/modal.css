@@ -1,0 +1,28 @@
+.edit-modal-container {
+  border: 0.5px solid rgb(66, 66, 66);
+  border-radius: 5px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 14rem;
+  z-index: 10;
+}
+.edit-modal-container button {
+  border: 0.5px solid rgb(66, 66, 66);
+  border-radius: 5px;
+  min-width: 6rem;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+.about-light .edit-modal-container {
+  background-color: white;
+}
+.about-dark .edit-modal-container {
+  background-color: rgb(34, 34, 34);
+}

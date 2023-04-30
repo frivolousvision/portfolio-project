@@ -5,6 +5,7 @@ import "./dan-durnell-resume.pdf";
 import resumeNew from "./resume-10-22.png";
 import { useContext, useState } from "react";
 import { DarkContext } from "../../App";
+import Modal from "../Modal/Modal";
 
 const About = (props) => {
   const dark = useContext(DarkContext);
@@ -41,20 +42,34 @@ const About = (props) => {
     "CI / CD",
   ];
   const [skills, setSkills] = useState({
+    actionActive: false,
     addMode: false,
     deleteMode: false,
+    editMode: false,
+    editModalActive: false,
+    currentEditingSkill: "",
+    currentEditingSkillType: "",
+    currentEditingSkillIndex: 0,
     editAboutMode: false,
     aboutMe:
       "I'm an Atlanta based Frontend / Fullstack developer excelling in problem-solving, building modern applications, and learning all the time! Highly motivated self-starter who loves working with people. Knowledge in current web development technologies, with an affinity for creating dynamic single-page applications. Experience building responsive UI's with clean functionality with precise attention to design details based on wire frames. Skilled in using backend frameworks to create services to deliver and manage data through relational databases. Extensive experience in customer service - building and maintaining client relationships.",
     newSkill: "",
     newSkillType: "frontendSkills",
-    frontendSkills: frontendSkills,
+    frontendSkills,
     backendSkills,
     otherSkills,
     sortDirection: "default",
     sorted: true,
   });
-
+  const handleSaveChanges = () => {
+    setSkills({
+      ...skills,
+      actionActive: false,
+      addMode: false,
+      deleteMode: false,
+      editMode: false,
+    });
+  };
   const handleSetAddMode = () => {
     setTimeout(() => {
       window.scrollTo(0, document.body.scrollHeight);
@@ -63,79 +78,68 @@ const About = (props) => {
     setSkills({
       ...skills,
       addMode: !skills.addMode,
+      actionActive: !skills.actionActive,
     });
   };
   const handleSetDeleteMode = () => {
-    // setTimeout(() => {
-    //   window.scrollTo(0, document.body.scrollHeight);
-    // }, 100);
-
     setSkills({
       ...skills,
+      actionActive: !skills.actionActive,
       deleteMode: !skills.deleteMode,
+    });
+  };
+  const handleSetEditMode = () => {
+    setSkills({
+      ...skills,
+      actionActive: !skills.actionActive,
+      editMode: !skills.editMode,
     });
   };
   const handleAddSkill = (e) => {
     e.preventDefault();
     if (skills.newSkill.length === 0) return;
     let newArray;
-    switch (skills.newSkillType) {
-      case "frontendSkills":
-        newArray = skills.frontendSkills;
-        newArray.push(skills.newSkill);
-        setSkills({
-          ...skills,
-          frontendSkills: newArray,
-          newSkill: "",
-          sorted: false,
-        });
-        break;
-      case "backendSkills":
-        newArray = skills.backendSkills;
-        newArray.push(skills.newSkill);
-        setSkills({
-          ...skills,
-          backendSkills: newArray,
-          newSkill: "",
-          sorted: false,
-        });
-        break;
-      case "otherSkills":
-        newArray = skills.otherSkills;
-        newArray.push(skills.newSkill);
-        setSkills({
-          ...skills,
-          otherSkills: newArray,
-          newSkill: "",
-          sorted: false,
-        });
-        break;
-      default:
-        break;
-    }
+    newArray = skills[skills.newSkillType];
+    newArray.push(skills.newSkill);
+    setSkills({
+      ...skills,
+      [skills.newSkillType]: newArray,
+      newSkill: "",
+      sorted: false,
+    });
   };
   const handleDeleteSkill = (type, index) => {
     if (!skills.deleteMode) return;
     let newArray;
-    switch (type) {
-      case "frontendSkills":
-        newArray = skills.frontendSkills;
-        newArray.splice(index, 1);
-        setSkills({ ...skills, frontendSkills: newArray, newSkill: "" });
-        break;
-      case "backendSkills":
-        newArray = skills.backendSkills;
-        newArray.splice(index, 1);
-        setSkills({ ...skills, backendSkills: newArray, newSkill: "" });
-        break;
-      case "otherSkills":
-        newArray = skills.otherSkills;
-        newArray.splice(index, 1);
-        setSkills({ ...skills, otherSkills: newArray, newSkill: "" });
-        break;
-      default:
-        break;
+    if (skills.deleteMode) {
+      newArray = skills[type];
+      newArray.splice(index, 1);
+      setSkills({ ...skills, [type]: newArray, newSkill: "" });
     }
+  };
+  const handleSetUpModal = (type, index) => {
+    if (!skills.editMode) return;
+    setSkills({
+      ...skills,
+      currentEditingSkill: skills[type][index],
+      currentEditingSkillType: type,
+      currentEditingSkillIndex: index,
+      editModalActive: true,
+    });
+  };
+  const closeModal = () => {
+    setSkills({ ...skills, editModalActive: false });
+  };
+  const handleEditSkill = (newValue, type, index) => {
+    if (!skills.editMode) return;
+    let newArray;
+    newArray = skills[type];
+    newArray.splice(index, 1, newValue);
+    setSkills({
+      ...skills,
+      type: newArray,
+      editModalActive: false,
+    });
   };
   const handleSortSkills = (sort = null) => {
     let value = sort;
@@ -143,7 +147,6 @@ const About = (props) => {
     let backendSkillsArray = skills.backendSkills;
     let otherSkillsArray = skills.otherSkills;
     if (value === "aToZ") {
-      console.log(frontendSkillsArray);
       frontendSkillsArray = frontendSkillsArray.sort((a, b) => {
         a = a.toLowerCase();
         b = b.toLowerCase();
@@ -201,6 +204,15 @@ const About = (props) => {
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
+      {skills.editModalActive && (
+        <Modal
+          skill={skills.currentEditingSkill}
+          skillType={skills.currentEditingSkillType}
+          index={skills.currentEditingSkillIndex}
+          closeModal={closeModal}
+          handleEditSkill={handleEditSkill}
+        />
+      )}
       <div
         onClick={props.closeAllNav}
         className={`about-container ${
@@ -208,9 +220,6 @@ const About = (props) => {
         }`}
       >
         <img src={resumeNew} alt='resume for Dan Durnell' className='resume' />
-        {/* <div className='resume-container'>
-          <img src={resumeLight} />
-        </div> */}
         <div className='about-text-container' onClick={props.closeAllNav}>
           <div className='about-header-container'>
             <h2 className='about-header'>About</h2>
@@ -260,6 +269,22 @@ const About = (props) => {
               </select>
             </div>
           </div>
+          {skills.actionActive ? (
+            <div className='actions-container'>
+              <button
+                onClick={() => handleSaveChanges()}
+                disabled={skills.editModalActive}
+              >
+                Save
+              </button>
+            </div>
+          ) : (
+            <div className='actions-container'>
+              <button onClick={() => handleSetAddMode()}>Add</button>
+              <button onClick={() => handleSetEditMode()}>Edit</button>
+              <button onClick={() => handleSetDeleteMode()}>Delete</button>
+            </div>
+          )}
           <div className='skills-container'>
             <div>
               <h3>Frontend:</h3>
@@ -267,11 +292,16 @@ const About = (props) => {
                 {skills.frontendSkills.length > 0 ? (
                   skills.frontendSkills.map((skill, i) => (
                     <li
+                      key={i}
+                      {...(skills.deleteMode && {
+                        onClick: () => handleDeleteSkill("frontendSkills", i),
+                      })}
+                      {...(skills.editMode && {
+                        onClick: () => handleSetUpModal("frontendSkills", i),
+                      })}
                       className={`${
                         skills.deleteMode ? "list-delete-mode" : ""
-                      }`}
-                      key={i}
-                      onClick={() => handleDeleteSkill("frontendSkills", i)}
+                      } ${skills.editMode ? "list-edit-mode" : ""}`}
                     >
                       {skill}
                     </li>
@@ -287,11 +317,16 @@ const About = (props) => {
                 {skills.backendSkills.length > 0 ? (
                   skills.backendSkills.map((skill, i) => (
                     <li
+                      key={i}
+                      {...(skills.deleteMode && {
+                        onClick: () => handleDeleteSkill("backendSkills", i),
+                      })}
+                      {...(skills.editMode && {
+                        onClick: () => handleSetUpModal("backendSkills", i),
+                      })}
                       className={`${
                         skills.deleteMode ? "list-delete-mode" : ""
-                      }`}
-                      key={i}
-                      onClick={() => handleDeleteSkill("backendSkills", i)}
+                      } ${skills.editMode ? "list-edit-mode" : ""}`}
                     >
                       {skill}
                     </li>
@@ -307,11 +342,16 @@ const About = (props) => {
                 {skills.otherSkills.length > 0 ? (
                   skills.otherSkills.map((skill, i) => (
                     <li
+                      key={i}
+                      {...(skills.deleteMode && {
+                        onClick: () => handleDeleteSkill("otherSkills", i),
+                      })}
+                      {...(skills.editMode && {
+                        onClick: () => handleSetUpModal("otherSkills", i),
+                      })}
                       className={`${
                         skills.deleteMode ? "list-delete-mode" : ""
-                      }`}
-                      key={i}
-                      onClick={() => handleDeleteSkill("otherSkills", i)}
+                      } ${skills.editMode ? "list-edit-mode" : ""}`}
                     >
                       {skill}
                     </li>
@@ -323,15 +363,6 @@ const About = (props) => {
             </div>
           </div>
           <div className='add-a-new-skill-container'>
-            {skills.addMode ? (
-              <h4 onClick={() => handleSetAddMode()}>
-                Click to close this form
-              </h4>
-            ) : (
-              <h4 onClick={() => handleSetAddMode()}>
-                Click to add a new skill for me!
-              </h4>
-            )}
             {skills.addMode && (
               <form onSubmit={(e) => handleAddSkill(e)}>
                 <div className='skill-type-check-container'>
@@ -383,17 +414,6 @@ const About = (props) => {
                   Save Skill
                 </button>
               </form>
-            )}
-          </div>
-          <div className='add-a-new-skill-container'>
-            {skills.deleteMode ? (
-              <h4 onClick={() => handleSetDeleteMode()}>
-                Click to stopping deleting my skills
-              </h4>
-            ) : (
-              <h4 onClick={() => handleSetDeleteMode()}>
-                Click to delete some of my skills!
-              </h4>
             )}
           </div>
         </div>
