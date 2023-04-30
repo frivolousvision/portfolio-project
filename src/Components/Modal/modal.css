@@ -26,3 +26,8 @@
 .about-dark .edit-modal-container {
   background-color: rgb(34, 34, 34);
 }
+@media only screen and (max-width: 600px) {
+  .edit-modal-container {
+    width: 95%;
+  }
+}
