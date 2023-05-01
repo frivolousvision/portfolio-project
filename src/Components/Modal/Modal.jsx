@@ -21,10 +21,13 @@ const Modal = ({ skill, skillType, index, handleEditSkill, closeModal }) => {
       ></input>
 
       <div>
-        <button onClick={() => handleEditSkill(value, skillType, index)}>
+        <button onClick={closeModal}>Cancel</button>
+        <button
+          disabled={skill === value}
+          onClick={() => handleEditSkill(value, skillType, index)}
+        >
           Save
         </button>
-        <button onClick={closeModal}>Cancel</button>
       </div>
     </div>
   );

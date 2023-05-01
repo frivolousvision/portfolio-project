@@ -1,7 +1,4 @@
 import "./about.css";
-import "./dan-durnell-resume.pdf";
-// import resumeLight from "./resume-light.png";
-// import resumeDark from "./resume-dark.png";
 import resumeNew from "./resume-10-22.png";
 import { useContext, useState } from "react";
 import { DarkContext } from "../../App";
@@ -61,7 +58,7 @@ const About = (props) => {
     sortDirection: "default",
     sorted: true,
   });
-  const handleSaveChanges = () => {
+  const handleDoneWithChanges = () => {
     setSkills({
       ...skills,
       actionActive: false,
@@ -272,10 +269,10 @@ const About = (props) => {
           {skills.actionActive ? (
             <div className='actions-container'>
               <button
-                onClick={() => handleSaveChanges()}
+                onClick={() => handleDoneWithChanges()}
                 disabled={skills.editModalActive}
               >
-                Save
+                Done
               </button>
             </div>
           ) : (
