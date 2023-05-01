@@ -68,9 +68,9 @@ const About = (props) => {
     });
   };
   const handleSetAddMode = () => {
-    setTimeout(() => {
-      window.scrollTo(0, document.body.scrollHeight);
-    }, 100);
+    // setTimeout(() => {
+    //   window.scrollTo(0, "6rem");
+    // }, 100);
 
     setSkills({
       ...skills,
@@ -282,6 +282,60 @@ const About = (props) => {
               <button onClick={() => handleSetDeleteMode()}>Delete</button>
             </div>
           )}
+          <div className='add-a-new-skill-container'>
+            {skills.addMode && (
+              <form onSubmit={(e) => handleAddSkill(e)}>
+                <div className='skill-type-check-container'>
+                  <label>
+                    Frontend
+                    <input
+                      type='radio'
+                      name='new-skill'
+                      value='frontendSkills'
+                      checked={skills.newSkillType === "frontendSkills"}
+                      onChange={(e) =>
+                        setSkills({ ...skills, newSkillType: e.target.value })
+                      }
+                    ></input>
+                  </label>
+                  <label>
+                    Backend
+                    <input
+                      type='radio'
+                      name='new-skill'
+                      value='backendSkills'
+                      checked={skills.newSkillType === "backendSkills"}
+                      onChange={(e) =>
+                        setSkills({ ...skills, newSkillType: e.target.value })
+                      }
+                    ></input>
+                  </label>
+                  <label>
+                    Other
+                    <input
+                      type='radio'
+                      name='new-skill'
+                      value='otherSkills'
+                      checked={skills.newSkillType === "otherSkills"}
+                      onChange={(e) =>
+                        setSkills({ ...skills, newSkillType: e.target.value })
+                      }
+                    ></input>
+                  </label>
+                </div>
+                <input
+                  type='text'
+                  value={skills.newSkill}
+                  onChange={(e) => {
+                    setSkills({ ...skills, newSkill: e.target.value });
+                  }}
+                ></input>
+                <button type='submit' disabled={skills.newSkill.length === 0}>
+                  Save Skill
+                </button>
+              </form>
+            )}
+          </div>
           <div className='skills-container'>
             <div>
               <h3>Frontend:</h3>
@@ -358,60 +412,6 @@ const About = (props) => {
                 )}
               </ul>
             </div>
-          </div>
-          <div className='add-a-new-skill-container'>
-            {skills.addMode && (
-              <form onSubmit={(e) => handleAddSkill(e)}>
-                <div className='skill-type-check-container'>
-                  <label>
-                    Frontend
-                    <input
-                      type='radio'
-                      name='new-skill'
-                      value='frontendSkills'
-                      checked={skills.newSkillType === "frontendSkills"}
-                      onChange={(e) =>
-                        setSkills({ ...skills, newSkillType: e.target.value })
-                      }
-                    ></input>
-                  </label>
-                  <label>
-                    Backend
-                    <input
-                      type='radio'
-                      name='new-skill'
-                      value='backendSkills'
-                      checked={skills.newSkillType === "backendSkills"}
-                      onChange={(e) =>
-                        setSkills({ ...skills, newSkillType: e.target.value })
-                      }
-                    ></input>
-                  </label>
-                  <label>
-                    Other
-                    <input
-                      type='radio'
-                      name='new-skill'
-                      value='otherSkills'
-                      checked={skills.newSkillType === "otherSkills"}
-                      onChange={(e) =>
-                        setSkills({ ...skills, newSkillType: e.target.value })
-                      }
-                    ></input>
-                  </label>
-                </div>
-                <input
-                  type='text'
-                  value={skills.newSkill}
-                  onChange={(e) => {
-                    setSkills({ ...skills, newSkill: e.target.value });
-                  }}
-                ></input>
-                <button type='submit' disabled={skills.newSkill.length === 0}>
-                  Save Skill
-                </button>
-              </form>
-            )}
           </div>
         </div>
       </div>
