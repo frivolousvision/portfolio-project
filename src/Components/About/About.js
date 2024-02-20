@@ -49,7 +49,7 @@ const About = (props) => {
     currentEditingSkillIndex: 0,
     editAboutMode: false,
     aboutMe:
-      "I'm an Atlanta based Frontend / Fullstack developer excelling in problem-solving, building modern applications, and learning all the time! Highly motivated self-starter who loves working with people. Knowledge in current web development technologies, with an affinity for creating dynamic single-page applications. Experience building responsive UI's with clean functionality with precise attention to design details based on wire frames. Skilled in using backend frameworks to create services to deliver and manage data through relational databases. Extensive experience in customer service - building and maintaining client relationships.",
+      "I'm an Atlanta-based Frontend / Fullstack developer excelling in problem-solving, building modern applications, and learning constantly! Highly motivated self-starter who loves working with people. Knowledge of current web development technologies, with an affinity for creating dynamic single-page applications. Experience building responsive UI's with clean functionality with precise attention to design details based on wireframes. Skilled in using backend frameworks to create services to deliver and manage data through relational databases. Extensive experience in customer service - building and maintaining client relationships. Just for fun, this page is editable!",
     newSkill: "",
     newSkillType: "frontendSkills",
     frontendSkills,
@@ -250,7 +250,7 @@ const About = (props) => {
             <p>{skills.aboutMe}</p>
           )}
           <div className='skills-header-container'>
-            <h2 className='skills-header'>Technologies I Use</h2>
+            <h2 className='skills-header'>Technologies I'm skilled with:</h2>
             <div className='skills-select-container'>
               {!skills.sorted && skills.sortDirection !== "default" ? (
                 <button onClick={() => handleSortSkills(skills.sortDirection)}>
@@ -266,7 +266,7 @@ const About = (props) => {
               </select>
             </div>
           </div>
-          {skills.actionActive ? (
+          {skills.editAboutMode ? skills.actionActive ? (
             <div className='actions-container'>
               <button
                 onClick={() => handleDoneWithChanges()}
@@ -281,7 +281,7 @@ const About = (props) => {
               <button onClick={() => handleSetEditMode()}>Edit</button>
               <button onClick={() => handleSetDeleteMode()}>Delete</button>
             </div>
-          )}
+          ) : null}
           <div className='add-a-new-skill-container'>
             {skills.addMode && (
               <form onSubmit={(e) => handleAddSkill(e)}>

@@ -49,8 +49,8 @@ const CodingChallenge = (props) => {
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
-                A React app that recieves user inputs and queries data from an
-                API to help users cheat... I mean *solve* their NYTimes' Wordle.
+                A React app that receives user inputs and queries data from an
+                API to help users solve their NYTimes' daily Wordle.
                 <br />
                 <br />
                 The site is hosted via Netlify and is linked to GitHub to allow

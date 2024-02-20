@@ -56,9 +56,8 @@ const ECommerceApp = (props) => {
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
-                A full-stack mock e-commerce application made with the PERN
-                stack. The site is hosted via Heroku and is linked to GitHub to
-                allow for continuous integration.
+                This was a full-stack mock e-commerce application made with the PERN
+                stack. Unfortunately, it is no longer active after Salesforce purchased Heroku.
                 <br />
                 <br />
                 The goal of this project was to create an application that
