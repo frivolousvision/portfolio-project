@@ -50,7 +50,7 @@ const Home = (props) => {
             //    firstVisit ? "home-header-show" : "home-header-hide"}`
             // }
           >
-            Hey there! My name's Dan and I make websites.
+            Hey there! My name's Dan and I make web applications
           </h2>
 
           {/* <h2

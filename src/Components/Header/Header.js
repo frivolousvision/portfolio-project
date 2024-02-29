@@ -114,7 +114,7 @@ const Header = (props) => {
           >
             <ul>
               <NavLink
-                to='/coding-challenge'
+                to='/find-your-wordle'
                 exact={true}
                 activeClassName='is-active'
               >
@@ -123,21 +123,21 @@ const Header = (props) => {
                 </div>
               </NavLink>
               <NavLink
-                to='/e-commerce-app'
+                to='/cleveland-clinic'
                 exact={true}
                 activeClassName='is-active'
               >
                 <div className='sub-menu-mobile-link-container'>
-                  <li onClick={props.toggleMobileNav}>E-Commerce-App</li>
+                  <li onClick={props.toggleMobileNav}>Cleveland Clinic</li>
                 </div>
               </NavLink>
               <NavLink
-                to='/reddit-app'
+                to='/schedule-viewer'
                 exact={true}
                 activeClassName='is-active'
               >
                 <div className='sub-menu-mobile-link-container'>
-                  <li onClick={props.toggleMobileNav}>Reddit API App</li>
+                  <li onClick={props.toggleMobileNav}>Schedule Viewer</li>
                 </div>
               </NavLink>
               <NavLink to='/projects' exact={true} activeClassName='is-active'>

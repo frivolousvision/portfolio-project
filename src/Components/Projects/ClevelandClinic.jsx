@@ -1,9 +1,9 @@
 import "./project.css";
-import codingChallenge from "../ProjectList/findyourwordle.png";
+import clevelandClinicMain from "../../Assets/cleaveland-clinic-main.png"
 import { useContext } from "react";
 import { DarkContext } from "../../App";
 
-const CodingChallenge = (props) => {
+const ClevelandClinic = (props) => {
   const dark = useContext(DarkContext);
   return (
     <div
@@ -21,25 +21,17 @@ const CodingChallenge = (props) => {
                 : "text-light project-header-light"
             }`}
           >
-            Find Your Wordle
+            Cleveland Clinic Nurse Unit Finder
           </h2>
           <div className='project-content'>
             <div className='project-image-container'>
-              <img src={codingChallenge} alt='' />
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <img src={clevelandClinicMain} alt='' />
+              <p
+                className={`${dark ? "text-dark" : "text-light"}`}
+              >
                 View the project live{" "}
                 <a
-                  href='https://www.findyourwordle.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  here
-                </a>
-              </p>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
-                View this project's repository{" "}
-                <a
-                  href='https://github.com/frivolousvision/find-your-wordle'
+                  href='https://ccfnurseunitfinder.aspirant.com/start-the-story/'
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -49,11 +41,14 @@ const CodingChallenge = (props) => {
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
-                A React app that receives user inputs and queries data from an
-                API to help users solve their NY Times' daily Wordle
+                This is a contracted project I built with TypeScript + React for 
+                Cleveland Clinic to assist their recruiting team in finding candidates
                 <br />
                 <br />
-                The site is hosted via Netlify and is linked to GitHub for CI/CD
+                The goal of this project was to create an application that
+                provides information and talking points for Cleveland Clinic recruiters 
+                when speaking to candidates based on acuity levels and testimonials from
+                others in the industry
               </p>
 
               <br />
@@ -64,21 +59,7 @@ const CodingChallenge = (props) => {
               >
                 View the project live{" "}
                 <a
-                  href='https://www.findyourwordle.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  here
-                </a>
-              </p>
-              <p
-                className={`view-project-text-desktop ${
-                  dark ? "text-dark" : "text-light"
-                }`}
-              >
-                View this project's repository{" "}
-                <a
-                  href='https://github.com/frivolousvision/find-your-wordle'
+                  href='https://ccfnurseunitfinder.aspirant.com/start-the-story/'
                   target='_blank'
                   rel='noreferrer'
                 >
@@ -92,4 +73,4 @@ const CodingChallenge = (props) => {
     </div>
   );
 };
-export default CodingChallenge;
+export default ClevelandClinic;

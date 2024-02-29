@@ -250,7 +250,7 @@ a {
 .mobile-sub-menu ul {
   padding: 0;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 775px) {
   .header-content li {
     display: none;
   }
@@ -263,7 +263,7 @@ a {
     margin-left: 0;
   }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 776px) {
   .bars {
     display: none;
   }

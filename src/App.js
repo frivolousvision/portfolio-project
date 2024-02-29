@@ -8,11 +8,11 @@ import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
 import Projects from "./Components/ProjectList/Projects";
 import Contact from "./Components/Contact/Contact";
-import ECommerceApp from "./Components/Projects/ECommerceApp";
 import CodingChallenge from "./Components/Projects/CodingChallenge";
-import RedditApp from "./Components/Projects/RedditApp";
+import ScheduleViewer from "./Components/Projects/ScheduleViewer";
 import DropDownList from "./Components/Header/DropDownList";
 import Secret from "./Components/Secret/Secret";
+import ClevelandClinic from "./Components/Projects/ClevelandClinic";
 
 export const DarkContext = React.createContext(null);
 
@@ -30,9 +30,9 @@ function App() {
     setTimeout(() => {
       path.current = window.location.pathname;
       if (
-        /reddit-app/.test(window.location.href) ||
-        /e-commerce-app/.test(window.location.href) ||
-        /coding-challenge/.test(window.location.href) ||
+        /schedule-viewer/.test(window.location.href) ||
+        /cleveland-clinic/.test(window.location.href) ||
+        /find-your-wordle/.test(window.location.href) ||
         /projects/.test(window.location.href)
       ) {
         setActiveState(true);
@@ -91,7 +91,9 @@ function App() {
     }
   };
   return (
-    <div className='App'>
+    <div className={`App ${
+      dark ? "background-dark" : "background-light"
+    }`}>
       <DarkContext.Provider value={dark}>
         <Router>
           <ScrollToTop />
@@ -125,14 +127,14 @@ function App() {
             <Route path='/contact' exact>
               <Contact showNav={showNav} closeAllNav={closeAllNav} />
             </Route>
-            <Route path='/e-commerce-app' exact>
-              <ECommerceApp showNav={showNav} closeAllNav={closeAllNav} />
+            <Route path='/cleveland-clinic' exact>
+              <ClevelandClinic showNav={showNav} closeAllNav={closeAllNav} />
             </Route>
-            <Route path='/coding-challenge' exact>
+            <Route path='/find-your-wordle' exact>
               <CodingChallenge showNav={showNav} closeAllNav={closeAllNav} />
             </Route>
-            <Route path='/reddit-app' exact>
-              <RedditApp showNav={showNav} closeAllNav={closeAllNav} />
+            <Route path='/schedule-viewer' exact>
+              <ScheduleViewer showNav={showNav} closeAllNav={closeAllNav} />
             </Route>
             <Route path='/secret' exact>
               <Secret showNav={showNav} closeAllNav={closeAllNav} />

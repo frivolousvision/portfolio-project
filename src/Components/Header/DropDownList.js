@@ -20,7 +20,7 @@ const DropDownList = (props) => {
     >
       <ul>
         <NavLink
-          to='/coding-challenge'
+          to='/find-your-wordle'
           exact={true}
           activeClassName='is-active'
         >
@@ -31,20 +31,20 @@ const DropDownList = (props) => {
             Find Your Wordle
           </li>
         </NavLink>
-        <NavLink to='/e-commerce-app' exact={true} activeClassName='is-active'>
+        <NavLink to='/cleveland-clinic' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
             className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
-            E-Commerce-App
+            Cleveland Clinic
           </li>
         </NavLink>
-        <NavLink to='/reddit-app' exact={true} activeClassName='is-active'>
+        <NavLink to='/schedule-viewer' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
             className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
-            Reddit API App
+            Schedule Vieweer
           </li>
         </NavLink>
         <NavLink to='/projects' exact={true} activeClassName='is-active'>

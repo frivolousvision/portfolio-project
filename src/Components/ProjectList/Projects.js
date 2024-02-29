@@ -2,9 +2,9 @@ import "./projects.css";
 import { useContext } from "react";
 import { DarkContext } from "../../App";
 import { Link } from "react-router-dom";
-import eCommercePhoto from "./e-commerce-app.jpg";
-import redditPhoto from "./reddit-screenshot.jpg";
 import codingChallenge from "./findyourwordle.png";
+import clevelandClinic from "../../Assets/cleaveland-clinic-main.png"
+import scheduleViewer from "../../Assets/schedule-viewer-main.png"
 
 const Projects = (props) => {
   const dark = useContext(DarkContext);
@@ -21,38 +21,37 @@ const Projects = (props) => {
         </h2>
         <div className={`projects-content`}>
           <div className={`each-project-container`}>
-            <Link to='/coding-challenge'>
-              <h5 className={`${dark ? "text-dark" : "text-light"}`}>
+            <Link to='/find-your-wordle'>
+              <h4 className={`${dark ? "text-dark" : "text-light"}`}>
                 Find Your Wordle
-              </h5>
+              </h4>
               <img src={codingChallenge} alt='' />
             </Link>
             <p className={`${dark ? "text-dark" : "text-light"}`}>
-              A React app to that helps users find solutions to the popular
-              NYTimes game, Wordle
+              A React app to that helps users find the solution to the popular
+              NY Times game, Wordle
             </p>
           </div>
           <div className={`each-project-container`}>
-            <Link to='/e-commerce-app'>
-              <h5 className={`${dark ? "text-dark" : "text-light"}`}>
-                E-Commerce-App
-              </h5>
-              <img src={eCommercePhoto} alt='' />
+            <Link to='/cleveland-clinic'>
+              <h4 className={`${dark ? "text-dark" : "text-light"}`}>
+                Cleveland Clinic
+              </h4>
+              <img src={clevelandClinic} alt='' />
             </Link>
             <p className={`${dark ? "text-dark" : "text-light"}`}>
-              A full-stack mock e-commerce application made with the PERN stack
+              A TypeScript + React I made to help Cleveland Clinic Recruiters find the right candidates
             </p>
           </div>
           <div className={`each-project-container`}>
-            <Link to='/reddit-app'>
-              <h5 className={`${dark ? "text-dark" : "text-light"}`}>
-                Reddit API App
-              </h5>
-              <img src={redditPhoto} alt='' />
+            <Link to='/schedule-viewer'>
+              <h4 className={`${dark ? "text-dark" : "text-light"}`}>
+                Schedule Viewer App
+              </h4>
+              <img src={scheduleViewer} alt='' />
             </Link>
             <p className={`${dark ? "text-dark" : "text-light"}`}>
-              A frontend application made with React and Redux using Reddit's
-              API
+              A Fullstack application I made to help Law GRA students at a local university manage and view semester schedules
             </p>
           </div>
         </div>
