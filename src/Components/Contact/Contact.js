@@ -4,33 +4,33 @@ import { DarkContext } from "../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 const Contact = (props) => {
   const dark = useContext(DarkContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        e.target,
-        process.env.REACT_APP_USER_ID
-      )
-      .then(
-        (result) => {
-          alert(
-            "Thanks for reaching out! I'll will get back to you shortly",
-            result.text
-          );
-        },
-        (error) => {
-          alert("An error occurred, Please try again", error.text);
-        }
-      );
-    e.target.reset();
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       process.env.REACT_APP_SERVICE_ID,
+  //       process.env.REACT_APP_TEMPLATE_ID,
+  //       e.target,
+  //       process.env.REACT_APP_USER_ID
+  //     )
+  //     .then(
+  //       (result) => {
+  //         alert(
+  //           "Thanks for reaching out! I'll will get back to you shortly",
+  //           result.text
+  //         );
+  //       },
+  //       (error) => {
+  //         alert("An error occurred, Please try again", error.text);
+  //       }
+  //     );
+  //   e.target.reset();
+  // };
   return (
     <div
       onClick={props.closeAllNav}
