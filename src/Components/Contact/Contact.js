@@ -47,9 +47,9 @@ const Contact = (props) => {
           Contact
         </h2>
         <h3 className={`connect-message ${dark ? "text-dark" : "text-light"}`}>
-          Want to connect? Send me a message or hit the links below!
+          Want to connect? Send me an email or hit the links below!
         </h3>
-        <div className='form-container'>
+        {/* <div className='form-container'>
           <form onSubmit={handleSubmit}>
             <label className={`${dark ? "text-dark" : "text-light"}`}>
               Name
@@ -65,7 +65,7 @@ const Contact = (props) => {
             </label>
             <input type='submit' value='Submit' className={`submit-button`} />
           </form>
-        </div>
+        </div> */}
         <div className='contact-links'>
           <div
             className={`contact-link-container ${
