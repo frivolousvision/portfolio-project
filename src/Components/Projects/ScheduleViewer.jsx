@@ -2,11 +2,16 @@ import "./project.css";
 import scheduleViewerMain from "../../Assets/schedule-viewer-main.png"
 import scheduleViewerCreate from "../../Assets/schedule-viewer-create.png"
 import scheduleViewerEdit from "../../Assets/schedule-viewer-edit.png"
-import { useContext } from "react";
+import PhotoModal from "../../Atoms/PhotoModal/PhotoModal"
+import { useContext, useState } from "react";
 import { DarkContext } from "../../App";
 
 const ScheduleViewer = (props) => {
+  const [photoModal, setPhotoModal] = useState("");
   const dark = useContext(DarkContext);
+  const handlePhotoModal =(src)=> {
+    setPhotoModal(src)
+  }
   return (
     <div
       onClick={props.closeAllNav}
@@ -14,6 +19,7 @@ const ScheduleViewer = (props) => {
         dark ? "background-dark" : "background-light"
       }`}
     >
+      {photoModal && <PhotoModal imgSrc={photoModal} dark={dark} setPhotoModal={setPhotoModal}/>}
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
@@ -27,7 +33,7 @@ const ScheduleViewer = (props) => {
           </h2>
           <div className='project-content'>
             <div className='project-image-container'>
-              <img src={scheduleViewerMain} alt='' />
+              <img onClick={()=> handlePhotoModal(scheduleViewerMain)} src={scheduleViewerMain} alt='' />
               <p
                 className={`${dark ? "text-dark" : "text-light"}`}
               >
@@ -73,11 +79,11 @@ const ScheduleViewer = (props) => {
               <p className={`${
                   dark ? "text-dark" : "text-light"
                 }`}>Create Courses:</p>
-              <img src={scheduleViewerCreate} alt='' />
+              <img onClick={()=> handlePhotoModal(scheduleViewerCreate)} src={scheduleViewerCreate} alt='' />
               <p className={`${
                   dark ? "text-dark" : "text-light"
                 }`}>Edit Courses:</p>
-              <img src={scheduleViewerEdit} alt='' />
+              <img onClick={()=> handlePhotoModal(scheduleViewerEdit)} src={scheduleViewerEdit} alt='' />
             </div>
           </div>
         </div>

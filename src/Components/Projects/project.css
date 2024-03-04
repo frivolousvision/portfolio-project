@@ -8,6 +8,10 @@
   padding-top: 4rem;
   padding-bottom: 2rem;
   transition: 600ms;
+  position: relative;
+}
+.project img {
+  cursor: pointer;
 }
 .background-light {
   background-color: white;
@@ -76,9 +80,18 @@
 .sample-screenshots-container {
   padding-bottom: 16px;
 }
+.sample-screenshots-container img {
+  margin-bottom: 24px;
+}
+.sample-screenshots-container p {
+  margin-bottom: 4px;
+}
 @media only screen and (max-width: 600px) {
   .project-container {
     margin-top: 1rem;
+  }
+  .project img {
+    cursor: default;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -117,6 +130,7 @@
     width: 60%;
     /* margin-top: 0.5rem; */
     padding: 0;
+    margin-bottom: 16px;
   }
   .text-container {
     text-align: left;
@@ -131,12 +145,6 @@
   .sample-screenshots-container {
     width: 70%;
   }
-  .sample-screenshots-container p {
-    margin-bottom: 4px;
-  }
-  .sample-screenshots-container img {
-    margin-bottom: 24px;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -145,7 +153,6 @@
   }
   .project-header {
     font-size: 2.4rem;
-    margin-top: 0rem;
     margin-bottom: 0rem;
   }
   .project-image-container {

@@ -1,12 +1,17 @@
-import "./project.css";
 import clevelandClinicMain from "../../Assets/cleaveland-clinic-main.png"
 import clevelandClinicWord from "../../Assets/cleaveland-clinic-word-filter.png"
 import clevelandClinicFilter from "../../Assets/cleveland-clinic-filter.png"
-import { useContext } from "react";
+import PhotoModal from "../../Atoms/PhotoModal/PhotoModal"
+import { useContext, useState } from "react";
 import { DarkContext } from "../../App";
+import "./project.css";
 
 const ClevelandClinic = (props) => {
+  const [photoModal, setPhotoModal] = useState("");
   const dark = useContext(DarkContext);
+  const handlePhotoModal =(src)=> {
+    setPhotoModal(src)
+  }
   return (
     <div
       onClick={props.closeAllNav}
@@ -14,6 +19,7 @@ const ClevelandClinic = (props) => {
         dark ? "background-dark" : "background-light"
       }`}
     >
+      {photoModal && <PhotoModal imgSrc={photoModal} dark={dark} setPhotoModal={setPhotoModal}/>}
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
@@ -27,7 +33,7 @@ const ClevelandClinic = (props) => {
           </h2>
           <div className='project-content'>
             <div className='project-image-container'>
-              <img src={clevelandClinicMain} alt='' />
+              <img onClick={()=> handlePhotoModal(clevelandClinicMain)} src={clevelandClinicMain} alt='' />
               <p
                 className={`${dark ? "text-dark" : "text-light"}`}
               >
@@ -73,11 +79,11 @@ const ClevelandClinic = (props) => {
               <p className={`${
                   dark ? "text-dark" : "text-light"
                 }`}>Key word search for talking points:</p>
-              <img src={clevelandClinicWord} alt='' />
+              <img onClick={()=> handlePhotoModal(clevelandClinicWord)} src={clevelandClinicWord} alt='' />
               <p className={`${
                   dark ? "text-dark" : "text-light"
-                }`}>Filters for experience, shcedule, acuity, and specialty:</p>
-              <img src={clevelandClinicFilter} alt='' />
+                }`}>Filters for experience, schedule, acuity, and specialty:</p>
+              <img onClick={()=> handlePhotoModal(clevelandClinicFilter)} src={clevelandClinicFilter} alt='' />
             </div>
           </div>
         </div>

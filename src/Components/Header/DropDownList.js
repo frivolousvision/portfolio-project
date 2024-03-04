@@ -44,7 +44,7 @@ const DropDownList = (props) => {
             onClick={props.toggleDropMenu}
             className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
           >
-            Schedule Vieweer
+            Schedule Viewer
           </li>
         </NavLink>
         <NavLink to='/projects' exact={true} activeClassName='is-active'>
