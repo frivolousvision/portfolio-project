@@ -44,7 +44,6 @@
 .project-container img {
   max-width: 90%;
   border-radius: 5px;
-  /* margin-top: 0.5rem; */
 }
 .outer-container {
   display: flex;
@@ -110,6 +109,9 @@
     border-radius: 5px;
     margin-top: 4rem;
   }
+  .project-container img:hover {
+    opacity: 0.8;
+  }
 }
 @media only screen and (min-width: 1000px) {
   .project {
@@ -128,7 +130,6 @@
   }
   .project-image-container {
     width: 60%;
-    /* margin-top: 0.5rem; */
     padding: 0;
     margin-bottom: 16px;
   }
@@ -137,10 +138,6 @@
     margin: 0;
     width: 40%;
     font-size: 1.2rem;
-  }
- 
-  .project-image-container p {
-    /* display: none; */
   }
   .sample-screenshots-container {
     width: 70%;
@@ -164,14 +161,8 @@
   .project-container img {
     max-width: 90%;
   }
-  /* .project-container {
-    margin-top: 4rem;
-  } */
 }
 @media only screen and (min-width: 1400px) {
-  .project-image-container {
-    /* width: 55%; */
-  }
   .project-container {
     margin-top: 3rem;
   }

@@ -14,7 +14,7 @@ useEffect(()=> {
       return () => {
         document.removeEventListener("click", handleClickOutside, true);
       };
-}, [])
+}, [setPhotoModal])
 return (
     <>
     {imgSrc && <div ref={ref} onClick={()=>setPhotoModal("")} className={`photo-modal-container ${dark ? 'dark' : 'light'}`}>
