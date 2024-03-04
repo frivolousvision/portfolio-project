@@ -1,5 +1,7 @@
 import "./project.css";
 import clevelandClinicMain from "../../Assets/cleaveland-clinic-main.png"
+import clevelandClinicWord from "../../Assets/cleaveland-clinic-word-filter.png"
+import clevelandClinicFilter from "../../Assets/cleveland-clinic-filter.png"
 import { useContext } from "react";
 import { DarkContext } from "../../App";
 
@@ -41,7 +43,7 @@ const ClevelandClinic = (props) => {
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
-                This is a contracted project I built with TypeScript + React for 
+                This is a project I built with TypeScript + React for 
                 Cleveland Clinic to assist their recruiting team in finding candidates
                 <br />
                 <br />
@@ -52,7 +54,7 @@ const ClevelandClinic = (props) => {
               </p>
 
               <br />
-              <p
+              {/* <p
                 className={`view-project-text-desktop ${
                   dark ? "text-dark" : "text-light"
                 }`}
@@ -65,7 +67,17 @@ const ClevelandClinic = (props) => {
                 >
                   here
                 </a>
-              </p>
+              </p> */}
+            </div>
+            <div className="sample-screenshots-container">
+              <p className={`${
+                  dark ? "text-dark" : "text-light"
+                }`}>Key word search for talking points:</p>
+              <img src={clevelandClinicWord} alt='' />
+              <p className={`${
+                  dark ? "text-dark" : "text-light"
+                }`}>Filters for experience, shcedule, acuity, and specialty:</p>
+              <img src={clevelandClinicFilter} alt='' />
             </div>
           </div>
         </div>

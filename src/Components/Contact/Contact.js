@@ -39,13 +39,13 @@ const Contact = (props) => {
       }`}
     >
       <div className={`contact-container`}>
-        <h2
+        {/* <h2
           className={`contact-header ${
             dark ? "contact-header-dark" : "contact-header-light"
           }`}
         >
           Contact
-        </h2>
+        </h2> */}
         <h3 className={`connect-message ${dark ? "text-dark" : "text-light"}`}>
           Want to connect? Send me an email or hit the links below!
         </h3>

@@ -54,7 +54,7 @@ const ScheduleViewer = (props) => {
               </p>
 
               <br />
-              <p
+              {/* <p
                 className={`view-project-text-desktop ${
                   dark ? "text-dark" : "text-light"
                 }`}
@@ -67,7 +67,7 @@ const ScheduleViewer = (props) => {
                 >
                   here
                 </a>
-              </p>
+              </p> */}
             </div>
             <div className="sample-screenshots-container">
               <p className={`${

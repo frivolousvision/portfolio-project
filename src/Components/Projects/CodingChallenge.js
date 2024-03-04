@@ -57,7 +57,7 @@ const CodingChallenge = (props) => {
               </p>
 
               <br />
-              <p
+              {/* <p
                 className={`view-project-text-desktop ${
                   dark ? "text-dark" : "text-light"
                 }`}
@@ -70,7 +70,7 @@ const CodingChallenge = (props) => {
                 >
                   here
                 </a>
-              </p>
+              </p> */}
               <p
                 className={`view-project-text-desktop ${
                   dark ? "text-dark" : "text-light"

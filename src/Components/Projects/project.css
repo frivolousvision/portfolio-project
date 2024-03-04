@@ -7,7 +7,6 @@
   width: 100%;
   padding-top: 4rem;
   padding-bottom: 2rem;
-  /* min-height: 100vh; */
   transition: 600ms;
 }
 .background-light {
@@ -33,13 +32,15 @@
 .project-container p {
   width: 90%;
   margin: 0 auto;
-  /* margin-top: 0.5rem; */
+  font-size: 16px;
+}
+.project-image-container p {
   margin-bottom: 1rem;
 }
 .project-container img {
   max-width: 90%;
   border-radius: 5px;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
 }
 .outer-container {
   display: flex;
@@ -125,7 +126,7 @@
   }
  
   .project-image-container p {
-    display: none;
+    /* display: none; */
   }
   .sample-screenshots-container {
     width: 70%;
