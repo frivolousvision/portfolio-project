@@ -1,6 +1,8 @@
 import clevelandClinicMain from "../../Assets/cleaveland-clinic-main.png"
 import clevelandClinicWord from "../../Assets/cleaveland-clinic-word-filter.png"
 import clevelandClinicFilter from "../../Assets/cleveland-clinic-filter.png"
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PhotoModal from "../../Atoms/PhotoModal/PhotoModal"
 import { useContext, useState } from "react";
 import { DarkContext } from "../../App";
@@ -32,9 +34,10 @@ const ClevelandClinic = (props) => {
             Cleveland Clinic Nurse Unit Finder
           </h2>
           <div className='project-content'>
-            <div className='project-image-container'>
-              <img onClick={()=> handlePhotoModal(clevelandClinicMain)} src={clevelandClinicMain} alt='' />
-              <p
+            <div onClick={()=> handlePhotoModal(clevelandClinicMain)} className='project-image-container'>
+            <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
+              <img src={clevelandClinicMain} alt='' />
+              {/* <p
                 className={`${dark ? "text-dark" : "text-light"}`}
               >
                 View the project live{" "}
@@ -45,7 +48,7 @@ const ClevelandClinic = (props) => {
                 >
                   here
                 </a>
-              </p>
+              </p> */}
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
@@ -60,8 +63,8 @@ const ClevelandClinic = (props) => {
               </p>
 
               <br />
-              {/* <p
-                className={`view-project-text-desktop ${
+              <p
+                className={`${
                   dark ? "text-dark" : "text-light"
                 }`}
               >
@@ -73,17 +76,23 @@ const ClevelandClinic = (props) => {
                 >
                   here
                 </a>
-              </p> */}
+              </p>
             </div>
             <div className="sample-screenshots-container">
               <p className={`${
                   dark ? "text-dark" : "text-light"
                 }`}>Key word search for talking points:</p>
-              <img onClick={()=> handlePhotoModal(clevelandClinicWord)} src={clevelandClinicWord} alt='' />
+              <div onClick={()=> handlePhotoModal(clevelandClinicWord)} className='each-project-image-container'>
+              <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
+                <img src={clevelandClinicWord} alt='' />
+              </div>
               <p className={`${
                   dark ? "text-dark" : "text-light"
                 }`}>Filters for experience, schedule, acuity, and specialty:</p>
-              <img onClick={()=> handlePhotoModal(clevelandClinicFilter)} src={clevelandClinicFilter} alt='' />
+              <div onClick={()=> handlePhotoModal(clevelandClinicFilter)} className='each-project-image-container'>
+                <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
+                <img src={clevelandClinicFilter} alt='' />
+              </div>
             </div>
           </div>
         </div>

@@ -3,6 +3,8 @@ import scheduleViewerMain from "../../Assets/schedule-viewer-main.png"
 import scheduleViewerCreate from "../../Assets/schedule-viewer-create.png"
 import scheduleViewerEdit from "../../Assets/schedule-viewer-edit.png"
 import PhotoModal from "../../Atoms/PhotoModal/PhotoModal"
+import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
 import { DarkContext } from "../../App";
 
@@ -32,9 +34,10 @@ const ScheduleViewer = (props) => {
             Law School Schedule App
           </h2>
           <div className='project-content'>
-            <div className='project-image-container'>
-              <img onClick={()=> handlePhotoModal(scheduleViewerMain)} src={scheduleViewerMain} alt='' />
-              <p
+            <div onClick={()=> handlePhotoModal(scheduleViewerMain)}  className='project-image-container'>
+            <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
+              <img src={scheduleViewerMain} alt='' />
+              {/* <p
                 className={`${dark ? "text-dark" : "text-light"}`}
               >
                 View the project live{" "}
@@ -45,7 +48,7 @@ const ScheduleViewer = (props) => {
                 >
                   here
                 </a>
-              </p>
+              </p> */}
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>
@@ -60,8 +63,8 @@ const ScheduleViewer = (props) => {
               </p>
 
               <br />
-              {/* <p
-                className={`view-project-text-desktop ${
+              <p
+                className={`${
                   dark ? "text-dark" : "text-light"
                 }`}
               >
@@ -73,17 +76,23 @@ const ScheduleViewer = (props) => {
                 >
                   here
                 </a>
-              </p> */}
+              </p>
             </div>
             <div className="sample-screenshots-container">
               <p className={`${
                   dark ? "text-dark" : "text-light"
                 }`}>Create Courses:</p>
-              <img onClick={()=> handlePhotoModal(scheduleViewerCreate)} src={scheduleViewerCreate} alt='' />
+                <div onClick={()=> handlePhotoModal(scheduleViewerCreate)} className='each-project-image-container'>
+                <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
+                  <img src={scheduleViewerCreate} alt='' />
+                </div>
               <p className={`${
                   dark ? "text-dark" : "text-light"
                 }`}>Edit Courses:</p>
-              <img onClick={()=> handlePhotoModal(scheduleViewerEdit)} src={scheduleViewerEdit} alt='' />
+                <div onClick={()=> handlePhotoModal(scheduleViewerEdit)} className='each-project-image-container'>
+                  <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
+                  <img src={scheduleViewerEdit} alt='' />
+                </div>
             </div>
           </div>
         </div>
