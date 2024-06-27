@@ -33,11 +33,11 @@
   transition: 400ms;
 }
 .is-active .drop-down-link {
-  border-bottom: 1px solid cornflowerblue;
-  box-shadow: 0 5px 5px -5px cornflowerblue;
+  border-bottom: 1px solid #008080;
+  box-shadow: 0 5px 5px -5px #008080;
 }
 .dropdown-container li:hover {
-  color: cornflowerblue;
+  color: #008080;
 }
 .drop-down-light {
   background-color: white;
@@ -52,5 +52,5 @@
   cursor: pointer;
 }
 .drop-menu-x:hover {
-  color: cornflowerblue;
+  color: #008080;
 }

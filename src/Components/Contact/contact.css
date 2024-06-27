@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
 .contact {
-  transition: 600ms;
   padding-top: 4rem;
   padding-bottom: 2rem;
   min-height: 100vh;
+  width: 100vw;
 }
 .contact-light {
   background-color: white;
@@ -86,15 +86,15 @@ input {
   cursor: pointer;
   border: 0.5px solid rgb(66, 66, 66);
 }
-.contact-link-container {
-  margin: 0rem 4rem;
-}
 .contact-link-container p {
   font-size: 1rem;
   margin-bottom: -1rem;
 }
-.contact-dark .contact-link-container a:hover {
-  color: cornflowerblue;
+.contact-link-container a {
+  transition: color 400ms;
+}
+.contact-link-container a:hover {
+  color: #008080;
 }
 .icon {
   margin-top: -2rem;
@@ -115,6 +115,8 @@ input {
     width: 100%;
     margin-top: 2rem;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
   }
   .contact-link-container {
@@ -122,11 +124,11 @@ input {
   }
   .contact-container p {
     font-size: 1rem;
-    margin-bottom: -2rem;
     margin-top: 0rem;
+    margin-bottom: 16px;
   }
   .icon {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .contact-link-container {
     margin: 0.5rem;
@@ -134,7 +136,7 @@ input {
 }
 @media only screen and (min-width: 600px) {
   .contact-container {
-    margin-top: 4rem;
+    margin-top: 2rem;
     width: 80%;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
@@ -147,8 +149,10 @@ input {
   .contact-links {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: -1.5rem;
+    width: 80%;
+    max-width: 500px;
   }
   .submit-button:hover {
     opacity: 0.7;
@@ -160,7 +164,7 @@ input {
     width: 80%;
     min-height: 40rem;
     max-height: 40rem;
-    margin-top: 2rem; /* HERE!!!! Removed two rem*/
+    margin-top: 2rem;
   }
   input,
   textarea {
@@ -173,22 +177,7 @@ input {
     width: 60%;
   }
 }
-@media only screen and (min-width: 1400px) {
-  .contact-container {
-    max-height: 44rem;
-    margin-top: 3rem;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .contact-container {
-    min-height: 50rem;
-  }
-}
 @media only screen and (max-width: 1200px) and (min-height: 700px) {
-  .contact-container {
-    min-height: 50rem;
-    margin-top: 2rem;
-  }
   .contact-container .connect-message {
     width: 60%;
   }

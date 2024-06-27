@@ -25,8 +25,7 @@
   display: flex;
   justify-content: center;
   padding-top: 4rem;
-  transition: 600ms;
-  width: 100%;
+  width: 100vw;
   padding-bottom: 2rem;
   min-height: 100vh;
 }
@@ -48,7 +47,6 @@
 .home-container {
   width: 80%;
   margin: 0 auto;
-  margin-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +68,10 @@
   max-height: 30rem;
   max-width: 100%;
   border-radius: 100%;
+  box-shadow: none;
+}
+.home-container .image-container img {
+  box-shadow: none;
 }
 .text-container p {
   margin-top: -1rem;
@@ -208,9 +210,6 @@
   .image-container img {
     min-height: 26rem;
     max-height: 30rem;
-  }
-  .home-container {
-    margin-top: 3rem;
   }
 }
 @media only screen and (min-width: 1600px) {

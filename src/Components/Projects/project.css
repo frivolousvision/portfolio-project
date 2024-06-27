@@ -5,7 +5,6 @@
   flex-wrap: wrap;
   margin: 0 auto;
   width: 100%;
-  padding-top: 4rem;
   padding-bottom: 2rem;
   transition: 600ms;
   position: relative;
@@ -30,7 +29,6 @@
   width: 100%;
   min-height: 80%;
   margin: auto;
-  margin-top: 4rem;
   margin-bottom: 16px;
 }
 .project-container p {
@@ -139,7 +137,7 @@
     margin: auto;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   .project-image-container:hover img,
   .each-project-image-container:hover img {
@@ -198,11 +196,6 @@
   }
   .project-container img {
     max-width: 90%;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .project-container {
-    margin-top: 3rem;
   }
 }
 @media only screen and (min-width: 1600px) {

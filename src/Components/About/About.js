@@ -51,7 +51,7 @@ const About = (props) => {
     currentEditingSkillIndex: 0,
     editAboutMode: false,
     aboutMe:
-      "I'm an Atlanta-based Frontend / Fullstack developer excelling in problem-solving, building modern applications, and learning constantly! Highly motivated self-starter who loves working with people. Knowledge of current web development technologies, with an affinity for creating dynamic single-page applications. I have extensive experience building UI's with clean functionality with precise attention to design details based on wireframes. Skilled in using backend frameworks to create services to deliver and manage data through relational databases. Extensive experience in customer service - building and maintaining client relationships. Just for fun, this page is editable!",
+      "I'm an Atlanta-based Frontend / Fullstack developer excelling in problem-solving, building modern applications, and learning constantly! Highly motivated self-starter who loves working with people. Knowledge of current web development technologies, with an affinity for creating dynamic single-page applications. I have extensive experience building UI's with clean functionality with precise attention to design details based on wireframes. Skilled in using backend frameworks to create services to deliver and manage data through relational databases. Extensive experience in customer service - building and maintaining client relationships.",
     newSkill: "",
     newSkillType: "frontendSkills",
     frontendSkills,
