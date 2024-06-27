@@ -15,7 +15,7 @@ const Home = (props) => {
     >
       <div
         onClick={props.closeAllNav}
-        className={`home-container ${
+        className={`home-container inner-container ${
           dark ? "home-container-dark" : "home-container-light"
         }`}
       >

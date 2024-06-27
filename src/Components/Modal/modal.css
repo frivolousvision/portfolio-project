@@ -17,6 +17,10 @@
 .edit-modal-container input {
   margin-top: 24px;
 }
+.edit-modal-container input:focus {
+  border: 1px solid #008080;
+  outline: 2px solid #008080;
+}
 .close-edit-modal {
   position: absolute;
   top: 8px;

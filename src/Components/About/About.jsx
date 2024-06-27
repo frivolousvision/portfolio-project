@@ -224,7 +224,7 @@ const About = (props) => {
       )}
       <div
         onClick={props.closeAllNav}
-        className={`about-container ${
+        className={`about-container inner-container ${
           dark ? "about-container-dark" : "about-container-light"
         }`}
       >

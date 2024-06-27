@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap");
 .contact {
-  padding-top: 4rem;
-  padding-bottom: 2rem;
-  min-height: 100vh;
   width: 100vw;
 }
 .contact-light {
@@ -28,11 +25,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 .contact-header {
   font-size: 2.4rem;
-  margin-top: -2rem;
 }
 .contact-header-light {
   color: black;
@@ -108,7 +104,6 @@ input {
     font-size: 16px;
   }
   .contact-container {
-    margin-top: 3rem;
     width: 90%;
   }
   .contact-links {
@@ -136,7 +131,6 @@ input {
 }
 @media only screen and (min-width: 600px) {
   .contact-container {
-    margin-top: 2rem;
     width: 80%;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
@@ -163,8 +157,6 @@ input {
   .contact-container {
     width: 80%;
     min-height: 40rem;
-    max-height: 40rem;
-    margin-top: 2rem;
   }
   input,
   textarea {
