@@ -60,11 +60,20 @@
   display: none;
   cursor: pointer;
   font-weight: 900;
+  box-shadow: 1px 1px 3px rgb(66, 66, 66);
 }
 .click-to-enlarge-container p {
   color: #fff;
   padding: 8px 16px;
   margin-bottom: 0;
+}
+.background-light .click-to-enlarge-container {
+  background-color: white;
+  box-shadow: 1px 1px 3px rgb(155, 155, 155);
+}
+.background-light .click-to-enlarge-container p {
+  color: black;
+
 }
 .project-container img {
   max-width: 90%;
