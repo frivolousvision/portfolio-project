@@ -69,6 +69,16 @@ const About = (props) => {
       editMode: false,
     });
   };
+  const handleDoneEditing = () => {
+    setSkills({
+      ...skills,
+      actionActive: false,
+      addMode: false,
+      deleteMode: false,
+      editMode: false,
+      editAboutMode: false,
+    });
+  };
   const handleSetAddMode = () => {
     // setTimeout(() => {
     //   window.scrollTo(0, "6rem");
@@ -225,7 +235,7 @@ const About = (props) => {
             {skills.editAboutMode ? (
               <button
                 onClick={() =>
-                  setSkills({ ...skills, editAboutMode: !skills.editAboutMode })
+                  handleDoneEditing()
                 }
               >
                 Save
