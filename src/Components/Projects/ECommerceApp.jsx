@@ -13,11 +13,7 @@ const ECommerceApp = (props) => {
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
-            className={`project-header ${
-              dark
-                ? "text-dark project-header-dark"
-                : "text-light project-header-light"
-            }`}
+            className={`project-header`}
           >
             E-Commerce App
           </h2>
@@ -26,7 +22,6 @@ const ECommerceApp = (props) => {
               <img src={eCommercePhoto} alt='' />
               <p
                 style={{ textDecoration: "line-through" }}
-                className={`${dark ? "text-dark" : "text-light"}`}
               >
                 View the project live{" "}
                 <a
@@ -38,10 +33,10 @@ const ECommerceApp = (props) => {
                 </a>
               </p>
 
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 * no longer live because Heroku & Saleforce *
               </p>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 View this project's repository{" "}
                 <a
                   href='https://github.com/frivolousvision/e-commerce-app'
@@ -53,7 +48,7 @@ const ECommerceApp = (props) => {
               </p>
             </div>
             <div className='text-container'>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 This was a full-stack mock e-commerce application made with the PERN
                 stack. Unfortunately, it is no longer active after Salesforce purchased Heroku.
                 <br />
@@ -68,9 +63,7 @@ const ECommerceApp = (props) => {
               <br />
               <p
                 style={{ textDecoration: "line-through" }}
-                className={`view-project-text-desktop ${
-                  dark ? "text-dark" : "text-light"
-                }`}
+                className={`view-project-text-desktop`}
               >
                 View the project live{" "}
                 <a
@@ -81,11 +74,7 @@ const ECommerceApp = (props) => {
                   here
                 </a>
               </p>
-              <p
-                className={`view-project-text-desktop ${
-                  dark ? "text-dark" : "text-light"
-                }`}
-              >
+              <p>
                 View this project's repository{" "}
                 <a
                   href='https://github.com/frivolousvision/e-commerce-app'

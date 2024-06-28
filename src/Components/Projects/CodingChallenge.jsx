@@ -25,11 +25,7 @@ const CodingChallenge = (props) => {
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
-            className={`project-header ${
-              dark
-                ? "text-dark project-header-dark"
-                : "text-light project-header-light"
-            }`}
+            className={`project-header`}
           >
             Find Your Wordle
           </h2>
@@ -37,19 +33,9 @@ const CodingChallenge = (props) => {
             <div onClick={()=> handlePhotoModal(findYourWordleMain)} className='project-image-container'>
               <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
               <img src={findYourWordleMain} alt='' />
-              {/* <p className={`${dark ? "text-dark" : "text-light"}`}>
-                View this project's repository{" "}
-                <a
-                  href='https://github.com/frivolousvision/find-your-wordle'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  here
-                </a>
-              </p> */}
             </div>
             <div className='text-container'>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 A React app that receives user inputs and queries data from an
                 API to help users solve their NY Times' daily Wordle
                 <br />
@@ -57,7 +43,7 @@ const CodingChallenge = (props) => {
                 The site is hosted via Netlify and is linked to GitHub for CI/CD
               </p>
                 <br />
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 View the project live{" "}
                 <a
                   href='https://www.findyourwordle.com/'
@@ -68,24 +54,8 @@ const CodingChallenge = (props) => {
                 </a>
               </p>
               <br />
-              {/* <p
-                className={`view-project-text-desktop ${
-                  dark ? "text-dark" : "text-light"
-                }`}
-              >
-                View the project live{" "}
-                <a
-                  href='https://www.findyourwordle.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  here
-                </a>
-              </p> */}
               <p
-                className={`view-project-text-desktop ${
-                  dark ? "text-dark" : "text-light"
-                }`}
+                className={`view-project-text-desktop`}
               >
                 View this project's repository{" "}
                 <a
@@ -98,23 +68,17 @@ const CodingChallenge = (props) => {
               </p>
             </div>
             <div className="sample-screenshots-container">
-              <p className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}>Enter Green letter you know are in the Wordle:</p>
+              <p>Enter Green letter you know are in the Wordle:</p>
           <div onClick={()=> handlePhotoModal(findYourWordleGreen)} className='each-project-image-container'>
               <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
                 <img src={findYourWordleGreen} alt='' />
               </div>
-              <p className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}>Select letters you know aren't in the Wordle and yellow letters:</p>
+              <p>Select letters you know aren't in the Wordle and yellow letters:</p>
               <div onClick={()=> handlePhotoModal(findYourWordleSelection)} className='each-project-image-container'>
               <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
               <img src={findYourWordleSelection} alt='' />
               </div>
-              <p className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}>View list of possible Wordles:</p>
+              <p>View list of possible Wordles:</p>
               <div onClick={()=> handlePhotoModal(findYourWordleList)} className='each-project-image-container'>
               <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
               <img src={findYourWordleList} alt='' />

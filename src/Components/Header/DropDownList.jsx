@@ -26,7 +26,7 @@ const DropDownList = (props) => {
         >
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link`}
           >
             Find Your Wordle
           </li>
@@ -34,7 +34,7 @@ const DropDownList = (props) => {
         <NavLink to='/cleveland-clinic' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link`}
           >
             Cleveland Clinic
           </li>
@@ -42,7 +42,7 @@ const DropDownList = (props) => {
         <NavLink to='/schedule-viewer' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link`}
           >
             Schedule Viewer
           </li>
@@ -50,7 +50,7 @@ const DropDownList = (props) => {
         <NavLink to='/projects' exact={true} activeClassName='is-active'>
           <li
             onClick={props.toggleDropMenu}
-            className={`drop-down-link ${dark ? "text-dark" : "text-light"}`}
+            className={`drop-down-link`}
           >
             View all
           </li>
@@ -58,7 +58,7 @@ const DropDownList = (props) => {
         <FontAwesomeIcon
           onClick={props.toggleDropMenu}
           icon={faTimes}
-          className={`drop-menu-x ${dark ? "text-dark" : "text-light"}`}
+          className={`drop-menu-x`}
         />
       </ul>
     </div>

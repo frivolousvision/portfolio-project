@@ -146,7 +146,7 @@ a {
   font-size: 1.5rem;
   border: 0.5px solid rgb(66, 66, 66);
   box-shadow: 0.5px 0.5px 3px rgb(66, 66, 66);
-  transition: 800ms ease-in-out;
+  transition: transform 800ms ease-in-out, top 800ms ease-in-out, right 800ms ease-in-out;
   transform: rotate(60deg);
   overflow: hidden;
 }

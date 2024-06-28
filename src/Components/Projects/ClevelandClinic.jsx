@@ -23,11 +23,7 @@ const ClevelandClinic = (props) => {
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
-            className={`project-header ${
-              dark
-                ? "text-dark project-header-dark"
-                : "text-light project-header-light"
-            }`}
+            className={`project-header`}
           >
             Cleveland Clinic Nurse Unit Finder
           </h2>
@@ -37,7 +33,7 @@ const ClevelandClinic = (props) => {
               <img src={clevelandClinicMain} alt='' />
             </div>
             <div className='text-container'>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 This is a project I built with TypeScript + React for 
                 Cleveland Clinic to assist their recruiting team in finding candidates
                 <br />
@@ -49,11 +45,7 @@ const ClevelandClinic = (props) => {
               </p>
 
               <br />
-              <p
-                className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}
-              >
+              <p>
                 View the project live{" "}
                 <a
                   href='https://ccfnurseunitfinder.aspirant.com/start-the-story/'
@@ -65,16 +57,12 @@ const ClevelandClinic = (props) => {
               </p>
             </div>
             <div className="sample-screenshots-container">
-              <p className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}>Key word search for talking points:</p>
+              <p>Key word search for talking points:</p>
               <div onClick={()=> handlePhotoModal(clevelandClinicWord)} className='each-project-image-container'>
               <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
                 <img src={clevelandClinicWord} alt='' />
               </div>
-              <p className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}>Filters for experience, schedule, acuity, and specialty:</p>
+              <p>Filters for experience, schedule, acuity, and specialty:</p>
               <div onClick={()=> handlePhotoModal(clevelandClinicFilter)} className='each-project-image-container'>
                 <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
                 <img src={clevelandClinicFilter} alt='' />

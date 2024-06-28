@@ -1,10 +1,7 @@
-import "./project.css";
 import redditPhoto from "../ProjectList/reddit-screenshot.jpg";
-import { useContext } from "react";
-import { DarkContext } from "../../App";
+import "./project.css";
 
 const RedditApp = (props) => {
-  const dark = useContext(DarkContext);
   return (
     <div
       onClick={props.closeAllNav}
@@ -13,18 +10,14 @@ const RedditApp = (props) => {
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
-            className={`project-header ${
-              dark
-                ? "text-dark project-header-dark"
-                : "text-light project-header-light"
-            }`}
+            className={`project-header`}
           >
             Reddit API App
           </h2>
           <div className='project-content'>
             <div className='project-image-container'>
               <img src={redditPhoto} alt='' />
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 View the project live{" "}
                 <a
                   href='https://www.reddit-dark.com/'
@@ -34,7 +27,7 @@ const RedditApp = (props) => {
                   here
                 </a>
               </p>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 View this project's repository{" "}
                 <a
                   href='https://github.com/frivolousvision/reddit-mimic-app'
@@ -46,7 +39,7 @@ const RedditApp = (props) => {
               </p>
             </div>
             <div className='text-container'>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
                 A frontend application made with React and Redux using Reddit's
                 API. The site is hosted via Netlify and is linked to GitHub to
                 allow for continuous integration.
@@ -59,9 +52,7 @@ const RedditApp = (props) => {
               </p>
               <br />
               <p
-                className={`view-project-text-desktop  ${
-                  dark ? "text-dark" : "text-light"
-                }`}
+                className={`view-project-text-desktop`}
               >
                 View the project live{" "}
                 <a
@@ -73,9 +64,7 @@ const RedditApp = (props) => {
                 </a>
               </p>
               <p
-                className={`view-project-text-desktop  ${
-                  dark ? "text-dark" : "text-light"
-                }`}
+                className={`view-project-text-desktop`}
               >
                 View this project's repository{" "}
                 <a

@@ -1,4 +1,3 @@
-import "./project.css";
 import scheduleViewerMain from "../../Assets/schedule-viewer-main.png"
 import scheduleViewerCreate from "../../Assets/schedule-viewer-create.png"
 import scheduleViewerEdit from "../../Assets/schedule-viewer-edit.png"
@@ -7,6 +6,7 @@ import { faAngleDoubleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useState } from "react";
 import { DarkContext } from "../../App";
+import "./project.css";
 
 const ScheduleViewer = (props) => {
   const [photoModal, setPhotoModal] = useState("");
@@ -23,11 +23,7 @@ const ScheduleViewer = (props) => {
       <div className={`project-container`}>
         <div className='outer-container'>
           <h2
-            className={`project-header ${
-              dark
-                ? "text-dark project-header-dark"
-                : "text-light project-header-light"
-            }`}
+            className={`project-header`}
           >
             Law School Schedule App
           </h2>
@@ -35,21 +31,9 @@ const ScheduleViewer = (props) => {
             <div onClick={()=> handlePhotoModal(scheduleViewerMain)}  className='project-image-container'>
             <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
               <img src={scheduleViewerMain} alt='' />
-              {/* <p
-                className={`${dark ? "text-dark" : "text-light"}`}
-              >
-                View the project live{" "}
-                <a
-                  href='https://course-schedule.onrender.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  here
-                </a>
-              </p> */}
             </div>
             <div className='text-container'>
-              <p className={`${dark ? "text-dark" : "text-light"}`}>
+              <p>
               A Fullstack application I made to help Law GRA students at a local university manage 
               and view semester schedules
                 <br />
@@ -61,11 +45,7 @@ const ScheduleViewer = (props) => {
               </p>
 
               <br />
-              <p
-                className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}
-              >
+              <p>
                 View the project live{" "}
                 <a
                   href='https://course-schedule.onrender.com/'
@@ -77,16 +57,12 @@ const ScheduleViewer = (props) => {
               </p>
             </div>
             <div className="sample-screenshots-container">
-              <p className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}>Create Courses:</p>
+              <p>Create Courses:</p>
                 <div onClick={()=> handlePhotoModal(scheduleViewerCreate)} className='each-project-image-container'>
                 <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
                   <img src={scheduleViewerCreate} alt='' />
                 </div>
-              <p className={`${
-                  dark ? "text-dark" : "text-light"
-                }`}>Edit Courses:</p>
+              <p>Edit Courses:</p>
                 <div onClick={()=> handlePhotoModal(scheduleViewerEdit)} className='each-project-image-container'>
                   <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
                   <img src={scheduleViewerEdit} alt='' />

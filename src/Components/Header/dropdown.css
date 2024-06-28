@@ -1,13 +1,11 @@
 .dropdown-container {
   position: fixed;
-  background-color: red;
   transform: rotate(35deg);
   z-index: 5;
   width: 60rem;
   height: 50rem;
-  border: 0.5px solid rgb(66, 66, 66);
-  box-shadow: 0.5px 0.5px 3px rgb(66, 66, 66);
-  transition: 800ms ease-in-out;
+  box-shadow: 1px 1px 3px rgb(66, 66, 66);
+  transition: top 800ms ease-in-out, right 800ms ease-in-out;
 }
 .dropdown-container-show {
   top: -28rem;
@@ -30,7 +28,6 @@
   margin-left: 12rem;
   font-size: 1.5rem;
   margin-top: 1rem;
-  transition: 400ms;
 }
 .dark .drop-down-link {
   color: white;

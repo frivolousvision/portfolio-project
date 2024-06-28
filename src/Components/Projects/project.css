@@ -1,5 +1,4 @@
 .project {
-  padding-top: 4rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -108,10 +107,17 @@
 .sample-screenshots-container p {
   margin-bottom: 4px;
 }
+.dark .text-container a {
+  color: white;
+}
+.light .text-container a {
+  color: black;
+}
+.dark .text-container a:hover,
+.light .text-container a:hover {
+  color: #008080;
+}
 @media only screen and (max-width: 600px) {
-  .project-container {
-    margin-top: 1rem;
-  }
   .project img {
     cursor: default;
   }
@@ -130,7 +136,6 @@
     margin: auto;
     border: 0.5px solid rgb(66, 66, 66);
     border-radius: 5px;
-    margin-top: 2rem;
   }
   .project-image-container:hover img,
   .each-project-image-container:hover img {
@@ -146,7 +151,6 @@
     min-height: 100vh;
   }
   .project-container {
-    margin-top: 2rem;
     min-height: 40rem;
   }
   .project-content {

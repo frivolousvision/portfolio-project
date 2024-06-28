@@ -101,7 +101,7 @@ const Header = (props) => {
           </NavLink>
 
           <div
-            className={`mobile-sub-menu ${dark ? "text-dark" : "text-light"}
+            className={`mobile-sub-menu
             ${
               props.showSubMenu
                 ? "mobile-sub-menu-show"
