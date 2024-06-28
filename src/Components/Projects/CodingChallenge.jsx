@@ -19,9 +19,7 @@ const CodingChallenge = (props) => {
   return (
     <div
       onClick={props.closeAllNav}
-      className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
-        dark ? "background-dark" : "background-light"
-      }`}
+      className={`project ${props.showNav ? "show-nav" : "hide-nav"}`}
     >
       {photoModal && <PhotoModal imgSrc={photoModal} dark={dark} setPhotoModal={setPhotoModal}/>}
       <div className={`project-container`}>

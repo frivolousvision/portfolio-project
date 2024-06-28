@@ -18,7 +18,7 @@
     opacity: 1;
     width: 70vw;
 }
-.photo-modal-container.dark {
+.dark .photo-modal-container  {
     background-color: rgb(34, 34, 34);
     box-shadow: 1px 1px 3px rgb(66, 66, 66);
     border:1px solid rgb(66, 66, 66);

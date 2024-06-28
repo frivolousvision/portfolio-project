@@ -92,7 +92,7 @@ function App() {
   };
   return (
     <div className={`App ${
-      dark ? "background-dark" : "background-light"
+      dark ? "dark" : "light"
     }`}>
       <DarkContext.Provider value={dark}>
         <Router>

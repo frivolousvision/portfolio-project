@@ -17,9 +17,7 @@ const ClevelandClinic = (props) => {
   return (
     <div
       onClick={props.closeAllNav}
-      className={`project ${props.showNav ? "show-nav" : "hide-nav"} ${
-        dark ? "background-dark" : "background-light"
-      }`}
+      className={`project ${props.showNav ? "show-nav" : "hide-nav"}`}
     >
       {photoModal && <PhotoModal imgSrc={photoModal} dark={dark} setPhotoModal={setPhotoModal}/>}
       <div className={`project-container`}>
@@ -37,18 +35,6 @@ const ClevelandClinic = (props) => {
             <div onClick={()=> handlePhotoModal(clevelandClinicMain)} className='project-image-container'>
             <div className="click-to-enlarge-container"><p>Click to enlarge <FontAwesomeIcon icon={faAngleDoubleRight} /></p></div>
               <img src={clevelandClinicMain} alt='' />
-              {/* <p
-                className={`${dark ? "text-dark" : "text-light"}`}
-              >
-                View the project live{" "}
-                <a
-                  href='https://ccfnurseunitfinder.aspirant.com/start-the-story/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  here
-                </a>
-              </p> */}
             </div>
             <div className='text-container'>
               <p className={`${dark ? "text-dark" : "text-light"}`}>

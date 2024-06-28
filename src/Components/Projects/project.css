@@ -6,7 +6,6 @@
   margin: 0 auto;
   width: 100%;
   padding-bottom: 2rem;
-  transition: 600ms;
   position: relative;
 }
 .project img {
@@ -17,9 +16,6 @@
 }
 .background-light img {
   border: 1px solid rgb(34, 34, 34);
-}
-.background-dark {
-  background-color: rgb(34, 34, 34);
 }
 .project-container {
   display: flex;
@@ -98,9 +94,6 @@
 }
 .project-header h2 {
   font-family: Roboto;
-}
-.text-dark a {
-  color: white;
 }
 .text-light a {
   color: black;

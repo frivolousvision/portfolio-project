@@ -1,30 +1,24 @@
 import "./contact.css";
-import { useContext } from "react";
-import { DarkContext } from "../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInbox } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-// import emailjs from "emailjs-com";
 
 const Contact = (props) => {
-  const dark = useContext(DarkContext);
 
   return (
     <div
       onClick={props.closeAllNav}
-      className={`contact ${dark ? "contact-dark" : "contact-light"} ${
+      className={`contact ${
         props.showNav ? "show-nav" : "hide-nav"
       }`}
     >
-      <div className={`contact-container inner-container`}>
-        <h3 className={`connect-message ${dark ? "text-dark" : "text-light"}`}>
-          Want to connect? Send me an email or hit the links below!
+      <div className="contact-container inner-container">
+        <h3 className="connect-message">
+          Want to connect? Hit the links below!
         </h3>
         <div className='contact-links'>
           <div
-            className={`contact-link-container ${
-              dark ? "text-dark" : "text-light"
-            }`}
+            className="contact-link-container"
           >
             <a
               href='mailto:ddurnell1@gmail.com'
@@ -36,9 +30,7 @@ const Contact = (props) => {
             </a>
           </div>
           <div
-            className={`contact-link-container ${
-              dark ? "text-dark" : "text-light"
-            }`}
+            className="contact-link-container"
           >
             <a
               href='https://github.com/frivolousvision/'
@@ -50,9 +42,7 @@ const Contact = (props) => {
             </a>
           </div>
           <div
-            className={`contact-link-container ${
-              dark ? "text-dark" : "text-light"
-            }`}
+            className="contact-link-container"
           >
             <a
               href='https://www.linkedin.com/in/daniel-durnell/'

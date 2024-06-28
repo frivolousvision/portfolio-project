@@ -75,13 +75,10 @@ const Header = (props) => {
       </nav>
       {/* BEGIN MOBILE MENU */}
       <nav
-        className={`mobile-nav ${dark ? "mobile-nav-dark" : "mobile-nav-light"}
-           ${props.showNav ? "mobile-nav-show" : "mobile-nav-hide"}`}
+        className={`mobile-nav ${props.showNav ? "mobile-nav-show" : "mobile-nav-hide"}`}
       >
         <ul
           className={`mobile-nav-content ${
-            dark ? "mobile-nav-content-dark" : "mobile-nav-content-light"
-          } ${
             props.displayContent
               ? "mobile-nav-content-show"
               : "mobile-nav-content-hide"
