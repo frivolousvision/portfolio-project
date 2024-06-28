@@ -336,6 +336,7 @@ const About = (props) => {
                   </label>
                 </div>
                 <input
+                  autoFocus={skills.addMode}
                   type='text'
                   value={skills.newSkill}
                   onChange={(e) => {

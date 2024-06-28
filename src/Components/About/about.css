@@ -111,9 +111,6 @@
 .add-a-new-skill-container h4 {
   margin: 0.5rem;
 }
-.add-a-new-skill-container button {
-  border: 0.5px solid rgb(66, 66, 66);
-}
 .skills-select-container span {
   margin-right: 1rem;
 }
@@ -122,15 +119,10 @@
   min-width: 5rem;
   margin-right: 1rem;
   cursor: pointer;
-  border: 0.5px solid rgb(66, 66, 66);
 }
 .skills-select-container select:focus {
   border: 1px solid #008080;
   outline: 1px solid #008080;
-}
-.about-container-light button {
-  background-color: white;
-  color: black;
 }
 .about-container-light button:hover {
   background-color: #008080;
@@ -141,7 +133,6 @@
   min-width: 5rem;
   margin-right: 1rem;
   cursor: pointer;
-  border: 0.5px solid rgb(66, 66, 66);
 }
 .skills-header-container select {
   height: 2.5rem;
@@ -169,7 +160,6 @@
   height: 2.5rem;
   min-width: 5rem;
   cursor: pointer;
-  border: 0.5px solid rgb(66, 66, 66);
 }
 .add-a-new-skill-container {
   display: flex;
@@ -224,6 +214,15 @@
 .skill-type-check-container input {
   width: 2rem;
 }
+.add-a-new-skill-container input:focus {
+  border: 1px solid #008080;
+  outline: 2px solid #008080;
+}
+.skill-type-check-container input[type="radio"] {
+  accent-color: #008080;
+  cursor: pointer;
+  }
+
 @media only screen and (max-width: 600px) {
   .about-container {
     width: 95%;

@@ -30,8 +30,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-button:hover {
+button {
   background-color: #008080;
+  font-weight: 700;
+}
+button:hover {
+  filter: brightness(105%);
 }
 .text-container a:hover {
   color: #008080;
