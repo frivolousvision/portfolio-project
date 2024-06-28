@@ -32,6 +32,12 @@
   margin-top: 1rem;
   transition: 400ms;
 }
+.dark .drop-down-link {
+  color: white;
+}
+.light .drop-down-link {
+  color: black;
+}
 .is-active .drop-down-link {
   border-bottom: 1px solid #008080;
   box-shadow: 0 5px 5px -5px #008080;
