@@ -29,6 +29,10 @@
   font-size: 1.5rem;
   margin-top: 1rem;
 }
+.fa-times,
+.drop-down-link {
+  transition: 400ms;
+}
 .dark .drop-down-link {
   color: white;
 }
