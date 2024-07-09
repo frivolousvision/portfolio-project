@@ -1,5 +1,5 @@
 import "./dropdown.css";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { DarkContext } from "../../App";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +7,18 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const DropDownList = (props) => {
   const dark = useContext(DarkContext);
+  const ref = useRef(null)
+  useEffect(()=> {
+    const handleClickOutside = (event) => {
+        if (props.showDropMenu && ref.current && !ref.current.contains(event.target)) {
+          props.closeAllNav();
+        }
+      };
+      document.addEventListener("click", handleClickOutside, true);
+      return () => {
+        document.removeEventListener("click", handleClickOutside, true);
+      };
+}, [props])
   return (
     <div
       className={`dropdown-container ${
@@ -25,7 +37,8 @@ const DropDownList = (props) => {
           activeClassName='is-active'
         >
           <li
-            onClick={props.toggleDropMenu}
+          ref={ref}
+            onClick={props.closeAllNav}
             className={`drop-down-link`}
           >
             Find Your Wordle
@@ -33,7 +46,8 @@ const DropDownList = (props) => {
         </NavLink>
         <NavLink to='/cleveland-clinic' exact={true} activeClassName='is-active'>
           <li
-            onClick={props.toggleDropMenu}
+          ref={ref}
+            onClick={props.closeAllNav}
             className={`drop-down-link`}
           >
             Cleveland Clinic
@@ -41,7 +55,8 @@ const DropDownList = (props) => {
         </NavLink>
         <NavLink to='/schedule-viewer' exact={true} activeClassName='is-active'>
           <li
-            onClick={props.toggleDropMenu}
+          ref={ref}
+            onClick={props.closeAllNav}
             className={`drop-down-link`}
           >
             Schedule Viewer
@@ -49,14 +64,15 @@ const DropDownList = (props) => {
         </NavLink>
         <NavLink to='/projects' exact={true} activeClassName='is-active'>
           <li
-            onClick={props.toggleDropMenu}
+          ref={ref}
+            onClick={props.closeAllNav}
             className={`drop-down-link`}
           >
             View all
           </li>
         </NavLink>
         <FontAwesomeIcon
-          onClick={props.toggleDropMenu}
+          onClick={props.closeAllNav}
           icon={faTimes}
           className={`drop-menu-x`}
         />

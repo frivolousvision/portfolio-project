@@ -112,7 +112,7 @@ function App() {
           />
           <DropDownList
             showDropMenu={showDropMenu}
-            toggleDropMenu={toggleDropMenu}
+            closeAllNav={closeAllNav}
           />
           <Switch>
             <Route path='/' exact>
