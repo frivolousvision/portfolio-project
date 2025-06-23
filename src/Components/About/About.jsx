@@ -9,10 +9,11 @@ const About = (props) => {
   const frontendSkills = [
     "TypeScript",
     "JavaScript ES6",
+    "Vue",
+    "Svelte",
     "React",
     "MobX",
     "Redux",
-    "Vue",
     "Vanilla JS",
     "CSS3",
     "Ant Design",
