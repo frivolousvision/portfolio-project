@@ -52,7 +52,7 @@ const Contact = (props) => {
           </div>
           <div className="contact-link-container">
             <a
-              href='/Assets/Dan_Durnell.pdf'
+              href='/Dan_Durnell.pdf'
               target="_blank" rel="noopener noreferrer">
               <p>Resume:</p>
               <FontAwesomeIcon icon={faFile} className='icon' />
