@@ -1,6 +1,6 @@
 import "./contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInbox } from "@fortawesome/free-solid-svg-icons";
+import { faInbox, faFile } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = (props) => {
@@ -41,16 +41,21 @@ const Contact = (props) => {
               <FontAwesomeIcon icon={faGithubSquare} className='icon' />
             </a>
           </div>
-          <div
-            className="contact-link-container"
-          >
+          <div className="contact-link-container">
             <a
               href='https://www.linkedin.com/in/daniel-durnell/'
               target='_blank'
-              rel='noreferrer'
-            >
+              rel='noreferrer'>
               <p>LinkedIn:</p>
               <FontAwesomeIcon icon={faLinkedin} className='icon' />
+            </a>
+          </div>
+          <div className="contact-link-container">
+            <a
+              href='/Assets/Dan_Durnell.pdf'
+              target="_blank" rel="noopener noreferrer">
+              <p>Resume:</p>
+              <FontAwesomeIcon icon={faFile} className='icon' />
             </a>
           </div>
         </div>
